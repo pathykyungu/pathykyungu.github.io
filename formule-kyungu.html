@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formule de Kyungu – Transformée de Laplace Inverse</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    code {
+      background-color: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+    a {
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🧠 Formule de Kyungu : une nouvelle méthode pour la transformée de Laplace inverse</h1>
+
+<p><strong>Par Path Kyungu – Mathématicien et éducateur</strong><br>
+<a href="https://pathykyungu.github.io">pathykyungu.github.io</a></p>
+
+<hr>
+
+<h2>1. Introduction</h2>
+
+<p>La transformée de Laplace inverse joue un rôle fondamental dans l’analyse des systèmes dynamiques, les équations différentielles et le traitement du signal.</p>
+
+<p>La <strong>formule de Kyungu</strong> propose une approche nouvelle et élégante qui permet de retrouver \( f(t) \) à partir de \( F(p) \) sans passer par des intégrales complexes ni des tables classiques.</p>
+
+---
+
+<h2>2. La formule de Kyungu (KL)</h2>
+
+<p>Soit \( F(p) \) une fonction de Laplace. On définit une fonction auxiliaire :</p>
+
+<p>\[
+\varphi(x) = F\left(\frac{1}{x}\right)
+\]</p>
+
+<p>Alors, la transformée de Laplace inverse \( f(t) \) est donnée par :</p>
+
+<p>\[
+f(t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+\]</p>
+
+<p>Le terme \( \varphi(0)\delta(t) \) représente la composante impulsionnelle (cas où \( f \) contient un Dirac).</p>
+
+---
+
+<h2>3. Exemple : \( F(p) = \frac{1}{p^2} \)</h2>
+
+<p>Ici, \( \varphi(x) = x^2 \), donc :</p>
+
+<p>\[
+\varphi^{(n)}(0) =
+\begin{cases}
+0 & \text{si } n \neq 2 \\
+2 & \text{si } n = 2
+\end{cases}
+\Rightarrow
+f(t) = \frac{2}{(2!)^2} \cdot 2 \cdot t^{1} = t
+\]</p>
+
+<p>Ce qui correspond bien à la transformée de Laplace inverse de \( \frac{1}{p^2} \).</p>
+
+---
+
+<h2>4. Exemple : \( F(p) = \frac{1}{1 + p^3} \)</h2>
+
+<p>Alors \( \varphi(x) = \frac{1}{1 + \frac{1}{x^3}} = \frac{x^3}{x^3 + 1} \)</p>
+
+<p>On calcule ses dérivées, on applique la formule KL pour obtenir une série convergente. Ici, la méthode classique (résidus ou tables) échoue à donner une forme fermée facilement. La formule de Kyungu donne :</p>
+
+<p>\[
+f(t) = \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+\]</p>
+
+<p>qui est la représentation directe de la solution.</p>
+
+---
+
+<h2>5. Avantage pédagogique</h2>
+
+<p>La formule de Kyungu évite les intégrales complexes et donne un accès direct à \( f(t) \) à partir de \( F(p) \) par simple calcul de dérivées et développement en série.</p>
+
+<p>Elle révèle aussi une passerelle naturelle avec la transformée de Mellin :</p>
+
+<p>\[
+\mathcal{M}^{-1}[F](x) = f(-\ln x)
+\Rightarrow \text{Formule KML}
+\]</p>
+
+---
+
+<h2>6. Conclusion</h2>
+
+<p>Cette nouvelle approche ouvre la voie à une pédagogie inverse : enseigner d’abord la transformée de Laplace <strong>inverse</strong>, puis la directe.</p>
+
+<p>La formule de Kyungu est une alternative simple, rigoureuse et efficace aux méthodes classiques.</p>
+
+---
+
+<h2>📩 Contact</
+  <ul>
+  <li>🌐 Site : <a href="https://pathykyungu.github.io">pathykyungu.github.io</a></li>
+  <li>📧 Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></li>
+  <li>📹 TikTok / YouTube : Le Professeur des Maths</li>
+</ul>
+
+<footer style="margin-top: 2em; font-size: 0.9em; color: #777; text-align: center;">
+  Dernière mise à jour : juillet 2025 · Rédigé par Pathy Kyungu
+</footer>
+
+</body>
+</html>
