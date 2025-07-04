@@ -75,7 +75,7 @@
     <h3>Formule de Kyungu (KL) – Transformée de Laplace inverse :</h3>
     <p>
       \[
-        \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{(-1)^n}{n!} \, \varphi^{(n)}(1)\, t^n
+        \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(1)}{(n!)^2} \, n \, t^{n-1}
       \]
       <br />
       avec \( \varphi(x) = F\left(\frac{1}{x}\right) \)
@@ -84,10 +84,8 @@
     <h3>Formule Kyungu–Mellin–Laplace (KML) :</h3>
     <p>
       \[
-        \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) = \sum_{n=1}^{\infty} \frac{(-1)^n}{n!} \, \varphi^{(n)}(1)\, (\ln x)^n
+        \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) = \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(1)}{(n!)^2} \, n \, (\ln x)^{n-1}
       \]
-      <br />
-      où \( \mathcal{M}^{-1} \) est l’inverse de la transformée de Mellin
     </p>
   </section>
 
