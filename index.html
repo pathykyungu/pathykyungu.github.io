@@ -2,118 +2,124 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Professeur Pathy Kyungu – Formules de Kyungu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professeur Pathy Kyungu – Mathématiques & Recherches</title>
+
+  <!-- MathJax -->
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      background-color: #f8f8f8;
-      color: #333;
-      padding: 1rem 2rem;
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 1em auto;
+      padding: 0 1em;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #222;
     }
-    h1, h2 {
-      color: #1e3a8a;
+    h1, h2, h3 {
+      color: #0055aa;
+    }
+    img {
+      max-width: 180px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     a {
-      color: #2563eb;
+      color: #0055aa;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    .section {
-      margin-bottom: 2rem;
+    .center {
+      text-align: center;
     }
-    img {
-      max-width: 250px;
-      height: auto;
-      display: block;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    .links ul {
+      list-style: none;
+      padding-left: 0;
     }
-    .formula {
-      background: #fff;
-      border-left: 5px solid #1e3a8a;
-      padding: 1rem 1.5rem;
-      margin: 1rem 0;
-      font-size: 1.2rem;
-      line-height: 1.5;
+    .links li {
+      margin: 0.5em 0;
+    }
+    footer {
+      margin-top: 3em;
+      font-size: 0.9em;
+      text-align: center;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 1em;
     }
   </style>
-
-  <!-- MathJax -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
 </head>
 <body>
 
-  <h1>Professeur Pathy (Path) Kyungu</h1>
-  <p><strong>Mathématiques · Vulgarisation · Recherches</strong></p>
-
   <img src="images/kyungu-photo.jpg" alt="Professeur Pathy Kyungu" />
 
-  <div class="section">
-    <h2>👨🏽‍🏫 Qui suis-je ?</h2>
-    <p>
-      Je suis professeur de mathématiques à l’Institut Technique Industriel Lumière du Christ (Likasi, RDC). 
-      Je publie des recherches sur la transformée de Laplace inverse, notamment la <strong>Formule de Kyungu</strong>, 
-      et j'explore sa généralisation via la transformée de Mellin (formule <strong>KML</strong>).
-    </p>
-  </div>
+  <h1 class="center">Professeur Pathy (Path) Kyungu</h1>
+  <p class="center"><strong>Mathématiques · Vulgarisation · Recherches</strong></p>
 
-  <div class="section">
+  <section>
+    <h2>👨🏽‍🏫 Qui suis-je ?</h2>
+    <p>Je suis professeur de mathématiques à l’Institut Technique Industriel Lumière du Christ (Likasi, RDC). Je publie des recherches sur la transformée de Laplace inverse, notamment la <strong>Formule de Kyungu</strong>, et j'explore sa généralisation via la transformée de Mellin (formule KML).</p>
+  </section>
+
+  <section>
     <h2>🧠 Formules signatures</h2>
 
-    <p><strong>Formule de Kyungu (KL) – Transformée de Laplace inverse :</strong></p>
-    <div class="formula">
-      \[
-        \varphi(0) \, \delta(t) + \mathcal{L}^{-1}[F](t) = \sum_{n=0}^{\infty} \frac{(-1)^n}{n!} \, \varphi^{(n)}(1) \, t^n
-      \]
-      <small>avec \( \varphi(x) = F\left(\frac{1}{x}\right) \)</small>
-    </div>
-
-    <p><strong>Formule Kyungu-Mellin-Laplace (KML) :</strong></p>
-    <div class="formula">
-      \[
-        \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) = \sum_{n=0}^\infty \frac{(-1)^n}{n!} \, \varphi^{(n)}(1) \, (-\ln x)^n
-      \]
-      <small>où \( \mathcal{M}^{-1} \) est l'inverse de la transformée de Mellin</small>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>🧠 Ma formule de Kyungu</h2>
+    <h3>Formule de Kyungu (KL) – Transformée de Laplace inverse :</h3>
     <p>
-      J’ai développé une méthode originale pour la transformée de Laplace inverse à partir des dérivées d’une fonction auxiliaire.
+      \[
+        \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{(-1)^n}{n!} \, \varphi^{(n)}(1)\, t^n
+      \]
+      <br />
+      avec \( \varphi(x) = F\left(\frac{1}{x}\right) \)
     </p>
-    <ul>
-      <li>📘 <a href="formules-kyungu.html">Lire l’article complet (KL + KML)</a></li>
-      <li>📥 <a href="https://github.com/PathyKyungu/PathyKyungu.github.io/releases">Télécharger le fichier ZIP</a></li>
-      <li>📄 <a href="https://doi.org/10.5281/zenodo.15719813">DOI – Démonstration complète</a></li>
-      <li>📄 <a href="https://doi.org/10.5281/zenodo.15778235">DOI – Extensions via KML</a></li>
-      <li>📄 <a href="https://doi.org/10.5281/zenodo.15754963">DOI – Exemples et applications</a></li>
-    </ul>
-  </div>
 
-  <div class="section">
+    <h3>Formule Kyungu–Mellin–Laplace (KML) :</h3>
+    <p>
+      \[
+        \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) = \sum_{n=1}^{\infty} \frac{(-1)^n}{n!} \, \varphi^{(n)}(1)\, (\ln x)^n
+      \]
+      <br />
+      où \( \mathcal{M}^{-1} \) est l’inverse de la transformée de Mellin
+    </p>
+  </section>
+
+  <section class="links">
+    <h2>🧠 Ma formule de Kyungu</h2>
+    <ul>
+      <li>📘 <a href="https://pathykyungu.github.io/article-formule-kyungu.html" target="_blank" rel="noopener noreferrer">Lire l’article complet (KL + KML)</a></li>
+      <li>📥 <a href="https://github.com/PathyKyungu/Kyungu-Laplace/releases/latest" target="_blank" rel="noopener noreferrer">Télécharger le fichier ZIP</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15719813" target="_blank" rel="noopener noreferrer">DOI – Démonstration complète</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15778235" target="_blank" rel="noopener noreferrer">DOI – Extensions via KML</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15754963" target="_blank" rel="noopener noreferrer">DOI – Exemples et applications</a></li>
+    </ul>
+  </section>
+
+  <section class="links">
     <h2>📲 Me retrouver sur :</h2>
     <ul>
-      <li>🎥 TikTok : <a href="https://www.tiktok.com/@professeurpath">Professeur Path</a></li>
-      <li>📘 Facebook : <a href="https://www.facebook.com/leprofesseurdesmaths">Le Professeur des Maths</a></li>
-      <li>📂 Zenodo : <a href="https://zenodo.org/search?page=1&size=20&q=kyungu">Formule de Kyungu sur Zenodo</a></li>
-      <li>🔗 Linktree : <a href="https://linktr.ee/leprofesseurkyungu">Tous mes liens</a></li>
+      <li>🎥 <a href="https://www.tiktok.com/@professeurpath" target="_blank" rel="noopener noreferrer">TikTok : Professeur Path</a></li>
+      <li>📘 <a href="https://www.facebook.com/leprofesseursdesmaths" target="_blank" rel="noopener noreferrer">Facebook : Le Professeur des Maths</a></li>
+      <li>📂 <a href="https://zenodo.org/communities/kyungu" target="_blank" rel="noopener noreferrer">Zenodo : Formule de Kyungu sur Zenodo</a></li>
+      <li>🔗 <a href="https://linktr.ee/leprofesseurkyungu" target="_blank" rel="noopener noreferrer">Linktree : Tous mes liens</a></li>
     </ul>
-  </div>
+  </section>
 
-  <div class="section">
+  <section>
     <h2>📬 Contact</h2>
     <p>Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></p>
-  </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Professeur Pathy Kyungu – Tous droits réservés.
+  </footer>
 
 </body>
 </html>
