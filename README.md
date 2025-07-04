@@ -1,87 +1,76 @@
-# 🌟 Formule de Kyungu – Transformée de Laplace Inverse  
-## 🌍 Kyungu’s Formula – Inverse Laplace Transform
+# 📘 Formules de Kyungu – Approches analytiques inverses
 
-Bienvenue sur le dépôt officiel de la **Formule de Kyungu**, une méthode analytique originale pour calculer la transformée de Laplace inverse à partir des dérivées successives d'une fonction auxiliaire.
+Ce dépôt présente les travaux originaux du Professeur **Pathy Kyungu** sur les méthodes inverses en analyse opérationnelle, notamment :
 
-Welcome to the official repository of the **Kyungu Formula**, an original analytical method for computing the inverse Laplace transform from successive derivatives of an auxiliary function.
-
-🔗 **Site web / Website**: [pathykyungu.github.io](https://pathykyungu.github.io)
-
----
-
-## 📘 Présentation (FR)
-
-La Formule de Kyungu permet d'exprimer \( f(t) \), la transformée inverse de Laplace d'une fonction \( F(p) \), à partir des dérivées de :
-
-\[
-\varphi(x) = F\left(\frac{1}{x}\right)
-\]
-
-Formule :
-
-\[
-f(t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
-\]
+- ✅ La **formule de Kyungu pour la transformée de Laplace inverse (KL)**
+- ✅ La **formule Kyungu-Mellin-Laplace (KML)**, qui établit un pont entre les transformées de Laplace et de Mellin
+- ✅ Des séries généralisées, des applications pédagogiques, et des résultats inédits non présents dans les tables classiques
 
 ---
 
-## 📘 Overview (EN)
+## 🌐 Accès rapide
 
-Kyungu’s formula expresses the inverse Laplace transform \( f(t) \) of a function \( F(p) \) in terms of derivatives of:
-
-\[
-\varphi(x) = F\left(\frac{1}{x}\right)
-\]
-
-Formula:
-
-\[
-f(t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
-\]
+- 🔗 **Site officiel** : [https://pathykyungu.github.io](https://pathykyungu.github.io)
+- 📥 **Téléchargement de l’archive** :  
+  [📦 Kyungu-Laplace.zip](./Kyungu-Laplace.zip)
 
 ---
 
-## 📦 Télécharger l’article / Download the article
+## 🧠 Objectifs du projet
 
-📥 [Télécharger l’archive ZIP / Download ZIP](./Kyungu-Laplace.zip)
+Ce travail vise à :
 
-Contenu / Contents:
-- `kyungu-inverse-laplace-article.tex`
-- `kyungu-inverse-laplace-article.pdf`
-- `README.txt`
-
----
-
-## 🧪 Exemples traités / Examples
-
-1. \( F(p) = \dfrac{1}{p^4} \)  
-2. \( F(p) = \dfrac{1}{1 + p^2} \)  
-3. \( F(p) = \dfrac{p^2}{1 + p^3} \)
+- Proposer une nouvelle façon d’aborder les **transformées inverses**
+- Réconcilier les outils analytiques avec les méthodes pédagogiques modernes
+- Offrir aux chercheurs et aux étudiants des **outils accessibles, puissants et cohérents**
 
 ---
 
-## 👨🏽‍🏫 Auteur / Author
+## 📄 Contenu de l’archive ZIP
+
+- `kyungu-inverse-laplace-article.tex` – Code LaTeX complet
+- `kyungu-inverse-laplace-article.pdf` – Article académique
+- `README.txt` – Résumé et instructions
+
+---
+
+## 🧪 Exemples traités
+
+Les méthodes sont appliquées à plusieurs fonctions transformées, dont :
+
+1. \( F(p) = 1/p^4 \)
+2. \( F(p) = 1/(1 + p^2) \)
+3. \( F(p) = p^2/(1 + p^3) \)
+4. \( F(p) = e^{2/p} \)
+5. \( F(p) = p^5 / (1 - p^5) \)
+
+*→ Les détails et les calculs se trouvent dans la version HTML du site ci-dessous.*
+
+---
+
+## 📘 Lire l’article complet en ligne
+
+🔍 **Page dédiée avec formules et exemples** (MathJax activé) :  
+👉 [pathykyungu.github.io/formules-kyungu.html](https://pathykyungu.github.io/formules-kyungu.html)
+
+---
+
+## 🔗 Publications officielles
+
+- 📌 [DOI 1 – Démonstration de la formule](https://doi.org/10.5281/zenodo.15719813)
+- 📌 [DOI 2 – Extensions via la formule KML](https://doi.org/10.5281/zenodo.15778235)
+- 📌 [DOI 3 – Exemples et séries non classiques](https://doi.org/10.5281/zenodo.15754963)
+
+---
+
+## 👤 Auteur
 
 **Prof. Pathy Kyungu**  
-Institut Technique Industriel Lumière du Christ – Likasi, RDC  
+Institut Technique Industriel Lumière du Christ (Likasi, RDC)  
 📧 [leprofesseurkyungu@gmail.com](mailto:leprofesseurkyungu@gmail.com)  
 🌐 [pathykyungu.github.io](https://pathykyungu.github.io)  
 🔗 [linktr.ee/leprofesseurkyungu](https://linktr.ee/leprofesseurkyungu)
 
 ---
 
-## 🔗 Publications officielles (DOI)
-
-- [DOI 1 – Article principal](https://doi.org/10.5281/zenodo.15719813)  
-- [DOI 2 – Extensions KML](https://doi.org/10.5281/zenodo.15778235)  
-- [DOI 3 – Exemples avancés](https://doi.org/10.5281/zenodo.15754963)
-
----
-
-## 🎓 Objectif pédagogique / Educational purpose
-
-Cette formule inverse favorise une compréhension intuitive des équations différentielles et peut être enseignée **avant la transformation directe**.  
-This inverse formula supports an intuitive approach and can be taught **prior to the direct Laplace transform**.
-
-Merci pour votre intérêt scientifique 🙏🏽  
-Thank you for your scientific curiosity 🙏🏽
+Merci pour votre intérêt et votre curiosité scientifique 🙏🏽
