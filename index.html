@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Professeur Pathy Kyungu – Formules de Kyungu</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0 auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       max-width: 800px;
-      padding: 2rem;
+      margin: 2rem auto;
       background-color: #f8f8f8;
       color: #333;
+      padding: 1rem 2rem;
     }
     h1, h2 {
       color: #1e3a8a;
@@ -26,12 +26,36 @@
     .section {
       margin-bottom: 2rem;
     }
+    img {
+      max-width: 250px;
+      height: auto;
+      display: block;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .formula {
+      background: #fff;
+      border-left: 5px solid #1e3a8a;
+      padding: 1rem 1.5rem;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
   </style>
+
+  <!-- MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
 
   <h1>Professeur Pathy (Path) Kyungu</h1>
   <p><strong>Mathématiques · Vulgarisation · Recherches</strong></p>
+
+  <img src="images/kyungu-photo.jpg" alt="Professeur Pathy Kyungu" />
 
   <div class="section">
     <h2>👨🏽‍🏫 Qui suis-je ?</h2>
@@ -40,6 +64,26 @@
       Je publie des recherches sur la transformée de Laplace inverse, notamment la <strong>Formule de Kyungu</strong>, 
       et j'explore sa généralisation via la transformée de Mellin (formule <strong>KML</strong>).
     </p>
+  </div>
+
+  <div class="section">
+    <h2>🧠 Formules signatures</h2>
+
+    <p><strong>Formule de Kyungu (KL) – Transformée de Laplace inverse :</strong></p>
+    <div class="formula">
+      \[
+        \varphi(0) \, \delta(t) + \mathcal{L}^{-1}[F](t) = \sum_{n=0}^{\infty} \frac{(-1)^n}{n!} \, \varphi^{(n)}(1) \, t^n
+      \]
+      <small>avec \( \varphi(x) = F\left(\frac{1}{x}\right) \)</small>
+    </div>
+
+    <p><strong>Formule Kyungu-Mellin-Laplace (KML) :</strong></p>
+    <div class="formula">
+      \[
+        \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) = \sum_{n=0}^\infty \frac{(-1)^n}{n!} \, \varphi^{(n)}(1) \, (-\ln x)^n
+      \]
+      <small>où \( \mathcal{M}^{-1} \) est l'inverse de la transformée de Mellin</small>
+    </div>
   </div>
 
   <div class="section">
