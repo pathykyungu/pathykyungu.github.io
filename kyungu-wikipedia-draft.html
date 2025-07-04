@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formule de Kyungu – Brouillon Wikipédia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Georgia, serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    a { color: #0066cc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Formule de Kyungu</h1>
+
+  <p><strong>La formule de Kyungu</strong> est une expression mathématique pour la <strong>transformée de Laplace inverse</strong>, proposée par <strong>Pathy Kyungu</strong>, professeur de mathématiques congolais. Elle exprime la fonction inverse \( f(t) \) à partir des dérivées successives d’une fonction auxiliaire \( \varphi(x) = F(1/x) \).</p>
+
+  <h2>Définition</h2>
+  <p>Soit \( F(p) \) une fonction dans le domaine de Laplace. On définit :</p>
+  <pre>
+    \( \varphi(x) = F\left(\frac{1}{x}\right) \)
+    \( f(t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1} \)
+  </pre>
+
+  <h2>Formule Kyungu–Mellin–Laplace (KML)</h2>
+  <p>La formule est reliée à la transformée de Mellin inverse via la substitution \( t = -\ln x \) :</p>
+  <pre>
+    \( \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) \)
+  </pre>
+
+  <h2>Exemples</h2>
+
+  <ul>
+    <li><strong>F(p) = 1/p⁴</strong> ⇒ \( f(t) = \frac{1}{6} t^3 \)</li>
+    <li><strong>F(p) = 1/(1 + p²)</strong> ⇒ \( f(t) = \sin(t) \)</li>
+    <li><strong>F(p) = p²/(1 + p³)</strong> ⇒ 
+      \( f(t) = \frac{1}{3}e^{-t} + \frac{2}{3} e^{t/2} \cos\left(\frac{\sqrt{3}}{2}t - \frac{\pi}{3}\right) \)
+    </li>
+  </ul>
+
+  <h2>Références</h2>
+  <ul>
+    <li><a href="https://doi.org/10.5281/zenodo.15719813" target="_blank">doi.org/10.5281/zenodo.15719813</a></li>
+    <li><a href="https://doi.org/10.5281/zenodo.15778235" target="_blank">doi.org/10.5281/zenodo.15778235</a></li>
+    <li><a href="https://doi.org/10.5281/zenodo.15754963" target="_blank">doi.org/10.5281/zenodo.15754963</a></li>
+  </ul>
+
+  <p>Site officiel : <a href="https://pathykyungu.github.io" target="_blank">pathykyungu.github.io</a></p>
+
+  <hr>
+  <p style="font-size: 0.9em; color: #555;">Ce brouillon est destiné à inspirer la rédaction d’un futur article Wikipédia par des contributeurs indépendants.</p>
+</body>
+</html>
