@@ -44,8 +44,6 @@
 
 <p>La <strong>formule de Kyungu</strong> propose une approche nouvelle et élégante qui permet de retrouver \( f(t) \) à partir de \( F(p) \) sans passer par des intégrales complexes ni des tables classiques.</p>
 
----
-
 <h2>2. La formule de Kyungu (KL)</h2>
 
 <p>Soit \( F(p) \) une fonction de Laplace. On définit une fonction auxiliaire :</p>
@@ -62,9 +60,7 @@ f(t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2}
 
 <p>Le terme \( \varphi(0)\delta(t) \) représente la composante impulsionnelle (cas où \( f \) contient un Dirac).</p>
 
----
-
-<h2>3. Exemple : \( F(p) = \frac{1}{p^2} \)</h2>
+<h2>3. Exemple 1 : \( F(p) = \frac{1}{p^2} \)</h2>
 
 <p>Ici, \( \varphi(x) = x^2 \), donc :</p>
 
@@ -80,45 +76,71 @@ f(t) = \frac{2}{(2!)^2} \cdot 2 \cdot t^{1} = t
 
 <p>Ce qui correspond bien à la transformée de Laplace inverse de \( \frac{1}{p^2} \).</p>
 
----
+<h2>4. Exemple 2 : \( F(p) = \frac{1}{1 + p^3} \)</h2>
 
-<h2>4. Exemple : \( F(p) = \frac{1}{1 + p^3} \)</h2>
+<h3>Application de la formule de Kyungu</h3>
 
-<p>Alors \( \varphi(x) = \frac{1}{1 + \frac{1}{x^3}} = \frac{x^3}{x^3 + 1} \)</p>
-
-<p>On calcule ses dérivées, on applique la formule KL pour obtenir une série convergente. Ici, la méthode classique (résidus ou tables) échoue à donner une forme fermée facilement. La formule de Kyungu donne :</p>
-
+<p>On définit :</p>
 <p>\[
-f(t) = \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+\varphi(x) = F\left(\frac{1}{x}\right) = \frac{x^3}{x^3 + 1}
 \]</p>
 
-<p>qui est la représentation directe de la solution.</p>
-
----
-
-<h2>5. Avantage pédagogique</h2>
-
-<p>La formule de Kyungu évite les intégrales complexes et donne un accès direct à \( f(t) \) à partir de \( F(p) \) par simple calcul de dérivées et développement en série.</p>
-
-<p>Elle révèle aussi une passerelle naturelle avec la transformée de Mellin :</p>
-
+<p>Développement en série de Taylor :</p>
 <p>\[
-\mathcal{M}^{-1}[F](x) = f(-\ln x)
-\Rightarrow \text{Formule KML}
+\varphi(x) = \sum_{k=1}^{\infty} (-1)^{k+1} x^{3k}
 \]</p>
 
----
+<p>Donc les dérivées sont :</p>
+<p>\[
+\varphi^{(n)}(0) = \begin{cases}
+(-1)^{k+1} (3k)! & \text{si } n = 3k \\
+0 & \text{sinon}
+\end{cases}
+\]</p>
 
-<h2>6. Conclusion</h2>
+<p>Et la formule de Kyungu donne :</p>
+<p>\[
+f(t) = \sum_{k=1}^{\infty} \frac{(-1)^{k+1} \cdot 3k}{(3k)!} \cdot t^{3k - 1}
+\]</p>
 
-<p>Cette nouvelle approche ouvre la voie à une pédagogie inverse : enseigner d’abord la transformée de Laplace <strong>inverse</strong>, puis la directe.</p>
+<h3>Forme fermée retrouvée par intégration complexe</h3>
 
-<p>La formule de Kyungu est une alternative simple, rigoureuse et efficace aux méthodes classiques.</p>
+<p>Bien que la fonction 
+\(
+F(p) = \dfrac{1}{1 + p^3}
+\)
+n’apparaisse pas dans les tables classiques, 
+il est possible de retrouver une forme fermée par la décomposition suivante :</p>
 
----
+\[
+1 + p^3 = (p + 1)(p + \omega)(p + \omega^2), \quad \omega = e^{2i\pi/3}
+\]
 
-<h2>📩 Contact</
-  <ul>
+<p>La transformée inverse devient alors :</p>
+
+\[
+f(t) = \frac{1}{3} e^{-t} + \frac{1}{3\omega^2} e^{-\omega t} + \frac{1}{3\omega} e^{-\omega^2 t}
+\]
+
+<p>Ce qui donne, en projection réelle :</p>
+
+<p>\[
+\boxed{
+f(t) = \frac{1}{3} e^{-t} + \frac{2}{3} e^{t/2} \cos\left( \frac{\sqrt{3}}{2} t - \frac{\pi}{3} \right)
+}
+\]</p>
+
+<p>Cela confirme que la série issue de la formule de Kyungu converge vers cette solution exacte.</p>
+
+<h2>5. Conclusion</h2>
+
+<p>La formule de Kyungu offre une méthode directe pour retrouver la transformée de Laplace inverse sans tables ni résidus, en calculant seulement une série dérivée de la fonction auxiliaire \( \varphi(x) = F(1/x) \).</p>
+
+<p>Elle permet aussi de mettre en lumière des formes fermées même quand elles sont absentes des tables classiques.</p>
+
+<h2>📩 Contact</h2>
+
+<ul>
   <li>🌐 Site : <a href="https://pathykyungu.github.io">pathykyungu.github.io</a></li>
   <li>📧 Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></li>
   <li>📹 TikTok / YouTube : Le Professeur des Maths</li>
