@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kyungu’s Formula – Inverse Laplace Transform</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2em;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    code {
+      background-color: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+    }
+    a {
+      color: #0066cc;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🧠 Kyungu’s Formula: A New Method for the Inverse Laplace Transform</h1>
+
+<p><strong>By Path Kyungu – Mathematician and Educator</strong><br />
+<a href="https://pathykyungu.github.io">pathykyungu.github.io</a></p>
+
+<hr />
+
+<h2>1. Introduction</h2>
+
+<p>The inverse Laplace transform plays a fundamental role in the analysis of dynamic systems, differential equations, and signal processing.</p>
+
+<p><strong>Kyungu’s formula</strong> offers a new and elegant approach to retrieve \( f(t) \) from \( F(p) \) without relying on complex integrals or classical tables.</p>
+
+<h2>2. Kyungu’s Formula (KL)</h2>
+
+<p>Given a Laplace function \( F(p) \), define an auxiliary function:</p>
+
+<p>\[
+\varphi(x) = F\left(\frac{1}{x}\right)
+\]</p>
+
+<p>Then, the inverse Laplace transform \( f(t) \) is given by:</p>
+
+<p>\[
+f(t) = \varphi(0) \delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+\]</p>
+
+<p>The term \( \varphi(0) \delta(t) \) represents the impulsive component (when \( f \) contains a Dirac delta).</p>
+
+<h2>3. Example 1: \( F(p) = \frac{1}{p^2} \)</h2>
+
+<p>Here, \( \varphi(x) = x^2 \), so:</p>
+
+<p>\[
+\varphi^{(n)}(0) =
+\begin{cases}
+0 & \text{if } n \neq 2 \\
+2 & \text{if } n = 2
+\end{cases}
+\Rightarrow
+f(t) = \frac{2}{(2!)^2} \cdot 2 \cdot t^{1} = t
+\]</p>
+
+<p>This corresponds exactly to the inverse Laplace transform of \( \frac{1}{p^2} \).</p>
+
+<h2>4. Example 2: \( F(p) = \frac{1}{1 + p^3} \)</h2>
+
+<h3>Applying Kyungu’s formula</h3>
+
+<p>Define:</p>
+<p>\[
+\varphi(x) = F\left(\frac{1}{x}\right) = \frac{x^3}{x^3 + 1}
+\]</p>
+
+<p>Taylor series expansion:</p>
+<p>\[
+\varphi(x) = \sum_{k=1}^\infty (-1)^{k+1} x^{3k}
+\]</p>
+
+<p>Thus, the derivatives are:</p>
+<p>\[
+\varphi^{(n)}(0) = \begin{cases}
+(-1)^{k+1} (3k)! & \text{if } n = 3k \\
+0 & \text{otherwise}
+\end{cases}
+\]</p>
+
+<p>And Kyungu’s formula gives:</p>
+<p>\[
+f(t) = \sum_{k=1}^\infty \frac{(-1)^{k+1} \cdot 3k}{(3k)!} \cdot t^{3k - 1}
+\]</p>
+
+<h3>Closed form recovered by real projection</h3>
+
+<p>Although the function
+\(
+F(p) = \dfrac{1}{1 + p^3}
+\)
+does not appear in classical tables,
+it is possible to recover a closed form from the complex sum
+by projecting it onto the real axis using the cube roots of unity.</p>
+
+<p>Factorization:</p>
+
+\[
+1 + p^3 = (p + 1)(p + \omega)(p + \omega^2), \quad \omega = e^{2i\pi/3}
+\]
+
+<p>The inverse transform then becomes:</p>
+
+\[
+f(t) = \frac{1}{3} e^{-t} + \frac{1}{3\omega^2} e^{-\omega t} + \frac{1}{3\omega} e^{-\omega^2 t}
+\]
+
+<p>Projecting this complex expression onto the real axis yields:</p>
+
+<p>\[
+\boxed{
+f(t) = \frac{1}{3} e^{-t} + \frac{2}{3} e^{t/2} \cos\left( \frac{\sqrt{3}}{2} t - \frac{\pi}{3} \right)
+}
+\]</p>
+
+<p>This shows that the series obtained via Kyungu’s formula converges to this exact solution, even though it is absent from classical tables.</p>
+
+<h2>5. Conclusion</h2>
+
+<p>Kyungu’s formula provides a direct method to recover the inverse Laplace transform without tables or residues, by computing only a series derived from the auxiliary function \( \varphi(x) = F(1/x) \).</p>
+
+<p>It also sheds light on closed forms even when they are missing from classical tables.</p>
+
+<h2>📩 Contact</h2>
+
+<ul>
+  <li>🌐 Website: <a href="https://pathykyungu.github.io">pathykyungu.github.io</a></li>
+  <li>📧 Email: <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></li>
+  <li>📹 TikTok / YouTube: Le Professeur des Maths</li>
+</ul>
+
+<footer style="margin-top: 2em; font-size: 0.9em; color: #777; text-align: center;">
+  Last updated: July 2025 · Written by Pathy Kyungu
+</footer>
+
+</body>
+</html>
