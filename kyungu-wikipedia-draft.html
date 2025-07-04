@@ -4,37 +4,69 @@
   <meta charset="UTF-8">
   <title>Formule de Kyungu – Brouillon Wikipédia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
   <style>
-    body { font-family: Georgia, serif; max-width: 800px; margin: auto; padding: 2rem; line-height: 1.6; }
-    h1, h2 { color: #2c3e50; }
-    a { color: #0066cc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    pre { background: #f9f9f9; padding: 1em; border-left: 4px solid #ccc; }
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
   <h1>Formule de Kyungu</h1>
 
-  <p><strong>La formule de Kyungu</strong> est une expression mathématique originale pour la <strong>transformée de Laplace inverse</strong>, proposée par <strong>Pathy Kyungu</strong>, professeur de mathématiques congolais. Elle exprime la fonction inverse \( f(t) \) à partir des dérivées successives d’une fonction auxiliaire \( \varphi(x) = F(1/x) \).</p>
+  <p>La <strong>formule de Kyungu</strong> est une expression mathématique originale pour la <strong>transformée de Laplace inverse</strong>, proposée par <strong>Pathy Kyungu</strong>, professeur de mathématiques congolais. Elle exprime la fonction inverse $f(t)$ à partir des dérivées successives d’une fonction auxiliaire $\varphi(x) = F(1/x)$.</p>
 
   <h2>Définition</h2>
-  <pre>
-\( \varphi(x) = F\left(\frac{1}{x}\right) \)
-\( f(t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1} \)
-  </pre>
+  <p>Soit $F(p)$ une fonction dans le domaine de Laplace. On définit :</p>
+  <p>
+    \[
+    \varphi(x) = F\left(\frac{1}{x}\right)
+    \]
+    \[
+    f(t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+    \]
+  </p>
 
   <h2>Formule Kyungu–Mellin–Laplace (KML)</h2>
-  <p>La formule est reliée à la transformée de Mellin inverse via la substitution \( t = -\ln x \) :</p>
-  <pre>
-\( \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) \)
-  </pre>
+  <p>La formule est reliée à la transformée de Mellin inverse via la substitution $t = -\ln x$ :</p>
+  <p>
+    \[
+    \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x)
+    \]
+  </p>
 
   <h2>Exemples</h2>
   <ul>
-    <li><strong>F(p) = 1/p⁴</strong> ⇒ \( f(t) = \frac{1}{6} t^3 \)</li>
-    <li><strong>F(p) = 1/(1 + p²)</strong> ⇒ \( f(t) = \sin(t) \)</li>
-    <li><strong>F(p) = p²/(1 + p³)</strong> ⇒ 
-      \( f(t) = \frac{1}{3}e^{-t} + \frac{2}{3} e^{t/2} \cos\left(\frac{\sqrt{3}}{2}t - \frac{\pi}{3}\right) \)
+    <li><strong>$F(p) = \dfrac{1}{p^4}$</strong> ⇒ $f(t) = \dfrac{1}{6}t^3$</li>
+    <li><strong>$F(p) = \dfrac{1}{1 + p^2}$</strong> ⇒ $f(t) = \sin(t)$</li>
+    <li><strong>$F(p) = \dfrac{p^2}{1 + p^3}$</strong> ⇒ 
+      \[
+      f(t) = \frac{1}{3}e^{-t} + \frac{2}{3} e^{t/2} \cos\left(\frac{\sqrt{3}}{2}t - \frac{\pi}{3}\right)
+      \]
     </li>
   </ul>
 
