@@ -6,7 +6,9 @@
   <title>Professeur Pathy Kyungu – Mathématiques & Recherches</title>
 
   <!-- MathJax -->
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 
   <style>
     body {
@@ -20,6 +22,13 @@
     }
     h1, h2, h3 {
       color: #0055aa;
+    }
+    img {
+      max-width: 180px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     a {
       color: #0055aa;
@@ -47,6 +56,7 @@
       padding-top: 1em;
     }
 
+    /* Badge réseaux */
     .badge-container {
       position: relative;
       width: 500px;
@@ -61,13 +71,13 @@
     }
     .zone {
       position: absolute;
-      width: 50%;
-      height: 50%;
+      width: 250px;
+      height: 250px;
     }
-    .zone.tiktok { top: 0; left: 0; }
-    .zone.facebook { top: 0; left: 50%; }
-    .zone.zenodo { top: 50%; left: 0; }
-    .zone.linktree { top: 50%; left: 50%; }
+    .zone.tiktok   { top: 0; left: 0; }
+    .zone.facebook { top: 0; left: 250px; }
+    .zone.zenodo   { top: 250px; left: 0; }
+    .zone.linktree { top: 250px; left: 250px; }
     .zone a {
       display: block;
       width: 100%;
@@ -77,7 +87,7 @@
 </head>
 <body>
 
-  <img src="images/kyungu-photo.jpg" alt="Professeur Pathy Kyungu" style="max-width:180px; border-radius:50%; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
+  <img src="images/kyungu-photo.jpg" alt="Professeur Pathy Kyungu" />
 
   <h1 class="center">Professeur Pathy (Path) Kyungu</h1>
   <p class="center"><strong>Mathématiques · Vulgarisation · Recherches</strong></p>
@@ -108,62 +118,44 @@
   </section>
 
   <section class="links">
-    <h2>📲 Me retrouver sur :</h2>
+    <h2>📄 Publications Zenodo</h2>
     <ul>
-      <li>🎥 <a href="https://www.tiktok.com/@mathkyungu" target="_blank" rel="noopener noreferrer">TikTok : @mathkyungu</a></li>
-      <li>📂 <a href="https://zenodo.org/communities/kyungu-formula" target="_blank" rel="noopener noreferrer">Zenodo – Formule de Kyungu – Laplace et Mellin (KML)</a></li>
-      <li>📘 <a href="https://www.facebook.com/mathkyungu" target="_blank" rel="noopener noreferrer">Facebook : @mathkyungu</a></li>
-      <li>🔗 <a href="https://linktr.ee/leprofesseurkyungu" target="_blank" rel="noopener noreferrer">Linktree : Tous mes liens</a></li>
+      <li>📘 <a href="https://pathykyungu.github.io/article-formule-kyungu.html" target="_blank">Lire l’article complet (KL + KML)</a></li>
+      <li>📥 <a href="https://github.com/PathyKyungu/Kyungu-Laplace/releases/latest" target="_blank">Télécharger le fichier ZIP</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15719813" target="_blank">DOI – Démonstration complète</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15778234" target="_blank">DOI – Extensions via KML</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15754963" target="_blank">DOI – Exemples et applications</a></li>
     </ul>
   </section>
 
-<!-- ✅ Badge carré interactif -->
-<div class="badge-container">
-  <img src="images/badges-reseaux-optimise.png" alt="Badge réseaux Professeur Kyungu">
-  
-  <div class="zone tiktok">
-    <a href="https://www.tiktok.com/@mathkyungu" target="_blank" title="TikTok"></a>
-  </div>
-  
-  <div class="zone facebook">
-    <a href="https://www.facebook.com/mathkyungu" target="_blank" title="Facebook"></a>
-  </div>
-  
-  <div class="zone zenodo">
-    <a href="https://zenodo.org/communities/kyungu-formula" target="_blank" title="Zenodo"></a>
-  </div>
-  
-  <div class="zone linktree">
-    <a href="https://linktr.ee/leprofesseurkyungu" target="_blank" title="Linktree"></a>
-  </div>
-</div>
+  <section>
+    <h2>🌐 Réseaux – Accès rapide</h2>
+
+    <div class="badge-container">
+      <img src="images/badges-reseaux-optimise.png" alt="Badge réseaux Professeur Kyungu">
+      <div class="zone tiktok"><a href="https://www.tiktok.com/@mathkyungu" target="_blank" title="TikTok"></a></div>
+      <div class="zone facebook"><a href="https://www.facebook.com/mathkyungu" target="_blank" title="Facebook"></a></div>
+      <div class="zone zenodo"><a href="https://zenodo.org/communities/kyungu-formula" target="_blank" title="Zenodo"></a></div>
+      <div class="zone linktree"><a href="https://linktr.ee/leprofesseurkyungu" target="_blank" title="Linktree"></a></div>
+    </div>
+  </section>
+
+  <section class="links">
+    <h2>📦 Mes dépôts GitHub récents</h2>
+    <ul>
+      <li>🧪 <a href="https://github.com/PathyKyungu/formule-kyungu.html" target="_blank">Formule de Kyungu (Laplace inverse)</a></li>
+      <li>🔁 <a href="https://github.com/PathyKyungu/inverse-laplace-kyungu.html" target="_blank">Démonstration complète de l'inverse de Laplace</a></li>
+      <li>🌐 <a href="https://github.com/PathyKyungu/kyungu-formula-en.html" target="_blank">Kyungu Formula – English version</a></li>
+      <li>📚 <a href="https://github.com/PathyKyungu/kyungu-wikipedia-draft.html" target="_blank">Ébauche Wikipedia de la Formule de Kyungu</a></li>
+      <li>🗂️ <a href="https://github.com/PathyKyungu?tab=repositories" target="_blank">Voir tous mes dépôts sur GitHub</a></li>
+    </ul>
+  </section>
 
   <section>
     <h2>📬 Contact</h2>
     <p>Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></p>
   </section>
-  
-<section class="links">
-  <h2>📦 Mes dépôts GitHub récents</h2>
-  <ul>
-    <li>🧪 <a href="https://github.com/PathyKyungu/formule-kyungu.html" target="_blank">
-      Formule de Kyungu (Laplace inverse)</a></li>
-      
-    <li>🔁 <a href="https://github.com/PathyKyungu/inverse-laplace-kyungu.html" target="_blank">
-      Démonstration complète de l'inverse de Laplace</a></li>
-      
-    <li>🌐 <a href="https://github.com/PathyKyungu/kyungu-formula-en.html" target="_blank">
-      Kyungu Formula – English version</a></li>
-      
-    <li>📚 <a href="https://github.com/PathyKyungu/kyungu-wikipedia-draft.html" target="_blank">
-      Ébauche Wikipedia de la Formule de Kyungu</a></li>
 
-    <!-- ✅ BONUS : tous les dépôts -->
-    <li>🗂️ <a href="https://github.com/PathyKyungu?tab=repositories" target="_blank">
-      Voir tous mes dépôts sur GitHub</a></li>
-  </ul>
-</section>
-  
   <footer>
     &copy; 2025 Professeur Pathy Kyungu – Tous droits réservés.
   </footer>
