@@ -106,14 +106,22 @@
     <h2>🧠 Formules signatures</h2>
 
     <h3>Formule de Kyungu (KL) – Transformée de Laplace inverse :</h3>
-    <p>
-      \[
-        \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, t^{n-1}
-      \]
-      <br />
-      avec \( \varphi(x) = F\left(\frac{1}{x}\right) \)
-    </p>
+<p>
+  \[
+    \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, t^{n-1}
+  \]
+  <br />
+  avec \( \varphi(x) = F\left(\frac{1}{x}\right) \)
+</p>
 
+<h3>Formule de Kyungu (KL) – Forme intégrale :</h3>
+<p>
+  \[
+    \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} e^{t/z} \, dz
+  \]
+  <br>
+  avec \( \varphi(x) = F\left( \frac{1}{x} \right) \), et \( \Gamma \) un petit contour autour de \( z = 0 \).
+</p>
     <<h3>Formule Kyungu–Mellin–Laplace (KML) :</h3>
 <p>
   \[
