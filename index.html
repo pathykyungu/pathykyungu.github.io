@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professeur Pathy Kyungu – Mathématiques & Recherches</title>
+
+<meta name="google-site-verification" content="kakT10w8CuFR8JiWMW4Ls1L5yg6bhH3nzfzKLMq8C0Y" />
+  <!-- MathJax -->
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 1em auto;
+      padding: 0 1em;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #0055aa;
+    }
+
+    /* Photo de profil uniquement */
+    img.profile-photo {
+      max-width: 180px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    a {
+      color: #0055aa;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .center {
+      text-align: center;
+    }
+    .links ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .links li {
+      margin: 0.5em 0;
+    }
+    footer {
+      margin-top: 3em;
+      font-size: 0.9em;
+      text-align: center;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 1em;
+    }
+
+    /* Badge réseaux */
+    .badge-container {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      margin: 2em auto;
+      border: 1px solid #ccc;
+    }
+    .badge-container img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 0;
+    }
+    .zone {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+    }
+    .zone.tiktok   { top: 0; left: 0; }
+    .zone.facebook { top: 0; left: 250px; }
+    .zone.zenodo   { top: 250px; left: 0; }
+    .zone.linktree { top: 250px; left: 250px; }
+    .zone a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="images/kyungu-photo.jpg" alt="Professeur Pathy Kyungu" class="profile-photo" />
+
+  <h1 class="center">Professeur Pathy (Path) Kyungu</h1>
+  <p class="center"><strong>Mathématiques · Vulgarisation · Recherches</strong></p>
+
+  <section>
+    <h2>👨🏽‍🏫 Qui suis-je ?</h2>
+    <p>Je suis professeur de mathématiques à l’Institut Technique Industriel Lumière du Christ (Likasi, RDC). Je publie des recherches sur la transformée de Laplace inverse, notamment la <strong>Formule de Kyungu</strong>, et j'explore sa généralisation via la transformée de Mellin (formule KML).</p>
+  </section>
+
+  <section>
+    <h2>🧠 Formules signatures</h2>
+
+    <h3>Formule de Kyungu (KL) – Transformée de Laplace inverse :</h3>
+    <p>
+      \[
+        \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, t^{n-1}
+      \]
+      <br />
+      avec \( \varphi(x) = F\left(\frac{1}{x}\right) \)
+    </p>
+
+    <h3>Formule Kyungu–Mellin–Laplace (KML) :</h3>
+    <p>
+      \[
+        \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) = \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
+      \]
+    </p>
+  </section>
+
+  <section class="links">
+    <h2>📄 Publications Zenodo</h2>
+    <ul>
+      <li>📘 <a href="https://pathykyungu.github.io/article-formule-kyungu.html" target="_blank">Lire l’article complet (KL + KML)</a></li>
+      <li>📥 <a href="https://github.com/PathyKyungu/Kyungu-Laplace/releases/latest" target="_blank">Télécharger le fichier ZIP</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15719813" target="_blank">DOI – Démonstration complète</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15778234" target="_blank">DOI – Extensions via KML</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15754963" target="_blank">DOI – Exemples et applications</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🌐 Réseaux – Accès rapide</h2>
+
+    <div class="badge-container">
+      <img src="images/badges-reseaux.png" alt="Badge réseaux Professeur Kyungu">
+      <div class="zone tiktok"><a href="https://www.tiktok.com/@mathkyungu" target="_blank" title="TikTok"></a></div>
+      <div class="zone facebook"><a href="https://www.facebook.com/mathkyungu" target="_blank" title="Facebook"></a></div>
+      <div class="zone zenodo"><a href="https://zenodo.org/communities/kyungu-formula" target="_blank" title="Zenodo"></a></div>
+      <div class="zone linktree"><a href="https://linktr.ee/leprofesseurkyungu" target="_blank" title="Linktree"></a></div>
+    </div>
+  </section>
+
+  <section class="links">
+    <h2>📦 Mes dépôts GitHub récents</h2>
+    <ul>
+      <li>🧪 <a href="https://pathykyungu.github.io/formule-kyungu.html" target="_blank">Formule de Kyungu (Laplace inverse)</a></li>
+      <li>🔁 <a href="https://pathykyungu.github.io/inverse-laplace-kyungu.html" target="_blank">Démonstration complète de l'inverse de Laplace</a></li>
+      <li>🌐 <a href="https://pathykyungu.github.io/kyungu-formula-en.html" target="_blank">Kyungu Formula – English version</a></li>
+      <li>📚 <a href="https://pathykyungu.github.io/kyungu-wikipedia-draft.html" target="_blank">Ébauche Wikipedia de la Formule de Kyungu</a></li>
+      <li>🗂️ <a href="https://github.com/PathyKyungu?tab=repositories" target="_blank">Voir tous mes dépôts sur GitHub</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📬 Contact</h2>
+    <p>Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Professeur Pathy Kyungu – Tous droits réservés.
+  </footer>
+
+</body>
+</html>
