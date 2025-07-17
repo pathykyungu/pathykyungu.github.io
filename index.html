@@ -3,9 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Professeur Pathy Kyungu – Mathématiques & Recherches</title>
+  
+  <title>Professeur Pathy Kyungu – Mathématiques, Physique & Formule de Kyungu (Laplace inverse)</title>
+  
+  <meta name="author" content="Professeur Pathy Kyungu" />
+  <meta name="description" content="Site officiel du Professeur Pathy Kyungu, enseignant en mathématiques et physique en RDC. Découvrez la formule originale de Kyungu pour la transformée de Laplace inverse, publications scientifiques, vidéos pédagogiques et ressources éducatives." />
+  <meta name="keywords" content="Pathy Kyungu, Professeur Pathy Kyungu, formule de Kyungu, transformée de Laplace inverse, mathématiques, physique, vulgarisation scientifique, RDC, enseignement, Zenodo, TikTok, Facebook" />
+  <meta name="google-site-verification" content="kakT10w8CuFR8JiWMW4Ls1L5yg6bhH3nzfzKLMq8C0Y" />
 
-<meta name="google-site-verification" content="kakT10w8CuFR8JiWMW4Ls1L5yg6bhH3nzfzKLMq8C0Y" />
+  <!-- Open Graph (pour un meilleur partage sur réseaux sociaux) -->
+  <meta property="og:title" content="Professeur Pathy Kyungu – Mathématiques & Recherches" />
+  <meta property="og:description" content="Découvrez la formule originale de Kyungu pour la transformée de Laplace inverse, ainsi que des contenus pédagogiques en mathématiques et physique." />
+  <meta property="og:image" content="https://pathykyungu.github.io/images/kyungu-photo.jpg" />
+  <meta property="og:url" content="https://pathykyungu.github.io" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
   <!-- MathJax -->
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -99,57 +113,58 @@
 
   <section>
     <h2>👨🏽‍🏫 Qui suis-je ?</h2>
-    <p>Je suis professeur de mathématiques à l’Institut Technique Industriel Lumière du Christ (Likasi, RDC). Je publie des recherches sur la transformée de Laplace inverse, notamment la <strong>Formule de Kyungu</strong>, et j'explore sa généralisation via la transformée de Mellin (formule KML).</p>
+    <p>Je suis <strong>Professeur Pathy Kyungu</strong>, enseignant de mathématiques et physique à l’Institut Technique Industriel Lumière du Christ à Likasi (RDC). Passionné par la recherche, j’ai développé la <strong>formule de Kyungu</strong> pour la transformée de Laplace inverse, une méthode innovante publiée sur Zenodo. J’utilise également les réseaux sociaux comme TikTok et Facebook pour vulgariser les mathématiques et la physique auprès des élèves et étudiants francophones.</p>
   </section>
 
   <section>
     <h2>🧠 Formules signatures</h2>
 
-    <h3>Formule de Kyungu (KL) – Transformée de Laplace inverse :</h3>
-<p>
-  \[
-    \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, t^{n-1}
-  \]
-  <br />
-  avec \( \varphi(x) = F\left(\frac{1}{x}\right) \)
-</p>
+    <figure>
+      <p>
+        \[
+          \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, t^{n-1}
+        \]
+      </p>
+      <figcaption>Formule de Kyungu pour la transformée de Laplace inverse</figcaption>
+    </figure>
 
-<h3>Formule de Kyungu (KL) – Forme intégrale :</h3>
-<p>
-  \[
-    \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} e^{t/z} \, dz
-  \]
-  <br>
-  avec \( \varphi(x) = F\left( \frac{1}{x} \right) \), et \( \Gamma \) un petit contour autour de \( z = 0 \).
-</p>
+    <figure>
+      <p>
+        \[
+          \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} e^{t/z} \, dz
+        \]
+      </p>
+      <figcaption>Formule de Kyungu – Forme intégrale</figcaption>
+    </figure>
+
     <h3>Formule Kyungu–Mellin–Laplace (KML) :</h3>
-<p>
-  \[
-    \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x)
-  \]
-  <br />
-  \[
-    \mathcal{M}^{-1}[F](x) = \varphi(0)\,\delta(1 - x) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
-  \]
-</p>
-    <h3>Formule Kyungu–Mellin–Laplace (KML) – Forme intégrale :</h3>
-<p>
-  \[
-    \mathcal{M}^{-1}[F](x) = \varphi(0) \cdot \delta(1 - x) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \cdot x^{-1/z} \, dz
-  \]
-  <br>
-  avec \( \varphi(x) = F\left( \frac{1}{x} \right) \), et \( \Gamma \) un petit contour autour de \( z = 0 \).
-</p>
+    <p>
+      \[
+        \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x)
+      \]
+      <br />
+      \[
+        \mathcal{M}^{-1}[F](x) = \varphi(0)\,\delta(1 - x) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
+      \]
+    </p>
+    <figure>
+      <p>
+        \[
+          \mathcal{M}^{-1}[F](x) = \varphi(0) \cdot \delta(1 - x) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \cdot x^{-1/z} \, dz
+        \]
+      </p>
+      <figcaption>Formule Kyungu–Mellin–Laplace (KML) – Forme intégrale</figcaption>
+    </figure>
   </section>
 
   <section class="links">
     <h2>📄 Publications Zenodo</h2>
     <ul>
-      <li>📘 <a href="https://pathykyungu.github.io/article-formule-kyungu.html" target="_blank">Lire l’article complet (KL + KML)</a></li>
-      <li>📥 <a href="https://github.com/PathyKyungu/Kyungu-Laplace/releases/latest" target="_blank">Télécharger le fichier ZIP</a></li>
-      <li>📄 <a href="https://doi.org/10.5281/zenodo.15719813" target="_blank">DOI – Démonstration complète</a></li>
-      <li>📄 <a href="https://doi.org/10.5281/zenodo.15778234" target="_blank">DOI – Extensions via KML</a></li>
-      <li>📄 <a href="https://doi.org/10.5281/zenodo.15754963" target="_blank">DOI – Exemples et applications</a></li>
+      <li>📘 <a href="https://pathykyungu.github.io/article-formule-kyungu.html" target="_blank" rel="noopener noreferrer">Lire l’article complet (KL + KML)</a></li>
+      <li>📥 <a href="https://github.com/PathyKyungu/Kyungu-Laplace/releases/latest" target="_blank" rel="noopener noreferrer">Télécharger le fichier ZIP</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15719813" target="_blank" rel="noopener noreferrer">DOI – Démonstration complète</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15778234" target="_blank" rel="noopener noreferrer">DOI – Extensions via KML</a></li>
+      <li>📄 <a href="https://doi.org/10.5281/zenodo.15754963" target="_blank" rel="noopener noreferrer">DOI – Exemples et applications</a></li>
     </ul>
   </section>
 
@@ -157,25 +172,24 @@
     <h2>🌐 Réseaux – Accès rapide</h2>
 
     <div class="badge-container">
-      <img src="images/badges-reseaux.png" alt="Badge réseaux Professeur Kyungu">
-      <div class="zone tiktok"><a href="https://www.tiktok.com/@mathkyungu" target="_blank" title="TikTok"></a></div>
-      <div class="zone facebook"><a href="https://www.facebook.com/mathkyungu" target="_blank" title="Facebook"></a></div>
-      <div class="zone zenodo"><a href="https://zenodo.org/communities/kyungu-formula" target="_blank" title="Zenodo"></a></div>
-      <div class="zone linktree"><a href="https://linktr.ee/leprofesseurkyungu" target="_blank" title="Linktree"></a></div>
+      <img src="images/badges-reseaux.png" alt="Badge réseaux Professeur Kyungu" />
+      <div class="zone tiktok"><a href="https://www.tiktok.com/@mathkyungu" target="_blank" rel="noopener noreferrer" title="TikTok"></a></div>
+      <div class="zone facebook"><a href="https://www.facebook.com/mathkyungu" target="_blank" rel="noopener noreferrer" title="Facebook"></a></div>
+      <div class="zone zenodo"><a href="https://zenodo.org/communities/kyungu-formula" target="_blank" rel="noopener noreferrer" title="Zenodo"></a></div>
+      <div class="zone linktree"><a href="https://linktr.ee/leprofesseurkyungu" target="_blank" rel="noopener noreferrer" title="Linktree"></a></div>
     </div>
   </section>
 
   <section class="links">
     <h2>📦 Mes dépôts GitHub récents</h2>
     <ul>
-      <li>🧪 <a href="https://pathykyungu.github.io/formule-kyungu.html" target="_blank">Formule de Kyungu (Laplace inverse)</a></li>
-      <li>🔁 <a href="https://pathykyungu.github.io/inverse-laplace-kyungu.html" target="_blank">Révolution pédagogique imminente</a></li>
-      <li>🌐 <a href="https://pathykyungu.github.io/kyungu-formula-en.html" target="_blank">Kyungu Formula – English version</a></li>
-      <li>📚 <a href="https://pathykyungu.github.io/kyungu-wikipedia-draft.html" target="_blank">Ébauche Wikipedia de la Formule de Kyungu</a></li>
-      <li>🗂️ <a href="https://github.com/PathyKyungu?tab=repositories" target="_blank">Voir tous mes dépôts sur GitHub</a></li>
-      <li>📄 <a href="https://pathykyungu.github.io/serie-integrale-formule-kyungu.html" target="_blank">
+      <li>🧪 <a href="https://pathykyungu.github.io/formule-kyungu.html" target="_blank" rel="noopener noreferrer">Formule de Kyungu (Laplace inverse)</a></li>
+      <li>🔁 <a href="https://pathykyungu.github.io/inverse-laplace-kyungu.html" target="_blank" rel="noopener noreferrer">Révolution pédagogique imminente</a></li>
+      <li>🌐 <a href="https://pathykyungu.github.io/kyungu-formula-en.html" target="_blank" rel="noopener noreferrer">Kyungu Formula – English version</a></li>
+      <li>📚 <a href="https://pathykyungu.github.io/kyungu-wikipedia-draft.html" target="_blank" rel="noopener noreferrer">Ébauche Wikipedia de la Formule de Kyungu</a></li>
+      <li>🗂️ <a href="https://github.com/PathyKyungu?tab=repositories" target="_blank" rel="noopener noreferrer">Voir tous mes dépôts sur GitHub</a></li>
+      <li>📄 <a href="https://pathykyungu.github.io/serie-integrale-formule-kyungu.html" target="_blank" rel="noopener noreferrer">
 Formes Série et Intégrale de la Formule de Kyungu – Lien avec Bromwich
-</a></li>
 </a></li>
     </ul>
   </section>
@@ -184,17 +198,19 @@ Formes Série et Intégrale de la Formule de Kyungu – Lien avec Bromwich
     <h2>📬 Contact</h2>
     <p>Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></p>
   </section>
-<a href="https://independentscholar.academia.edu/PathyKyungu" target="_blank" style="
-  display: inline-block;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-">
-  📚 Voir mon profil Academia.edu
-</a>
+
+  <a href="https://independentscholar.academia.edu/PathyKyungu" target="_blank" rel="noopener noreferrer" style="
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  ">
+    📚 Voir mon profil Academia.edu
+  </a>
+
   <footer>
     &copy; 2025 Professeur Pathy Kyungu – Tous droits réservés.
   </footer>
