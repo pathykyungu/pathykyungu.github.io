@@ -6,6 +6,18 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <!-- Style to enlarge MathJax formulas -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+    }
+
+    mjx-container[jax="CHTML"] {
+        font-size: 180% !important;  /* ← ceci agrandit les formules MathJax */
+    }
+</style>
   <style>
     body {
       font-family: Georgia, serif;
