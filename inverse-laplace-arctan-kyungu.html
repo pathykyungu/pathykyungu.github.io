@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kyungu Formula Applied to the Inverse Laplace Transform of arctan(1/p²)</title>
+    <meta name="description" content="Application of the Kyungu Formula to the inverse Laplace transform of arctan(1/p²): Series expression and closed-form result.">
+    <meta name="author" content="Pathy Kyungu">
+    <meta name="keywords" content="Kyungu Formula, Inverse Laplace Transform, arctan, Power Series, Closed-form Expression, Applied Mathematics, Mathematical Analysis">
+    
+    <!-- MathJax for LaTeX equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+
+<h1>Application of the Kyungu Formula to the Inverse Laplace Transform of \\(\arctan\left(\frac{1}{p^2}\right)\\)</h1>
+<p><strong>Author:</strong> Pathy Kyungu</p>
+<p><strong>Publication Date:</strong> July 20, 2025</p>
+<p><strong>Version:</strong> 1.0 — Official Published Version</p>
+
+<h2>Abstract</h2>
+<p>This article presents the application of the <em>Kyungu Formula</em> to the inverse Laplace transform of the function \\( \arctan\left( \frac{1}{p^2} \right) \\).
+A power series expression is obtained and then simplified into a closed-form expression involving hyperbolic and trigonometric functions. This original result highlights the efficiency of the Kyungu Formula in analytically computing complex inverse Laplace transforms.</p>
+
+<h2>1. Kyungu Formula</h2>
+<p>The <strong>Kyungu Formula</strong> for the inverse Laplace transform of a function \\( F(p) \\) is given by:</p>
+
+<p>\\[
+\mathcal{L}^{-1}[F](t) = \varphi(0) \cdot \delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+\\]</p>
+
+<p>Where \\( \varphi(p) = F\left( \frac{1}{p} \right) \\) and \\( \delta(t) \\) is the Dirac delta distribution.</p>
+
+<h2>2. Application to \\( F(p) = \arctan\left( \frac{1}{p^2} \right) \\)</h2>
+
+<h3>2.1 Auxiliary Function</h3>
+<p>\\[
+F(p) = \arctan\left( \frac{1}{p^2} \right)
+\\]</p>
+<p>\\[
+\varphi(p) = F\left( \frac{1}{p} \right) = \arctan(p^2)
+\\]</p>
+
+<h3>2.2 Series Expansion</h3>
+<p>Using the classical expansion:</p>
+
+<p>\\[
+\arctan(x) = \sum_{k=0}^\infty (-1)^k \cdot \frac{x^{2k+1}}{2k+1}
+\\]</p>
+
+<p>We get:</p>
+
+<p>\\[
+\varphi(p) = \arctan(p^2) = \sum_{k=0}^\infty (-1)^k \cdot \frac{p^{4k+2}}{2k+1}
+\\]</p>
+
+<h3>2.3 Derivatives</h3>
+<p>\\[
+\varphi^{(4k+2)}(0) = (-1)^k \cdot \frac{(4k+2)!}{2k+1}
+\\]</p>
+
+<h3>2.4 Inverse Laplace Transform</h3>
+
+<p>Using the Kyungu Formula:</p>
+
+<p>\\[
+\mathcal{L}^{-1}[F](t) = 2 \sum_{k=0}^\infty (-1)^k \cdot \frac{t^{4k+1}}{(4k+2)!}
+\\]</p>
+
+<h2>3. Closed-form Expression</h2>
+
+<p>The resulting series:</p>
+
+<p>\\[
+S(t) = 2 \sum_{k=0}^\infty (-1)^k \cdot \frac{t^{4k+1}}{(4k+2)!}
+\\]</p>
+
+<p>Has the following closed-form:</p>
+
+<p>\\[
+S(t) = \frac{2}{t} \cdot \sinh\left( \frac{t \sqrt{2}}{2} \right) \cdot \sin\left( \frac{t \sqrt{2}}{2} \right)
+\\]</p>
+
+<h2>4. Conclusion</h2>
+
+<p>We conclude that:</p>
+
+<p>\\[
+\mathcal{L}^{-1}\left[ \arctan\left( \frac{1}{p^2} \right) \right](t)
+= \frac{2}{t} \cdot \sinh\left( \frac{t \sqrt{2}}{2} \right)
+\cdot \sin\left( \frac{t \sqrt{2}}{2} \right)
+\\]</p>
+
+<p>This result is not present in classical Laplace transform tables. It demonstrates the effectiveness of the <strong>Kyungu Formula</strong> in analytically deriving complex inverse Laplace transforms.</p>
+
+<h2>References</h2>
+<ul>
+    <li><strong>Zenodo DOI (Application to arctan(1/p²)) :</strong> <a href="https://doi.org/10.5281/zenodo.16190286">https://doi.org/10.5281/zenodo.16190286</a></li>
+    <li><strong>Zenodo DOI (Detailed presentation of the Kyungu Formula) :</strong> <a href="https://doi.org/10.5281/zenodo.15966318">https://doi.org/10.5281/zenodo.15966318</a></li>
+    <li><strong>Official Website :</strong> <a href="https://pathykyungu.github.io">https://pathykyungu.github.io</a></li>
+</ul>
+
+<hr>
+<p><strong>Copyright:</strong><br>
+© 2025 Pathy Kyungu. All rights reserved.<br>
+Distribution allowed only with proper attribution and official link: <a href="https://pathykyungu.github.io">https://pathykyungu.github.io</a></p>
+
+</body>
+</html>
