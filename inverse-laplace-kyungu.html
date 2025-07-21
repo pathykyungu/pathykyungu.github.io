@@ -2,172 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>What If We Started With the Inverse?</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <title>What If We Started With the Inverse? – Kyungu's Approach</title>
   <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
 
-  <!-- Typographie & Styles MathJax -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-
     body {
-      font-family: 'Libre Baskerville', serif;
-      max-width: 860px;
-      margin: auto;
-      padding: 2em;
-      background-color: #fdfdfd;
+      font-family: Georgia, serif;
+      max-width: 900px;
+      margin: 2em auto;
+      background: #f9f9f9;
       color: #222;
       line-height: 1.7;
+      padding: 0 1em;
     }
-
-    mjx-container[jax="CHTML"] {
-      font-size: 170% !important;
+    h1, h2, h3 {
+      color: #0055aa;
     }
-
-    h1 {
-      background-color: #e3eaf2;
-      padding: 0.5em;
-      text-align: center;
-      border-radius: 6px;
-      color: #003366;
-    }
-
-    h2 {
-      color: #004477;
-      margin-top: 2em;
-    }
-
     p {
       margin-top: 1em;
     }
-
     code {
-      background-color: #eee;
-      padding: 0.2em 0.4em;
+      background: #eee;
+      padding: 0 4px;
       border-radius: 4px;
     }
-
+    blockquote {
+      background: #f0f0f0;
+      border-left: 4px solid #888;
+      padding: 1em;
+      font-style: italic;
+    }
     a {
-      color: #0066cc;
+      color: #0055aa;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
-    ul {
-      padding-left: 1.5em;
-    }
-
-    blockquote {
-      background: #f0f0f0;
-      border-left: 5px solid #aaa;
-      padding: 1em;
-      font-style: italic;
-      margin: 2em 0;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #ccc;
-      margin: 3em 0;
+    .center {
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
 
-<h1>🔁 What If We Started With the Inverse?</h1>
+<h1 class="center">What If We Started With the Inverse?</h1>
 
-<p><strong>By Path Kyungu – Math educator and creator of the Kyungu formula</strong><br>
-<a href="https://pathykyungu.github.io">pathykyungu.github.io</a></p>
+<p class="center">
+<strong>By Path Kyungu</strong><br>
+Contact: <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a>
+</p>
 
-<hr>
+<h2>1. Introduction</h2>
 
-<h2>1. What if we’ve been teaching everything in the wrong order?</h2>
+<p>In traditional mathematics education, students learn <strong>derivatives before integrals</strong>, 
+<strong>direct transforms before inverse transforms</strong>, and <strong>theory before applications</strong>. 
+But is this sequence natural? What if a reversed approach led to deeper understanding?</p>
 
-<p>In mathematics, we traditionally teach <strong>derivatives before integrals</strong>, <strong>direct transforms before inverse transforms</strong>, and <strong>definitions before real-world problems</strong>.</p>
+<p>This article proposes a new pedagogical framework inspired by the discovery of the <strong>Kyungu formula</strong>:
+start by teaching the <strong>inverse Laplace transform</strong>, and present the direct transform later, as a consequence.</p>
 
-<p>But what if that order is just a habit?  
-What if understanding would come faster — and deeper — if we <em>reversed the teaching sequence</em>?</p>
+<h2>2. The Kyungu Formula for Inverse Laplace Transform</h2>
 
-<p>Here’s a radical example:  
-👉 <strong>What if we taught derivatives only <em>after</em> integrals?</strong></p>
+<p>The <strong>Kyungu formula</strong> allows the inversion of a Laplace-transformed function \( F(p) \) via a simple series, 
+without resorting to complex contour integrals:</p>
 
-<p>Imagine a student first learning how to accumulate quantities — how to measure total effects, areas under curves, and long-term behaviors.  
-Then, one day, the teacher introduces the derivative — not as a formal limit, but as a way to <strong>zoom in and retrieve the instantaneous from the accumulated</strong>.</p>
+<p>
+\[
+f(t) = \varphi(0)\cdot \delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+\]
+</p>
 
-<p>Suddenly, the derivative would not be an abstract construct — it would feel necessary.  
-It would be <strong>born out of intuition</strong>.</p>
+<p>with:</p>
 
-<hr>
+<p>
+\[
+\varphi(x) = F\left( \frac{1}{x} \right)
+\]
+</p>
 
-<h2>2. This is exactly what the Kyungu Formula proposes</h2>
-
-<p>Today, I propose a similar pedagogical inversion:</p>
-
-<p>👉 <strong>Teach the <em>inverse Laplace transform</em> first — before the direct one.</strong></p>
-
-<p>In practice, whether in physics, engineering, or signal analysis, we are often given a function \( F(p) \) in the Laplace domain.  
-Our real challenge is not to compute the Laplace transform, but to <strong>recover the original signal \( f(t) \)</strong> from \( F(p) \).</p>
-
-<p>This is where the <strong>Kyungu–Laplace formula (KL)</strong> comes in:</p>
-
-<p>\[
-f(t) = \varphi(0)\delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, t^{n-1}, \quad \text{with} \quad \varphi(x) = F\left(\frac{1}{x}\right)
-\]</p>
-
-<p>No complex integrals. No residues.  
-Just an auxiliary function \( \varphi(x) \), its derivatives at zero, and a clean, computable series.</p>
-
-<p>Even better — if we substitute \( t = -\ln x \), we obtain the <strong>inverse Mellin transform</strong>:</p>
-
-<p>\[
-\mathcal{M}^{-1}[F](x) = f(-\ln x)
-\]</p>
-
-<p>This yields what I call the <strong>KML formula</strong>: Kyungu–Mellin–Laplace.</p>
-
-<hr>
-
-<h2>3. Why this reversal is powerful — and pedagogical</h2>
-
-<p>Teaching the inverse transform first:</p>
-
+<p>Here:</p>
 <ul>
-  <li>Starts from a real-world problem (signal recovery)</li>
-  <li>Builds understanding through reconstruction, not abstraction</li>
-  <li>Makes the direct Laplace transform feel like a reversible tool, not an end in itself</li>
-  <li>Avoids heavy methods like contour integration or Laplace tables for tricky functions</li>
-  <li>Reveals deep connections between Laplace, Mellin, series, and impulse theory</li>
+  <li>\( \delta(t) \) is the Dirac delta distribution (impulse at \( t=0 \))</li>
+  <li>\( \varphi^{(n)}(0) \) denotes the \(n\)-th derivative of the auxiliary function at zero</li>
 </ul>
 
-<p>And perhaps most importantly — it repositions the student not as a passive user of formulas, but as a mathematician <strong>searching for the origin</strong>.</p>
+<p>The inversion is thus performed purely using derivatives and powers of \( t \).</p>
 
-<hr>
+<h2>3. Application to the Inverse Mellin Transform</h2>
 
-<h2>4. So what comes next?</h2>
+<p>By introducing the logarithmic substitution \( t = -\ln(x) \), the formula extends to Mellin inversion:</p>
 
-<p>I truly believe that in the years to come, many teachers and students will naturally begin with <strong>inverse Laplace transforms</strong> — because that’s how we encounter problems in real life.</p>
+<p>
+\[
+\mathcal{M}^{-1}[F](x) = \varphi(0)\cdot \delta(x-1) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot \left( \ln\frac{1}{x} \right)^{n-1}
+\]
+</p>
 
-<p>Just as teaching integrals first makes students see the big picture before zooming into the details, <strong>teaching the inverse first brings purpose and clarity</strong>.</p>
+<p>This is called the <strong>Kyungu–Mellin–Laplace (KML) formula</strong>. The function is reconstructed directly from derivatives, avoiding classical integral representations.</p>
+
+<h2>4. Pedagogical Interest</h2>
+
+<p>The Kyungu approach invites educators to reverse the conventional teaching order:</p>
+
+<ul>
+  <li>Present the <strong>inverse Laplace transform</strong> first, based on real-world reconstruction problems</li>
+  <li>Introduce the <strong>direct Laplace transform</strong> as a tool derived from the inversion process</li>
+  <li>Make students work directly with signals \( f(t) \) and their recoveries, rather than abstract transforms</li>
+  <li>Emphasize analytic structures (series expansions, derivatives) over complex analysis</li>
+</ul>
+
+<h2>5. Philosophical Reflection</h2>
 
 <blockquote>
-  "We used to teach the Laplace transform from left to right.  
-  But that was before we discovered how powerful the inverse could be."
+"We used to teach the Laplace transform from left to right.  
+But that was before we discovered how powerful the inverse could be."
 </blockquote>
+
+<p>Starting with the inverse focuses the learner on reconstructing signals, finding causes from effects, and understanding transformations as reversible processes.</p>
+
+<h2>6. Conclusion</h2>
+
+<p>The <strong>Kyungu formula</strong> offers not only a mathematical tool but a new pedagogical paradigm. It transforms the inverse Laplace and Mellin transforms into simple, constructive processes based on series, accessible even without advanced integration techniques.</p>
+
+<p>Perhaps it's time to teach inverses first.</p>
 
 <hr>
 
-<h2>📚 Learn more</h2>
-
-<ul>
-  <li>🌐 Website: <a href="https://pathykyungu.github.io">pathykyungu.github.io</a></li>
-  <li>📧 Email: <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></li>
-  <li>🎓 TikTok & YouTube: <em>Le Professeur des Maths</em></li>
-</ul>
+<p class="center">
+<strong>Author:</strong> Path Kyungu<br>
+<strong>Email:</strong> <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a><br>
+<strong>Website:</strong> <a href="https://pathykyungu.github.io">pathykyungu.github.io</a>
+</p>
 
 </body>
 </html>
