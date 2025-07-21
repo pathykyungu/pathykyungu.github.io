@@ -44,7 +44,9 @@
 
 <h2>Présentation</h2>
 
-<p>La formule exprime la transformée de Laplace inverse d'une fonction \( F(p) \) sous la forme :</p>
+<p>La formule exprime la <strong>transformée de Laplace inverse</strong> d'une fonction \( F(p) \), sous deux formes équivalentes :</p>
+
+<h3>1. Forme série (formule dérivée)</h3>
 
 <p>
 \[
@@ -60,13 +62,24 @@
 \]
 </p>
 
-<p>où :</p>
 <ul>
-  <li>\( \delta(t) \) est la distribution de Dirac,</li>
-  <li>\( \varphi^{(n)}(0) \) désigne la \(n\)-ième dérivée de la fonction auxiliaire.</li>
+  <li>\( \delta(t) \) désigne l’impulsion de Dirac,</li>
+  <li>\( \varphi^{(n)}(0) \) est la \(n\)-ième dérivée de la fonction auxiliaire, évaluée en zéro.</li>
 </ul>
 
-<p>Une <strong>version intégrale</strong> de la formule existe également, en lien avec le contour de Bromwich.</p>
+<h3>2. Forme intégrale (contour de Bromwich)</h3>
+
+<p>La formule peut également s'exprimer sous forme intégrale :</p>
+
+<p>
+\[
+\mathcal{L}^{-1}[F](t) = \varphi(0) \cdot \delta(t) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \cdot e^{t/z} \, dz
+\]
+</p>
+
+<p>où \(\Gamma\) désigne un contour fermé autour de l’origine dans le plan complexe.</p>
+
+<p>Cette forme met en évidence la connexion entre la formule de Kyungu et les méthodes intégrales classiques de Bromwich.</p>
 
 <h2>Extensions</h2>
 
