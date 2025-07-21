@@ -3,116 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <title>What If We Started With the Inverse? – Kyungu's Approach</title>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
   </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
   <style>
     body {
       font-family: Georgia, serif;
-      max-width: 900px;
-      margin: 2em auto;
-      background: #f9f9f9;
-      color: #222;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
       line-height: 1.7;
-      padding: 0 1em;
     }
     h1, h2, h3 {
-      color: #0055aa;
-    }
-    p {
-      margin-top: 1em;
-    }
-    code {
-      background: #eee;
-      padding: 0 4px;
-      border-radius: 4px;
-    }
-    blockquote {
-      background: #f0f0f0;
-      border-left: 4px solid #888;
-      padding: 1em;
-      font-style: italic;
+      color: #2c3e50;
     }
     a {
-      color: #0055aa;
+      color: #0066cc;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    .center {
-      text-align: center;
-    }
-    /* Agrandir les formules MathJax */
-    mjx-container[jax="CHTML"] {
-      font-size: 180% !important;
+    blockquote {
+      font-style: italic;
+      background: #f0f0f0;
+      padding: 1em;
+      border-left: 4px solid #888;
     }
   </style>
 </head>
-
 <body>
 
-<h1 class="center">What If We Started With the Inverse?</h1>
+<h1>What If We Started With the Inverse? — Kyungu's Approach</h1>
 
-<p class="center">
-<strong>By Path Kyungu</strong><br>
-Contact: <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a>
-</p>
+<p><strong>Author:</strong> Pathy Kyungu</p>
+<p><strong>Contact:</strong> <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></p>
 
 <h2>1. Introduction</h2>
 
-<p>In traditional mathematics education, students learn <strong>derivatives before integrals</strong>, 
-<strong>direct transforms before inverse transforms</strong>, and <strong>theory before applications</strong>. 
-But is this sequence natural? What if a reversed approach led to deeper understanding?</p>
+<p>In traditional mathematics teaching, students first learn derivatives before integrals, direct transforms before inverse transforms, and abstract theory before applications. But is this sequence the most natural? What if starting with inverses could lead to deeper understanding?</p>
 
-<p>This article proposes a new pedagogical framework inspired by the discovery of the <strong>Kyungu formula</strong>:
-start by teaching the <strong>inverse Laplace transform</strong>, and present the direct transform later, as a consequence.</p>
+<p>This article introduces a pedagogical framework based on the <strong>Kyungu Formula</strong>, suggesting that we should teach the <strong>inverse Laplace transform first</strong>, before introducing the direct transform as a consequence.</p>
 
-<h2>2. The Kyungu Formula for Inverse Laplace Transform</h2>
+<h2>2. Kyungu Formula for Inverse Laplace Transform</h2>
 
-<p>The <strong>Kyungu formula</strong> allows the inversion of a Laplace-transformed function \( F(p) \) via a simple series, 
-without resorting to complex contour integrals:</p>
+<p>The <strong>Kyungu Formula</strong> expresses the inverse Laplace transform of a function \( F(p) \) as a series, without requiring contour integrals:</p>
 
-<p>
 \[
-f(t) = \varphi(0)\cdot \delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+\mathcal{L}^{-1}[F](t) = \varphi(0)\cdot \delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
 \]
-</p>
 
-<p>with:</p>
+<p>with the auxiliary function:</p>
 
-<p>
 \[
 \varphi(x) = F\left( \frac{1}{x} \right)
 \]
-</p>
 
-<p>Here:</p>
 <ul>
-  <li>\( \delta(t) \) is the Dirac delta distribution (impulse at \( t=0 \))</li>
-  <li>\( \varphi^{(n)}(0) \) denotes the \(n\)-th derivative of the auxiliary function at zero</li>
+  <li>\( \delta(t) \) denotes the Dirac delta distribution (impulse at \( t=0 \)).</li>
+  <li>\( \varphi^{(n)}(0) \) is the \(n\)-th derivative of the auxiliary function evaluated at zero.</li>
 </ul>
 
-<h2>3. Application to the Inverse Mellin Transform</h2>
+<h2>3. Extension to the Inverse Mellin Transform</h2>
 
-<p>By introducing the logarithmic substitution \( t = -\ln(x) \), the formula extends to Mellin inversion:</p>
+<p>Using the logarithmic substitution \( t = -\ln(x) \), the formula extends naturally to the inverse Mellin transform:</p>
 
-<p>
 \[
 \mathcal{M}^{-1}[F](x) = \varphi(0)\cdot \delta(x-1) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot \left( \ln\frac{1}{x} \right)^{n-1}
 \]
-</p>
 
-<p>This is called the <strong>Kyungu–Mellin–Laplace (KML) formula</strong>.</p>
+<p>This expression is known as the <strong>Kyungu–Mellin–Laplace (KML) Formula</strong>.</p>
 
 <h2>4. Pedagogical Interest</h2>
 
 <ul>
-  <li>Present the <strong>inverse Laplace transform</strong> first</li>
-  <li>Introduce the <strong>direct Laplace transform</strong> later as a natural consequence</li>
-  <li>Build understanding through reconstruction of signals \( f(t) \)</li>
-  <li>Use analytic structures: derivatives and series expansions</li>
+  <li>Introduce the <strong>inverse Laplace transform</strong> first.</li>
+  <li>Present the <strong>direct Laplace transform</strong> as a derived concept.</li>
+  <li>Focus learning on reconstructing signals \( f(t) \) from known transforms.</li>
+  <li>Use derivatives and series as central analytical tools.</li>
 </ul>
 
 <h2>5. Philosophical Reflection</h2>
@@ -124,15 +100,30 @@ But that was before we discovered how powerful the inverse could be."
 
 <h2>6. Conclusion</h2>
 
-<p>The <strong>Kyungu formula</strong> offers both a mathematical tool and a new teaching paradigm, focusing on inversion and signal recovery through simple series.</p>
+<p>The <strong>Kyungu Formula</strong> is not only a mathematical tool but also a new educational paradigm, emphasizing inversion, signal recovery, and analytical thinking through simple series expansions.</p>
+
+<h2>References</h2>
+
+<ul>
+  <li><a href="https://doi.org/10.5281/zenodo.15966318" target="_blank">Zenodo DOI: Detailed Kyungu Formula</a></li>
+  <li><a href="https://doi.org/10.5281/zenodo.15778234" target="_blank">Extension to Mellin Transform</a></li>
+  <li><a href="https://pathykyungu.github.io" target="_blank">Official Website</a></li>
+</ul>
+
+<h2>See Also</h2>
+
+<ul>
+  <li>Inverse Laplace Transform</li>
+  <li>Inverse Mellin Transform</li>
+  <li>Series Expansion Methods</li>
+  <li>Transform Analysis</li>
+</ul>
+
+<p>Official Website: <a href="https://pathykyungu.github.io" target="_blank">pathykyungu.github.io</a></p>
 
 <hr>
 
-<p class="center">
-<strong>Author:</strong> Path Kyungu<br>
-<strong>Email:</strong> <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a><br>
-<strong>Website:</strong> <a href="https://pathykyungu.github.io">pathykyungu.github.io</a>
-</p>
+<p style="font-size: 0.9em; color: #555;">This draft is intended to inspire the development of educational materials or future Wikipedia content by independent contributors.</p>
 
 </body>
 </html>
