@@ -1,172 +1,209 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Formes Série et Intégrale de la Formule de Kyungu</title>
+  <meta name="description" content="Analyse rigoureuse des formes série et intégrale de la Formule de Kyungu et son lien avec l'intégrale de Bromwich.">
 
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  <!-- MathJax -->
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
   </script>
-      <!-- Style to enlarge MathJax formulas -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        mjx-container[jax="CHTML"] {
-            font-size: 180% !important;
-        }
-    </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
 
+  <!-- Style -->
   <style>
     body {
-      font-family: Georgia, serif;
+      font-family: 'Georgia', serif;
       max-width: 900px;
-      margin: 2em auto;
+      margin: auto;
+      padding: 2rem 1rem;
       background: #f9f9f9;
       color: #222;
       line-height: 1.6;
-      padding: 0 1em;
     }
+
+    header, article, footer {
+      margin-bottom: 2rem;
+    }
+
     h1, h2, h3 {
-      color: #0055aa;
-    }
-    code {
-      background: #eee;
-      padding: 0 4px;
-      border-radius: 4px;
-    }
-    .center {
+      color: #003366;
       text-align: center;
+    }
+
+    h2 {
+      margin-top: 2rem;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+    }
+
+    a {
+      color: #0055aa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    mjx-container[jax="CHTML"] {
+      font-size: 140% !important;
+    }
+
+    .author {
+      text-align: center;
+      font-style: italic;
+      margin-top: 2rem;
+    }
+
+    footer {
+      font-size: 0.9em;
+      text-align: center;
+      color: #666;
+      border-top: 1px solid #ccc;
+      padding-top: 1em;
     }
   </style>
 </head>
 
 <body>
 
-  <h1 class="center">Formes Série et Intégrale de la Formule de Kyungu</h1>
-  <h2 class="center">Lien avec l’intégrale de Bromwich</h2>
+  <header>
+    <h1>Formes Série et Intégrale de la Formule de Kyungu</h1>
+    <h2>Lien avec l’intégrale de Bromwich</h2>
+    <p class="author">
+      <strong>Pathy Kyungu</strong><br>
+      Contact : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a>
+    </p>
+  </header>
 
-  <p class="center">
-    <strong>Path Kyungu</strong><br>
-    Contact : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a>
-  </p>
+  <article>
+    <h2>Résumé</h2>
+    <p>
+      Cet article présente une formulation complète de la transformée de Laplace inverse à partir de la formule de Kyungu. 
+      Nous relions la version en série à une version intégrale locale autour de \( z = 0 \), puis nous montrons comment cette 
+      dernière conduit naturellement à l’intégrale de Bromwich par un changement de variable. Chaque étape est rigoureusement 
+      expliquée dans un cadre analytique et distributionnel.
+    </p>
 
-  <h2>Résumé</h2>
-  <p>
-    Cet article présente une formulation complète de la transformée de Laplace inverse à partir de la formule de Kyungu. 
-    Nous relions la version en série à une version intégrale locale autour de \( z = 0 \), puis nous montrons comment cette 
-    dernière conduit naturellement à l’intégrale de Bromwich par un changement de variable. Chaque étape est rigoureusement 
-    expliquée dans un cadre analytique et distributionnel.
-  </p>
+    <h2>1. Introduction</h2>
+    <p>
+      La transformée de Laplace inverse est traditionnellement définie par l’intégrale de Bromwich. Cependant, dans cet article,
+      nous présentons une alternative basée sur une approche série originale découverte par l’auteur, appelée <strong>formule de Kyungu</strong>. 
+      Celle-ci permet de calculer la transformée inverse d’une fonction \( F(p) \) sans recourir aux résidus ni aux tables classiques,
+      mais uniquement à partir des dérivées de la fonction \( \varphi(x) := F(1/x) \) en zéro.
+    </p>
 
-  <h2>1. Introduction</h2>
-  <p>
-    La transformée de Laplace inverse est traditionnellement définie par l’intégrale de Bromwich. Cependant, dans cet article,
-    nous présentons une alternative basée sur une approche série originale découverte par l’auteur, appelée <strong>formule de Kyungu</strong>. 
-    Celle-ci permet de calculer la transformée inverse d’une fonction \( F(p) \) sans recourir aux résidus ni aux tables classiques,
-    mais uniquement à partir des dérivées de la fonction \( \varphi(x) := F(1/x) \) en zéro.
-  </p>
-
-  <h2>2. Forme série de la formule de Kyungu</h2>
-  <p>
-    Soit \( F(p) \) une fonction suffisamment régulière. On définit :
-  </p>
-  <p>
-    \[
-      \varphi(x) := F\left( \frac{1}{x} \right)
-    \]
-  </p>
-  <p>
-    Si \( \varphi \) est analytique en \( x = 0 \), on a la <strong>formule de Kyungu</strong> :
-  </p>
-  <p>
-    \[
-      \mathcal{L}^{-1}[F](t) = \varphi(0) \cdot \delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
-    \]
-  </p>
-  <p>
-    Cette formule décompose l’image inverse en deux parties :
+    <h2>2. Forme série de la formule de Kyungu</h2>
+    <p>
+      Soit \( F(p) \) une fonction suffisamment régulière. On définit :
+    </p>
+    <p>
+      \[
+        \varphi(x) := F\left( \frac{1}{x} \right)
+      \]
+    </p>
+    <p>
+      Si \( \varphi \) est analytique en \( x = 0 \), on a la <strong>formule de Kyungu</strong> :
+    </p>
+    <p>
+      \[
+        \mathcal{L}^{-1}[F](t) = \varphi(0) \cdot \delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+      \]
+    </p>
+    <p>
+      Cette formule décompose l’image inverse en deux parties :
+    </p>
     <ul>
       <li>Une partie singulière : \( \varphi(0) \cdot \delta(t) \), correspondant à la limite de \( F(p) \) quand \( p \to \infty \),</li>
       <li>Une partie régulière exprimée comme une série de puissances en \( t \).</li>
     </ul>
-  </p>
 
-  <h2>3. Forme intégrale centrée en \( z = 0 \)</h2>
-  <p>
-    Par le théorème intégral de Cauchy, on a :
-  </p>
-  <p>
-    \[
-      \varphi^{(n)}(0) = n! \cdot \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^{n+1}} \, dz
-    \]
-  </p>
-  <p>
-    En injectant cela dans la formule en série, on obtient une <strong>forme intégrale locale</strong> :
-  </p>
-  <p>
-    \[
-      \mathcal{L}^{-1}[F](t) = \varphi(0) \cdot \delta(t) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} e^{t/z} \, dz
-    \]
-  </p>
-  <p>
-    où \( \Gamma \) est un petit contour fermé autour de \( z = 0 \).
-  </p>
+    <h2>3. Forme intégrale centrée en \( z = 0 \)</h2>
+    <p>
+      Par le théorème intégral de Cauchy, on a :
+    </p>
+    <p>
+      \[
+        \varphi^{(n)}(0) = n! \cdot \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^{n+1}} \, dz
+      \]
+    </p>
+    <p>
+      En injectant cela dans la formule en série, on obtient une <strong>forme intégrale locale</strong> :
+    </p>
+    <p>
+      \[
+        \mathcal{L}^{-1}[F](t) = \varphi(0) \cdot \delta(t) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} e^{t/z} \, dz
+      \]
+    </p>
+    <p>
+      où \( \Gamma \) est un petit contour fermé autour de \( z = 0 \).
+    </p>
 
-  <h2>4. Changement de variable et passage au plan \( p \)</h2>
-  <p>
-    En posant \( z = 1/p \), on a :
-  </p>
-  <p>
-    \[
-      dz = -\frac{1}{p^2} dp, \quad \varphi(z) = F(p), \quad \frac{1}{z^2} = p^2, \quad e^{t/z} = e^{p t}
-    \]
-  </p>
-  <p>
-    La forme intégrale devient alors :
-  </p>
-  <p>
-    \[
-      \mathcal{L}^{-1}[F](t) = F(\infty) \cdot \delta(t) - \frac{1}{2\pi i} \oint_{C_\infty} F(p) \cdot e^{p t} \, dp
-    \]
-  </p>
-  <p>
-    où \( C_\infty \) est un grand contour fermé entourant l’infini dans le plan \( p \).
-  </p>
+    <h2>4. Changement de variable et passage au plan \( p \)</h2>
+    <p>
+      En posant \( z = 1/p \), on a :
+    </p>
+    <p>
+      \[
+        dz = -\frac{1}{p^2} dp, \quad \varphi(z) = F(p), \quad \frac{1}{z^2} = p^2, \quad e^{t/z} = e^{p t}
+      \]
+    </p>
+    <p>
+      La forme intégrale devient alors :
+    </p>
+    <p>
+      \[
+        \mathcal{L}^{-1}[F](t) = F(\infty) \cdot \delta(t) - \frac{1}{2\pi i} \oint_{C_\infty} F(p) \cdot e^{p t} \, dp
+      \]
+    </p>
+    <p>
+      où \( C_\infty \) est un grand contour fermé entourant l’infini dans le plan \( p \).
+    </p>
 
-  <h2>5. Lien avec l’intégrale de Bromwich</h2>
-  <p>
-    Si \( F \) est méromorphe avec une bande de convergence, le contour \( C_\infty \) peut être déformé en une ligne verticale
-    \( \Re(p) = c \), pour \( c > \sigma_0 \), ce qui donne la formule classique de Bromwich :
-  </p>
-  <p>
-    \[
-      \mathcal{L}^{-1}[F](t) = \frac{1}{2\pi i} \int_{c - i\infty}^{c + i\infty} F(p) \cdot e^{p t} \, dp
-    \]
-  </p>
-  <p>
-    On obtient ainsi une continuité logique entre :
+    <h2>5. Lien avec l’intégrale de Bromwich</h2>
+    <p>
+      Si \( F \) est méromorphe avec une bande de convergence, le contour \( C_\infty \) peut être déformé en une ligne verticale
+      \( \Re(p) = c \), pour \( c > \sigma_0 \), ce qui donne la formule classique de Bromwich :
+    </p>
+    <p>
+      \[
+        \mathcal{L}^{-1}[F](t) = \frac{1}{2\pi i} \int_{c - i\infty}^{c + i\infty} F(p) \cdot e^{p t} \, dp
+      \]
+    </p>
+    <p>
+      On obtient ainsi une continuité logique entre :
+    </p>
     <ul>
       <li>La <strong>série de Kyungu</strong>,</li>
       <li>La <strong>forme intégrale locale</strong> centrée sur \( z = 0 \),</li>
       <li>Et l’<strong>intégrale de Bromwich</strong> via un simple changement de variable.</li>
     </ul>
-  </p>
 
-  <h2>6. Conclusion</h2>
-  <p>
-    La <strong>formule de Kyungu</strong> apporte une approche originale et rigoureuse de la transformée de Laplace inverse. 
-    Elle permet une interprétation intuitive des composantes régulières et impulsionnelles. Son lien naturel avec 
-    l’intégrale de Bromwich révèle la profondeur analytique de cette découverte. Cette formule constitue ainsi une 
-    voie nouvelle pour l'enseignement et le calcul de la transformation de Laplace.
-  </p>
+    <h2>6. Conclusion</h2>
+    <p>
+      La <strong>formule de Kyungu</strong> apporte une approche originale et rigoureuse de la transformée de Laplace inverse. 
+      Elle permet une interprétation intuitive des composantes régulières et impulsionnelles. Son lien naturel avec 
+      l’intégrale de Bromwich révèle la profondeur analytique de cette découverte. Cette formule constitue ainsi une 
+      voie nouvelle pour l'enseignement et le calcul de la transformation de Laplace.
+    </p>
+  </article>
 
-  <p class="center">
-    <em>Auteur : Path Kyungu</em><br>
-    <em>Contact : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></em>
-  </p>
+  <footer>
+    Article rédigé par <strong>Pathy Kyungu</strong> · <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a><br>
+    <a href="https://pathykyungu.github.io" target="_blank">↩ Retour à la page principale</a>
+  </footer>
 
 </body>
 </html>
