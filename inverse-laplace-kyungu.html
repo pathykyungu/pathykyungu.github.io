@@ -7,38 +7,73 @@
   <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-  <!-- Style to enlarge MathJax formulas -->
-<style>
+
+  <!-- Typographie & Styles MathJax -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
     body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
+      font-family: 'Libre Baskerville', serif;
+      max-width: 860px;
+      margin: auto;
+      padding: 2em;
+      background-color: #fdfdfd;
+      color: #222;
+      line-height: 1.7;
     }
 
     mjx-container[jax="CHTML"] {
-        font-size: 180% !important;  /* ← ceci agrandit les formules MathJax */
+      font-size: 170% !important;
     }
-</style>
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 2em;
-      line-height: 1.6;
-      background-color: #fdfdfd;
-      color: #333;
+
+    h1 {
+      background-color: #e3eaf2;
+      padding: 0.5em;
+      text-align: center;
+      border-radius: 6px;
+      color: #003366;
     }
-    h1, h2, h3 {
-      color: #222;
+
+    h2 {
+      color: #004477;
+      margin-top: 2em;
     }
+
+    p {
+      margin-top: 1em;
+    }
+
     code {
       background-color: #eee;
       padding: 0.2em 0.4em;
       border-radius: 4px;
     }
+
     a {
       color: #0066cc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 1.5em;
+    }
+
+    blockquote {
+      background: #f0f0f0;
+      border-left: 5px solid #aaa;
+      padding: 1em;
+      font-style: italic;
+      margin: 2em 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 3em 0;
     }
   </style>
 </head>
@@ -51,7 +86,7 @@
 
 <hr>
 
-<h2>What if we’ve been teaching everything in the wrong order?</h2>
+<h2>1. What if we’ve been teaching everything in the wrong order?</h2>
 
 <p>In mathematics, we traditionally teach <strong>derivatives before integrals</strong>, <strong>direct transforms before inverse transforms</strong>, and <strong>definitions before real-world problems</strong>.</p>
 
@@ -69,7 +104,7 @@ It would be <strong>born out of intuition</strong>.</p>
 
 <hr>
 
-<h2>This is exactly what the Kyungu Formula proposes</h2>
+<h2>2. This is exactly what the Kyungu Formula proposes</h2>
 
 <p>Today, I propose a similar pedagogical inversion:</p>
 
@@ -97,7 +132,7 @@ Just an auxiliary function \( \varphi(x) \), its derivatives at zero, and a clea
 
 <hr>
 
-<h2>Why this reversal is powerful — and pedagogical</h2>
+<h2>3. Why this reversal is powerful — and pedagogical</h2>
 
 <p>Teaching the inverse transform first:</p>
 
@@ -113,7 +148,7 @@ Just an auxiliary function \( \varphi(x) \), its derivatives at zero, and a clea
 
 <hr>
 
-<h2>So what comes next?</h2>
+<h2>4. So what comes next?</h2>
 
 <p>I truly believe that in the years to come, many teachers and students will naturally begin with <strong>inverse Laplace transforms</strong> — because that’s how we encounter problems in real life.</p>
 
