@@ -1,153 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Kyungu Formula Applied to the Inverse Laplace Transform of arctan(1/p²)</title>
-    <meta name="description" content="Application of the Kyungu Formula to the inverse Laplace transform of arctan(1/p²): Series expression and closed-form result.">
-    <meta name="author" content="Pathy Kyungu">
-    <meta name="keywords" content="Kyungu Formula, Inverse Laplace Transform, arctan, Power Series, Closed-form Expression, Applied Mathematics, Mathematical Analysis">
-
-    <!-- Style -->
-    <style>
-        body {
-            font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #222;
-            line-height: 1.8;
-            margin: 40px auto;
-            max-width: 900px;
-            padding: 0 20px;
-        }
-        h1, h2, h3 {
-            color: #004080;
-        }
-        h1 {
-            border-bottom: 3px solid #004080;
-            padding-bottom: 5px;
-        }
-        h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 3px;
-            margin-top: 40px;
-        }
-        code {
-            background: #eee;
-            padding: 2px 5px;
-            border-radius: 4px;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        mjx-container[jax="CHTML"] {
-            font-size: 180% !important;
-        }
-        .footer {
-            font-size: 0.9em;
-            color: #555;
-            margin-top: 50px;
-            border-top: 1px solid #ccc;
-            padding-top: 20px;
-        }
-    </style>
-
-    <!-- MathJax CDN -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+  <meta charset="UTF-8">
+  <title>Kyungu Formula – Inverse Laplace of arctan(1/p²)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
 <h1>Application of the Kyungu Formula to the Inverse Laplace Transform of \( \arctan\left(\frac{1}{p^2}\right) \)</h1>
 
-<p><strong>Author:</strong> Pathy Kyungu<br>
-<strong>Publication Date:</strong> July 20, 2025<br>
-<strong>Version:</strong> 1.0 — Official Published Version</p>
+<p><strong>Author:</strong> Pathy Kyungu</p>
+<p><strong>Publication Date:</strong> July 20, 2025</p>
+<p><strong>Version:</strong> 1.0 – Official Published Version</p>
 
 <h2>Abstract</h2>
-<p>This work presents the application of the <strong>Kyungu Formula</strong> to the inverse Laplace transform of the function:
-\[
-F(p) = \arctan\left( \frac{1}{p^2} \right)
-\]
-A power series representation is obtained, followed by a simplification into a closed-form expression involving hyperbolic and trigonometric functions.</p>
 
-<h2>1. Kyungu Formula</h2>
-<p>The <strong>Kyungu Formula</strong> for the inverse Laplace transform is:
+<p>The <strong>Kyungu Formula</strong> is applied here to evaluate the inverse Laplace transform of the function:</p>
+
+<p>
+\[
+F(p) = \arctan\left(\frac{1}{p^2}\right)
+\]
+</p>
+
+<p>The method leads to both a series representation and a closed-form expression involving hyperbolic and trigonometric functions.</p>
+
+<h2>Kyungu Formula</h2>
+
+<p>The formula expresses the inverse Laplace transform of a function \( F(p) \) as follows:</p>
+
+<p>
 \[
 \mathcal{L}^{-1}[F](t) = \varphi(0) \cdot \delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
 \]
-where:
+</p>
+
+<p>with the auxiliary function:</p>
+
+<p>
 \[
-\varphi(p) = F\left( \frac{1}{p} \right)
+\varphi(p) = F\left(\frac{1}{p}\right)
 \]
-and \( \delta(t) \) is the Dirac delta function.</p>
+</p>
 
-<h2>2. Application to \( F(p) = \arctan\left( \frac{1}{p^2} \right) \)</h2>
+<ul>
+  <li>\( \delta(t) \) denotes the Dirac impulse.</li>
+  <li>\( \varphi^{(n)}(0) \) is the \(n\)-th derivative evaluated at zero.</li>
+</ul>
 
-<h3>2.1 Auxiliary Function</h3>
-<p>Given:
+<h2>Application to \( F(p) = \arctan\left( \frac{1}{p^2} \right) \)</h2>
+
+<h3>Auxiliary Function</h3>
+
+<p>Starting from:</p>
+
+<p>
 \[
 F(p) = \arctan\left( \frac{1}{p^2} \right)
 \]
-the auxiliary function becomes:
+</p>
+
+<p>we get:</p>
+
+<p>
 \[
 \varphi(p) = \arctan(p^2)
-\]</p>
+\]
+</p>
 
-<h3>2.2 Series Expansion</h3>
-<p>Using:
+<h3>Series Expansion</h3>
+
+<p>The series expansion of \(\arctan(x)\) is:</p>
+
+<p>
 \[
 \arctan(x) = \sum_{k=0}^\infty (-1)^k \cdot \frac{x^{2k+1}}{2k+1}
 \]
-we find:
+</p>
+
+<p>Therefore:</p>
+
+<p>
 \[
 \varphi(p) = \sum_{k=0}^\infty (-1)^k \cdot \frac{p^{4k+2}}{2k+1}
-\]</p>
+\]
+</p>
 
-<h3>2.3 Derivatives</h3>
-<p>The derivatives at zero are:
+<h3>Derivatives</h3>
+
+<p>The derivatives at zero are given by:</p>
+
+<p>
 \[
 \varphi^{(4k+2)}(0) = (-1)^k \cdot \frac{(4k+2)!}{2k+1}
-\]</p>
+\]
+</p>
 
-<h3>2.4 Inverse Laplace Transform</h3>
-<p>Therefore:
+<h3>Inverse Laplace Transform</h3>
+
+<p>Thus, the series expression becomes:</p>
+
+<p>
 \[
 \mathcal{L}^{-1}[F](t) = 2 \sum_{k=0}^\infty (-1)^k \cdot \frac{t^{4k+1}}{(4k+2)!}
-\]</p>
+\]
+</p>
 
-<h2>3. Closed-form Expression</h2>
-<p>The series can be summed into the closed-form:
+<h2>Closed-form Expression</h2>
+
+<p>This infinite sum simplifies into the following exact closed-form expression:</p>
+
+<p>
 \[
-S(t) = \frac{2}{t} \cdot \sinh\left( \frac{t \sqrt{2}}{2} \right) \cdot \sin\left( \frac{t \sqrt{2}}{2} \right)
-\]</p>
+\frac{2}{t} \cdot \sinh\left( \frac{t\sqrt{2}}{2} \right) \cdot \sin\left( \frac{t\sqrt{2}}{2} \right)
+\]
+</p>
 
-<h2>4. Conclusion</h2>
-<p>Thus, the final result is:
+<h2>Final Result</h2>
+
+<p>Therefore:</p>
+
+<p>
 \[
 \mathcal{L}^{-1}\left[ \arctan\left( \frac{1}{p^2} \right) \right](t)
-= \frac{2}{t} \cdot \sinh\left( \frac{t \sqrt{2}}{2} \right)
-\cdot \sin\left( \frac{t \sqrt{2}}{2} \right)
-\]</p>
+= \frac{2}{t} \cdot \sinh\left( \frac{t\sqrt{2}}{2} \right) \cdot \sin\left( \frac{t\sqrt{2}}{2} \right)
+\]
+</p>
 
-<p>This expression does not appear in standard Laplace transform tables. It highlights the analytical power of the <strong>Kyungu Formula</strong>.</p>
+<p>This result does not appear in classical Laplace transform tables. It demonstrates the analytical power of the <strong>Kyungu Formula</strong>.</p>
 
 <h2>References</h2>
+
 <ul>
-    <li><a href="https://doi.org/10.5281/zenodo.16190286" target="_blank">Zenodo DOI: Application to arctan(1/p²)</a></li>
-    <li><a href="https://doi.org/10.5281/zenodo.15966318" target="_blank">Zenodo DOI: Detailed Kyungu Formula</a></li>
-    <li><a href="https://pathykyungu.github.io" target="_blank">Official Website</a></li>
+  <li><a href="https://doi.org/10.5281/zenodo.16190286" target="_blank">Zenodo DOI: Application to arctan(1/p²)</a></li>
+  <li><a href="https://doi.org/10.5281/zenodo.15966318" target="_blank">Zenodo DOI: Detailed Kyungu Formula</a></li>
+  <li><a href="https://pathykyungu.github.io" target="_blank">Official Website</a></li>
 </ul>
 
-<div class="footer">
-    <p>© 2025 Pathy Kyungu. All rights reserved.<br>
-    Distribution allowed only with proper attribution and link to:
-    <a href="https://pathykyungu.github.io" target="_blank">https://pathykyungu.github.io</a></p>
-</div>
+<h2>See Also</h2>
+
+<ul>
+  <li>Inverse Laplace Transform</li>
+  <li>Power Series Methods</li>
+  <li>Hyperbolic and Trigonometric Functions</li>
+  <li>Analytical Methods in Applied Mathematics</li>
+</ul>
+
+<p>Official Website: <a href="https://pathykyungu.github.io" target="_blank">pathykyungu.github.io</a></p>
+
+<hr>
+
+<p style="font-size: 0.9em; color: #555;">This draft is intended to inspire the writing of a future Wikipedia article by independent contributors.</p>
 
 </body>
 </html>
