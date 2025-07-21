@@ -87,7 +87,43 @@
 <p>Cette forme exprime la transformée de Laplace inverse comme une intégrale complexe autour de l'origine, utilisant la fonction auxiliaire et l'exponentielle complexe.</p>
 <h2>Extensions</h2>
 
-<p>Le travail a été étendu à la <strong>transformée de Mellin inverse</strong>, aboutissant à une expression similaire appelée <strong>formule Kyungu–Mellin–Laplace (KML)</strong>.</p>
+<p>La formule de Kyungu, initialement conçue pour la <strong>transformée de Laplace inverse</strong>, a été étendue à la <strong>transformée de Mellin inverse</strong>, donnant naissance à la <strong>formule Kyungu–Mellin–Laplace (KML)</strong>.</p>
+
+<p>Cette extension repose sur la relation structurelle entre les deux transformées, en exploitant le lien suivant :</p>
+
+<p>
+\[
+\mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F]\left(-\ln x\right)
+\]
+</p>
+
+<p>Ainsi, la <strong>formule KML</strong> exprime la transformée de Mellin inverse sous forme :</p>
+
+<h3>Forme série :</h3>
+
+<p>
+\[
+\mathcal{M}^{-1}[F](x) = \varphi(0) \cdot \delta(1 - x) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot \left( \ln \frac{1}{x} \right)^{n-1}
+\]
+</p>
+
+<ul>
+  <li>\(\delta(1 - x)\) : distribution de Dirac centrée en \(x = 1\)</li>
+  <li>\(\varphi(x) = F(1/x)\)</li>
+  <li>\(\varphi^{(n)}(0)\) : dérivée \(n\)-ième de la fonction auxiliaire</li>
+</ul>
+
+<h3>Forme intégrale :</h3>
+
+<p>
+\[
+\mathcal{M}^{-1}[F](x) = \varphi(0) \cdot \delta(1 - x) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \cdot x^{-1/z} \, dz
+\]
+</p>
+
+<p>où le contour \(\Gamma\) est un petit contour autour de l'origine dans le plan complexe.</p>
+
+<p>Cette extension permet de traiter les deux grandes inverses (Laplace et Mellin) dans une approche unifiée, série ou intégrale.</p>
 
 <h2>Publications</h2>
 
