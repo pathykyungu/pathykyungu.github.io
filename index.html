@@ -112,18 +112,70 @@
   <p class="center"><strong>Mathématiques · Vulgarisation · Recherches</strong></p>
 
 <section>
-  <h2>👨🏽‍🏫 Biographie scientifique</h2>
-  <p><strong>Pathy Kyungu</strong> est un <strong>chercheur indépendant</strong> en mathématiques, originaire de la République Démocratique du Congo (RDC). Il est connu pour ses travaux sur la <strong>transformée de Laplace inverse</strong> et la <strong>transformée de Mellin inverse</strong>, dont il a établi la <strong>formule de Kyungu</strong>, publiée officiellement sur <a href="https://zenodo.org/communities/kyungu-formula" target="_blank" rel="noopener noreferrer">Zenodo</a>.</p>
+  <h2>🧠 Formules signatures</h2>
 
-  <p>Ses recherches débutent dès l'âge de <strong>16 ans</strong>. En <strong>1999</strong>, à <strong>19 ans</strong>, ses travaux furent reconnus par le Vice-Gouverneur du Katanga, <strong>Jacques Muyumba Ndubula</strong>, qui fit mention d’un dépôt officiel de l'abstract de ses découvertes.</p>
+  <h3>Formule de Kyungu pour la Transformée de Laplace Inverse</h3>
 
-  <p>En <strong>2002</strong>, il découvre un opérateur mathématique fondamental. En <strong>2010</strong>, il propose une démonstration de l'<strong>hypothèse de Riemann</strong>, dans une section de son document personnel de plus de <strong>500 pages</strong>, rédigé initialement sous Word 2003 et dont la source est conservée.</p>
+  <h4>1. Forme série</h4>
+  <p>
+    \[
+      \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, t^{n-1}
+    \]
+  </p>
+  <ul>
+    <li><strong>\(\mathcal{L}^{-1}[F](t)\)</strong> : transformée de Laplace inverse de la fonction \(F(p)\).</li>
+    <li><strong>\(\varphi(t)\)</strong> : fonction auxiliaire définie par \(\varphi(t) = F\left(\frac{1}{t}\right)\).</li>
+    <li><strong>\(\varphi^{(n)}(0)\)</strong> : la \(n\)-ième dérivée de \(\varphi\) évaluée en 0.</li>
+    <li><strong>\(\delta(t)\)</strong> : distribution de Dirac, impulsion de Dirac concentrée en 0.</li>
+    <li>La série exprime \(\mathcal{L}^{-1}[F](t)\) via les dérivées successives de \(\varphi\), pondérées par \(\frac{n}{(n!)^2}\) et multipliées par \(t^{n-1}\).</li>
+  </ul>
 
-  <p>Après une tentative infructueuse de création d’une fondation collaborative, il poursuit aujourd’hui seul ses recherches et développe l’une de ses contributions majeures : la <strong>formule de Kyungu</strong>.</p>
+  <h4>2. Forme intégrale</h4>
+  <p>
+    \[
+      \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} e^{\frac{t}{z}} \, dz
+    \]
+  </p>
+  <ul>
+    <li>\(\Gamma\) : contour fermé dans le plan complexe entourant l’origine.</li>
+    <li>Intégrale de contour représentant la transformée inverse avec un noyau exponentiel complexe.</li>
+  </ul>
 
-  <p>Ses publications officielles sont disponibles principalement sur <strong>Zenodo</strong>. Il dispose également de comptes personnels sur <strong>arXiv</strong> et <strong>ResearchGate</strong>, en vue de futures publications.</p>
+  <h3>Formule de Kyungu pour la Transformée de Mellin Inverse</h3>
 
-  <p>Il partage régulièrement ses recherches et ses enseignements en mathématiques et physique via des <strong>vidéos pédagogiques</strong> sur <a href="https://www.tiktok.com/@mathkyungu" target="_blank" rel="noopener noreferrer">TikTok</a> et <a href="https://www.facebook.com/mathkyungu" target="_blank" rel="noopener noreferrer">Facebook</a>.</p>
+  <h4>1. Forme symbolique</h4>
+  <p>
+    \[
+      \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x)
+    \]
+  </p>
+  <ul>
+    <li>La transformée de Mellin inverse s'exprime par la transformée de Laplace inverse avec \(t = -\ln x\).</li>
+  </ul>
+
+  <h4>2. Forme série</h4>
+  <p>
+    \[
+      \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1 - x) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
+    \]
+  </p>
+  <ul>
+    <li>\(x\) : variable positive.</li>
+    <li>\(\delta(1 - x)\) : impulsion de Dirac centrée en \(x = 1\).</li>
+    <li>Expansion en puissances logarithmiques de \(-\ln x\).</li>
+  </ul>
+
+  <h4>3. Forme intégrale</h4>
+  <p>
+    \[
+      \mathcal{M}^{-1}[F](x) = \varphi(0) \cdot \delta(1 - x) + \frac{1}{2\pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, x^{-\frac{1}{z}} \, dz
+    \]
+  </p>
+  <ul>
+    <li>Expression intégrale similaire à celle de Laplace adaptée à la transformée de Mellin.</li>
+    <li>Contour \(\Gamma\) défini selon la région de convergence.</li>
+  </ul>
+
 </section>
   <div style="
   max-width: 700px;
