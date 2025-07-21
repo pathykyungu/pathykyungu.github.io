@@ -44,6 +44,10 @@
     .center {
       text-align: center;
     }
+    /* Agrandir les formules MathJax */
+    mjx-container[jax="CHTML"] {
+      font-size: 180% !important;
+    }
   </style>
 </head>
 
@@ -90,8 +94,6 @@ f(t) = \varphi(0)\cdot \delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!
   <li>\( \varphi^{(n)}(0) \) denotes the \(n\)-th derivative of the auxiliary function at zero</li>
 </ul>
 
-<p>The inversion is thus performed purely using derivatives and powers of \( t \).</p>
-
 <h2>3. Application to the Inverse Mellin Transform</h2>
 
 <p>By introducing the logarithmic substitution \( t = -\ln(x) \), the formula extends to Mellin inversion:</p>
@@ -102,17 +104,15 @@ f(t) = \varphi(0)\cdot \delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!
 \]
 </p>
 
-<p>This is called the <strong>Kyungu–Mellin–Laplace (KML) formula</strong>. The function is reconstructed directly from derivatives, avoiding classical integral representations.</p>
+<p>This is called the <strong>Kyungu–Mellin–Laplace (KML) formula</strong>.</p>
 
 <h2>4. Pedagogical Interest</h2>
 
-<p>The Kyungu approach invites educators to reverse the conventional teaching order:</p>
-
 <ul>
-  <li>Present the <strong>inverse Laplace transform</strong> first, based on real-world reconstruction problems</li>
-  <li>Introduce the <strong>direct Laplace transform</strong> as a tool derived from the inversion process</li>
-  <li>Make students work directly with signals \( f(t) \) and their recoveries, rather than abstract transforms</li>
-  <li>Emphasize analytic structures (series expansions, derivatives) over complex analysis</li>
+  <li>Present the <strong>inverse Laplace transform</strong> first</li>
+  <li>Introduce the <strong>direct Laplace transform</strong> later as a natural consequence</li>
+  <li>Build understanding through reconstruction of signals \( f(t) \)</li>
+  <li>Use analytic structures: derivatives and series expansions</li>
 </ul>
 
 <h2>5. Philosophical Reflection</h2>
@@ -122,13 +122,9 @@ f(t) = \varphi(0)\cdot \delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!
 But that was before we discovered how powerful the inverse could be."
 </blockquote>
 
-<p>Starting with the inverse focuses the learner on reconstructing signals, finding causes from effects, and understanding transformations as reversible processes.</p>
-
 <h2>6. Conclusion</h2>
 
-<p>The <strong>Kyungu formula</strong> offers not only a mathematical tool but a new pedagogical paradigm. It transforms the inverse Laplace and Mellin transforms into simple, constructive processes based on series, accessible even without advanced integration techniques.</p>
-
-<p>Perhaps it's time to teach inverses first.</p>
+<p>The <strong>Kyungu formula</strong> offers both a mathematical tool and a new teaching paradigm, focusing on inversion and signal recovery through simple series.</p>
 
 <hr>
 
