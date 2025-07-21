@@ -3,21 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <title>Formule de Kyungu – Transformée de Laplace Inverse</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
   </script>
-      <!-- Style to enlarge MathJax formulas -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        mjx-container[jax="CHTML"] {
-            font-size: 180% !important;
-        }
-    </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
   <style>
     body {
       font-family: Georgia, serif;
@@ -26,143 +22,169 @@
       padding: 2em;
       background-color: #fdfdfd;
       color: #333;
+      line-height: 1.7;
     }
     h1, h2, h3 {
-      color: #222;
+      color: #2c3e50;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
     code {
       background-color: #eee;
       padding: 0.2em 0.4em;
       border-radius: 4px;
     }
-    a {
-      color: #0066cc;
+    blockquote {
+      font-style: italic;
+      background: #f0f0f0;
+      padding: 1em;
+      border-left: 4px solid #888;
     }
   </style>
 </head>
 <body>
 
-<h1>🧠 Formule de Kyungu : une nouvelle méthode pour la transformée de Laplace inverse</h1>
+<h1>Formule de Kyungu – Transformée de Laplace Inverse</h1>
 
-<p><strong>Par Path Kyungu – Mathématicien et éducateur</strong><br>
-<a href="https://pathykyungu.github.io">pathykyungu.github.io</a></p>
+<p><strong>Par Pathy Kyungu</strong> — Mathématicien et éducateur</p>
+<p><a href="https://pathykyungu.github.io">pathykyungu.github.io</a></p>
 
 <hr>
 
 <h2>1. Introduction</h2>
 
-<p>La transformée de Laplace inverse joue un rôle fondamental dans l’analyse des systèmes dynamiques, les équations différentielles et le traitement du signal.</p>
+<p>La <strong>transformée de Laplace inverse</strong> est essentielle en analyse des systèmes dynamiques, en équations différentielles et en traitement du signal.</p>
 
-<p>La <strong>formule de Kyungu</strong> propose une approche nouvelle et élégante qui permet de retrouver \( f(t) \) à partir de \( F(p) \) sans passer par des intégrales complexes ni des tables classiques.</p>
+<p>La <strong>formule de Kyungu</strong> propose une méthode nouvelle et directe pour retrouver une fonction temporelle \( f(t) \) à partir de sa transformée de Laplace \( F(p) \), sans utiliser ni résidus ni tables classiques.</p>
 
-<h2>2. La formule de Kyungu (KL)</h2>
+<h2>2. Présentation de la formule de Kyungu</h2>
 
-<p>Soit \( F(p) \) une fonction de Laplace. On définit une fonction auxiliaire :</p>
+<p>Soit \( F(p) \) une fonction de Laplace. On définit une <strong>fonction auxiliaire</strong> :</p>
 
-<p>\[
+\[
 \varphi(x) = F\left(\frac{1}{x}\right)
-\]</p>
+\]
 
-<p>Alors, la transformée de Laplace inverse \( f(t) \) est donnée par :</p>
+<p>Alors la <strong>transformée de Laplace inverse</strong> est donnée par la série :</p>
 
-<p>\[
-f(t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
-\]</p>
+\[
+f(t) = \varphi(0)\cdot \delta(t) + \sum_{n=1}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot n \cdot t^{n-1}
+\]
 
-<p>Le terme \( \varphi(0)\delta(t) \) représente la composante impulsionnelle (cas où \( f \) contient un Dirac).</p>
+<ul>
+  <li>\( \delta(t) \) : distribution de Dirac (composante impulsionnelle).</li>
+  <li>\( \varphi^{(n)}(0) \) : dérivées successives de la fonction auxiliaire au point zéro.</li>
+</ul>
 
-<h2>3. Exemple 1 : \( F(p) = \frac{1}{p^2} \)</h2>
+<h2>3. Exemple 1 : \( F(p) = \dfrac{1}{p^2} \)</h2>
 
-<p>Ici, \( \varphi(x) = x^2 \), donc :</p>
+<p>On a :</p>
 
-<p>\[
-\varphi^{(n)}(0) =
-\begin{cases}
-0 & \text{si } n \neq 2 \\
-2 & \text{si } n = 2
-\end{cases}
-\Rightarrow
-f(t) = \frac{2}{(2!)^2} \cdot 2 \cdot t^{1} = t
-\]</p>
+\[
+\varphi(x) = x^2
+\]
 
-<p>Ce qui correspond bien à la transformée de Laplace inverse de \( \frac{1}{p^2} \).</p>
+<p>La seule dérivée non nulle est :</p>
 
-<h2>4. Exemple 2 : \( F(p) = \frac{1}{1 + p^3} \)</h2>
+\[
+\varphi''(0) = 2
+\]
 
-<h3>Application de la formule de Kyungu</h3>
+<p>La formule donne alors :</p>
 
-<p>On définit :</p>
-<p>\[
-\varphi(x) = F\left(\frac{1}{x}\right) = \frac{x^3}{x^3 + 1}
-\]</p>
+\[
+f(t) = \frac{2}{(2!)^2} \cdot 2 \cdot t^1 = t
+\]
 
-<p>Développement en série de Taylor :</p>
-<p>\[
-\varphi(x) = \sum_{k=1}^{\infty} (-1)^{k+1} x^{3k}
-\]</p>
+<p>Ce résultat correspond à la transformée de Laplace inverse connue de \( F(p) = \frac{1}{p^2} \).</p>
 
-<p>Donc les dérivées sont :</p>
-<p>\[
-\varphi^{(n)}(0) = \begin{cases}
-(-1)^{k+1} (3k)! & \text{si } n = 3k \\
-0 & \text{sinon}
-\end{cases}
-\]</p>
+<h2>4. Exemple 2 : \( F(p) = \dfrac{1}{1 + p^3} \)</h2>
 
-<p>Et la formule de Kyungu donne :</p>
-<p>\[
-f(t) = \sum_{k=1}^{\infty} \frac{(-1)^{k+1} \cdot 3k}{(3k)!} \cdot t^{3k - 1}
-\]</p>
+<h3>Application de la formule</h3>
 
-<h3>Forme fermée retrouvée par projection réelle</h3>
+<p>On pose :</p>
 
-<p>Bien que la fonction 
-\(
-F(p) = \dfrac{1}{1 + p^3}
-\)
-n’apparaisse pas dans les tables classiques, 
-il est possible de retrouver une forme fermée à partir de la somme complexe, 
-en projetant sur l’axe réel grâce aux racines cubiques de l’unité.</p>
+\[
+\varphi(x) = \frac{x^3}{x^3 + 1}
+\]
 
-<p>On factorise :</p>
+<p>Développement en série :</p>
+
+\[
+\varphi(x) = \sum_{k=1}^\infty (-1)^{k+1} \cdot x^{3k}
+\]
+
+<p>Les dérivées au point zéro sont :</p>
+
+\[
+\varphi^{(3k)}(0) = (-1)^{k+1} \cdot (3k)!
+\]
+
+<p>La série devient :</p>
+
+\[
+f(t) = \sum_{k=1}^\infty \frac{(-1)^{k+1} \cdot 3k}{(3k)!} \cdot t^{3k - 1}
+\]
+
+<h3>Forme fermée retrouvée</h3>
+
+<p>La fonction \( F(p) \) n'apparaît pas dans les tables classiques. En factorisant le dénominateur :</p>
 
 \[
 1 + p^3 = (p + 1)(p + \omega)(p + \omega^2), \quad \omega = e^{2i\pi/3}
 \]
 
-<p>La transformée inverse devient alors :</p>
+<p>La transformée inverse devient :</p>
 
 \[
-f(t) = \frac{1}{3} e^{-t} + \frac{1}{3\omega^2} e^{-\omega t} + \frac{1}{3\omega} e^{-\omega^2 t}
+f(t) = \frac{1}{3}e^{-t} + \frac{1}{3\omega^2} e^{-\omega t} + \frac{1}{3\omega} e^{-\omega^2 t}
 \]
 
-<p>En projetant cette expression complexe sur l’axe réel, on obtient :</p>
+<p>En prenant la partie réelle :</p>
 
-<p>\[
+\[
 \boxed{
-f(t) = \frac{1}{3} e^{-t} + \frac{2}{3} e^{t/2} \cos\left( \frac{\sqrt{3}}{2} t - \frac{\pi}{3} \right)
+f(t) = \frac{1}{3} e^{-t} + \frac{2}{3} e^{t/2} \cdot \cos\left( \frac{\sqrt{3}}{2}t - \frac{\pi}{3} \right)
 }
-\]</p>
+\]
 
-<p>Cela montre que la série obtenue par la formule de Kyungu converge vers cette solution exacte, même si elle est absente des tables classiques.</p>
+<p>La série obtenue par la formule de Kyungu converge donc vers cette solution exacte, non répertoriée dans les tables classiques.</p>
 
 <h2>5. Conclusion</h2>
 
-<p>La formule de Kyungu offre une méthode directe pour retrouver la transformée de Laplace inverse sans tables ni résidus, en calculant seulement une série dérivée de la fonction auxiliaire \( \varphi(x) = F(1/x) \).</p>
-
-<p>Elle permet aussi de mettre en lumière des formes fermées même quand elles sont absentes des tables classiques.</p>
-
-<h2>📩 Contact</h2>
+<p>La <strong>formule de Kyungu</strong> constitue une méthode alternative, efficace et pédagogique pour calculer la transformée de Laplace inverse :</p>
 
 <ul>
-  <li>🌐 Site : <a href="https://pathykyungu.github.io">pathykyungu.github.io</a></li>
-  <li>📧 Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></li>
-  <li>📹 TikTok / YouTube : Le Professeur des Maths</li>
+  <li>Utilisation des dérivées successives de \( F(1/x) \)</li>
+  <li>Pas de résidus ni d'intégrales complexes</li>
+  <li>Capacité à révéler des formes fermées absentes des tables</li>
 </ul>
 
-<footer style="margin-top: 2em; font-size: 0.9em; color: #777; text-align: center;">
-  Dernière mise à jour : juillet 2025 · Rédigé par Pathy Kyungu
-</footer>
+<h2>Voir aussi</h2>
+
+<ul>
+  <li>Transformée de Laplace inverse</li>
+  <li>Formule Kyungu–Mellin–Laplace (KML)</li>
+  <li>Séries de Taylor appliquées aux transformations intégrales</li>
+</ul>
+
+<h2>Références</h2>
+
+<ul>
+  <li><a href="https://pathykyungu.github.io" target="_blank">Site officiel de Pathy Kyungu</a></li>
+  <li><a href="https://doi.org/10.5281/zenodo.15966318" target="_blank">Zenodo DOI : Présentation de la formule de Kyungu</a></li>
+</ul>
+
+<hr>
+
+<p style="font-size: 0.9em; color: #555; text-align: center;">
+Dernière mise à jour : juillet 2025 • rédigé par Pathy Kyungu
+</p>
 
 </body>
 </html>
