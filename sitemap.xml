@@ -6,12 +6,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pathykyungu.github.io/formule-kyungu.html</loc>
+    <loc>https://pathykyungu.github.io/page1.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pathykyungu.github.io/inverse-laplace-kyungu.html</loc>
-  </url>
-  <url>
-    <loc>https://pathykyungu.github.io/kyungu-formula-en.html</loc>
+    <loc>https://pathykyungu.github.io/page2.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
