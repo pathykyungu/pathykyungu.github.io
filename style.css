@@ -95,4 +95,8 @@
   margin: 0 8px;
   vertical-align: middle;
 }
+.signature {
+  font-size: 90%; /* Réduit de 10 % */
+  color: #555;     /* Optionnel : un ton légèrement plus gris */
+}
   </style>
