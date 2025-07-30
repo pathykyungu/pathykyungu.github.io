@@ -90,9 +90,9 @@
 }
 
 .footer-links img {
-  width: 32px;   /* ou 24px */
+  width: 16px;
   height: auto;
-  margin: 0 8px;
+  margin: 0 5px;
   vertical-align: middle;
 }
   </style>
