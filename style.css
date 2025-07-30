@@ -84,10 +84,15 @@
   outline: 2px dashed #ccc;
   outline-offset: 2px;
 }
+.footer-links {
+  text-align: center;
+  margin: 1em 0;
+}
+
 .footer-links img {
-  width: 32px;   /* ou 24px si tu veux plus petit */
+  width: 32px;   /* ou 24px */
   height: auto;
-  margin: 0 8px; /* espace entre les icônes */
+  margin: 0 8px;
   vertical-align: middle;
 }
   </style>
