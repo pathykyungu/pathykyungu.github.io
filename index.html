@@ -125,16 +125,17 @@
     <li>Expansion en puissances logarithmiques de \(-\ln x\).</li>
   </ul>
 
-  <h4>3. Forme intégrale</h4>
-  <p>
-    \[
-      \mathcal{M}^{-1}[F](x) = \varphi(0) \cdot \delta(1 - x) + \frac{1}{2\pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, x^{-\frac{1}{z}} \, dz
-    \]
-  </p>
-  <ul>
-    <li>Expression intégrale similaire à celle de Laplace adaptée à la transformée de Mellin.</li>
-    <li>Contour \(\Gamma\) défini selon la région de convergence.</li>
-  </ul>
+<h4>3. Forme intégrale</h4>
+<p>
+  \[
+    \mathcal{M}^{-1}[F](x) = \varphi(0) \cdot \delta(1 - x) + \frac{1}{2\pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \cdot x^{-\frac{1}{z}} \, dz
+  \]
+</p>
+<ul>
+  <li>Expression intégrale dérivée d’un développement en série autour de l’origine.</li>
+  <li>Le contour \(\Gamma\) est un petit cercle fermé autour de \( z = 0 \), parcouru dans le sens direct (positif), dans une région où \( \varphi(z) \) est analytique.</li>
+  <li>Permet de retrouver le développement en série utilisé dans la formule de Kyungu.</li>
+</ul>
 
 </section>
  <section class="links">
