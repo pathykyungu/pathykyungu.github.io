@@ -88,3 +88,10 @@ Ce dépôt contient l'article complet sur la transformée gamma, sa définition,
 - Pathy Kyungu  
 - Site web : [pathykyungu.github.io](https://pathykyungu.github.io)  
 - © 2025 Pathy Kyungu. Tous droits réservés.
+
+## 📄 Licence
+
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+Ce dépôt est mis à disposition selon les termes de la licence Creative Commons Attribution 4.0 International (CC BY 4.0).  
+Vous pouvez partager, modifier, adapter et utiliser ce travail, même à des fins commerciales, **à condition de citer l’auteur** : *Pathy Kyungu*.
