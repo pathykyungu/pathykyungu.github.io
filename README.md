@@ -74,3 +74,17 @@ Institut Technique Industriel Lumière du Christ (Likasi, RDC)
 ---
 
 Merci pour votre intérêt et votre curiosité scientifique 🙏🏽
+
+# 📘 Transformée Gamma et son Inversion
+
+Ce dépôt contient l'article complet sur la transformée gamma, sa définition, sa forme intégrale, et sa formule d’inversion, basé sur la méthode de Kyungu.
+
+## 📄 Lire l’article en PDF
+
+👉 [Cliquez ici pour lire l’article](transformee_gamma.pdf)
+
+## 🌐 Auteur
+
+- Pathy Kyungu  
+- Site web : [pathykyungu.github.io](https://pathykyungu.github.io)  
+- © 2025 Pathy Kyungu. Tous droits réservés.
