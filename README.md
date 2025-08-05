@@ -1,4 +1,5 @@
 # 📘 Formules de Kyungu – Approches analytiques inverses
+![License: CC BY 4.0](https://img.shields.io/badge/Licence-CC%20BY%204.0-blue.svg)
 
 Ce dépôt présente les travaux originaux du Professeur **Pathy Kyungu** sur les méthodes inverses en analyse opérationnelle, notamment :
 
