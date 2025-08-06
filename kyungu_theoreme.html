@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Théorème différentiel de Kyungu</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #222;
+    }
+    h1 {
+      color: #005a8d;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 3px;
+    }
+    .formula {
+      background: #f2f2f2;
+      border-left: 5px solid #005a8d;
+      padding: 1em;
+      margin: 1em 0;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Théorème différentiel de Kyungu</h1>
+
+  <p>Ce théorème établit une identité fondamentale entre le produit d'une fonction et le logarithme, et la dérivée de sa transformée gamma.</p>
+
+  <div class="formula">
+    \[
+    (x \varphi')^*(t) = t \cdot \left[ \left( \varphi^* \right)' \right](t)
+    \]
+  </div>
+
+  <p>où :</p>
+  <ul>
+    <li>\(\varphi(x)\) est une fonction suffisamment régulière,</li>
+    <li>\(^*\) désigne la transformée gamma de Kyungu, définie par :
+      \[
+      \varphi^*(t) = \int_0^t \varphi(x) \, dx
+      \]
+      (ou une autre définition selon le contexte choisi),
+    </li>
+    <li>le membre de droite représente d'abord la transformée gamma, puis la dérivation du résultat.</li>
+  </ul>
+
+  <h2>Exemple simple</h2>
+
+  <p>Considérons \( F(p) = \ln \left( \frac{1}{p} \right) \). Alors :</p>
+
+  <ul>
+    <li>\(\mathcal{L}^{-1} \left( \ln \left( \frac{1}{p} \right) \right) = \frac{1}{t}\)</li>
+    <li>\(\mathcal{L}^{-1} ( \ln p ) = -\frac{1}{t}\)</li>
+  </ul>
+
+  <p>Ces résultats découlent naturellement du théorème différentiel appliqué à la fonction \( \varphi(x) = \ln x \).</p>
+
+  <hr>
+  <p style="font-size: 0.9em; color: #666;">
+    Auteur : <strong>Pathy Kyungu</strong> &nbsp;|&nbsp; Date : Août 2025
+  </p>
+
+</body>
+</html>
