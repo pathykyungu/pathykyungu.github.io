@@ -2,77 +2,129 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Théorème différentiel de Kyungu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La transformée gamma – Pathy Kyungu</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 0 1em;
+      color: #222;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    code, pre {
+      background: #eee;
+      padding: 0.2em 0.4em;
+      border-radius: 5px;
+    }
+    .boxed {
+      display: block;
+      border: 2px solid #222;
+      padding: 1em;
+      margin: 1em 0;
+      background-color: #fff;
+      font-weight: bold;
+      text-align: center;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 2em 0;
+    }
+    .emoji {
+      font-size: 1.2em;
+    }
+  </style>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-  <style>
-    body {
-      font-family: "Georgia", serif;
-      max-width: 800px;
-      margin: 2em auto;
-      padding: 1em;
-      line-height: 1.6;
-      background-color: #fdfdfd;
-      color: #222;
-    }
-    h1 {
-      color: #005a8d;
-    }
-    code {
-      background-color: #eee;
-      padding: 2px 4px;
-      border-radius: 3px;
-    }
-    .formula {
-      background: #f2f2f2;
-      border-left: 5px solid #005a8d;
-      padding: 1em;
-      margin: 1em 0;
-      font-size: 1.2em;
-    }
-  </style>
 </head>
 <body>
 
-  <h1>Théorème différentiel de Kyungu</h1>
+  <h1>🧠 La transformée gamma et l’application du théorème différentiel</h1>
 
-  <p>Ce théorème établit une identité fondamentale entre le produit d'une fonction et le logarithme, et la dérivée de sa transformée gamma.</p>
+  <p>Nous démontrons ici, sans faire appel aux distributions ni à des procédés de régularisation, que :</p>
 
-  <div class="formula">
+  <div class="boxed">
+    \[\mathcal{L}^{-1}\ln p = -\frac{1}{t}\]
+  </div>
+
+  <p>Ce résultat n’est pas une reprise d’un fait connu, mais bien une conséquence directe et nouvelle de l’application rigoureuse du théorème différentiel appliqué à la transformée gamma de Kyungu.</p>
+
+  <hr>
+
+  <h2 class="emoji">🔁 Théorème différentiel (version Kyungu)</h2>
+
+  <p>Soit \(\varphi\) une fonction localement intégrable dont la transformée gamma est définie par :</p>
+
+  <p>\[
+  \varphi^*(t) = \sum_{n=0}^\infty \frac{\varphi^{(n)}(0)}{(n!)^2} \cdot t^n
+  \]</p>
+
+  <p>Alors, on a l’identité fondamentale :</p>
+
+  <p>\[
+  (x \varphi’)^*(t) = t \cdot \left( \varphi^* \right)’(t)
+  \]</p>
+
+  <hr>
+
+  <h2 class="emoji">📌 Application à \(\varphi(x) = \ln x\)</h2>
+
+  <p>Bien que la fonction \(\ln x\) ne soit pas développable en série entière autour de 0, sa transformée gamma \((\ln x)^*\) existe au sens analytique. En posant :</p>
+
+  <p>\[
+  F(p) = \ln\left(\frac{1}{p}\right) = -\ln p
+  \]</p>
+
+  <p>on a \(\varphi(x) = \ln x = F(1/x)\), et selon la formule :</p>
+
+  <p>\[
+  \frac{d}{dt} \left[ \varphi^*(t) \right] = \mathcal{L}^{-1}F(p)
+  \]</p>
+
+  <p>Par le théorème différentiel :</p>
+
+  <p>\[
+  (x \cdot \varphi’)^*(t) = t \cdot \left( \varphi^* \right)’(t)
+  \]</p>
+
+  <p>Dans notre cas :</p>
+
+  <p>\[
+  \varphi(x) = \ln x \quad \Rightarrow \quad \varphi’(x) = \frac{1}{x} \quad \Rightarrow \quad x \cdot \varphi’(x) = 1
+  \]</p>
+
+  <p>D’où :</p>
+
+  <p>\[
+  1^{*}(t) = 1 = t \cdot \left[ (\ln x)^* \right]’(t)
+  \Rightarrow
+  \left[ (\ln x)^* \right]’(t) = \frac{1}{t}
+  \]</p>
+
+  <p>Et ainsi :</p>
+
+  <div class="boxed">
     \[
-    (x \varphi')^*(t) = t \cdot \left[ \left( \varphi^* \right)' \right](t)
+    \mathcal{L}^{-1}\ln p = -\frac{1}{t}
     \]
   </div>
 
-  <p>où :</p>
-  <ul>
-    <li>\(\varphi(x)\) est une fonction suffisamment régulière,</li>
-    <li>\(^*\) désigne la transformée gamma de Kyungu, définie par :
-      \[
-      \varphi^*(t) = \int_0^t \varphi(x) \, dx
-      \]
-      (ou une autre définition selon le contexte choisi),
-    </li>
-    <li>le membre de droite représente d'abord la transformée gamma, puis la dérivation du résultat.</li>
-  </ul>
-
-  <h2>Exemple simple</h2>
-
-  <p>Considérons \( F(p) = \ln \left( \frac{1}{p} \right) \). Alors :</p>
-
-  <ul>
-    <li>\(\mathcal{L}^{-1} \left( \ln \left( \frac{1}{p} \right) \right) = \frac{1}{t}\)</li>
-    <li>\(\mathcal{L}^{-1} ( \ln p ) = -\frac{1}{t}\)</li>
-  </ul>
-
-  <p>Ces résultats découlent naturellement du théorème différentiel appliqué à la fonction \( \varphi(x) = \ln x \).</p>
-
   <hr>
-  <p style="font-size: 0.9em; color: #666;">
-    Auteur : <strong>Pathy Kyungu</strong> &nbsp;|&nbsp; Date : Août 2025
-  </p>
+
+  <h2 class="emoji">🎓 Conclusion</h2>
+
+  <p>Cette démarche montre la puissance du cadre analytique offert par la formule de Kyungu, via sa transformée gamma et le théorème différentiel associé. Sans avoir recours aux distributions, elle permet une interprétation rigoureuse de la transformée de Laplace inverse de fonctions singulières comme \(\ln p\).</p>
+
+  <p>Ce résultat ouvre la voie à une analyse nouvelle et plus accessible de la transformation de Laplace inverse, même dans des cas où les séries classiques sont inapplicables.</p>
 
 </body>
 </html>
