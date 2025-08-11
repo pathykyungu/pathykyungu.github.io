@@ -39,11 +39,11 @@ Ce travail vise à :
 
 Les méthodes sont appliquées à plusieurs fonctions transformées, dont :
 
-1. \( F(p) = 1/p^4 \)
-2. \( F(p) = 1/(1 + p^2) \)
-3. \( F(p) = p^2/(1 + p^3) \)
-4. \( F(p) = e^{2/p} \)
-5. \( F(p) = p^5 / (1 - p^5) \)
+1. F(p) = 1/p²
+2. F(p) = 1/(1 + p²)
+3. F(p) = p²/(1 + p³)
+4. F(p) = exp(2/p)
+5. F(p) = p⁵ / (1 - p⁵)
 
 *→ Les détails et les calculs se trouvent dans la version HTML du site ci-dessous.*
 
