@@ -61,6 +61,7 @@ Les méthodes sont appliquées à plusieurs fonctions transformées, dont :
 - 📌 [DOI 1 – Démonstration de la formule](https://doi.org/10.5281/zenodo.15719813)
 - 📌 [DOI 2 – Extensions via la formule KML](https://doi.org/10.5281/zenodo.15778235)
 - 📌 [DOI 3 – Exemples et séries non classiques](https://doi.org/10.5281/zenodo.15754963)
+[![DOI - Presentation detaillée de la formule de Kyungu](https://zenodo.org/badge/DOI/10.5281/zenodo.16783934.svg)](https://doi.org/10.5281/zenodo.16783934)
 
 ---
 
