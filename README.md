@@ -52,7 +52,7 @@ Les méthodes sont appliquées à plusieurs fonctions transformées, dont :
 ## 📘 Lire l’article complet en ligne
 
 🔍 **Page dédiée avec formules et exemples** (MathJax activé) :  
-👉 [pathykyungu.github.io/formules-kyungu.html](https://pathykyungu.github.io/formules-kyungu.html)
+👉 [pathykyungu.github.io/formule-kyungu.html](https://pathykyungu.github.io/formule-kyungu.html)
 
 ---
 
