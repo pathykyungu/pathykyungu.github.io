@@ -115,7 +115,7 @@
 
 <h4>1. Forme symbolique</h4>
 <p>
-  La transformée de Mellin inverse peut se relier à la transformée de Laplace inverse par le changement de variable \(t = -\ln x\) :
+  La transformée de Mellin inverse se relie à la transformée de Laplace inverse par le changement de variable \(t = -\ln x\) :
 </p>
 <p class="formula">
   \[
@@ -133,8 +133,12 @@
 </p>
 <p class="formula">
   \[
-    \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1 - x) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, (-\ln x)^{n-1}, 
-    \quad \varphi(x) = F\Big(\frac{1}{x}\Big)
+    \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1 - x) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, (-\ln x)^{n-1}
+  \]
+</p>
+<p class="formula">
+  \[
+    \varphi(x) = F\Big(\frac{1}{x}\Big)
   \]
 </p>
 <ul>
@@ -145,12 +149,16 @@
 
 <h4>3. Forme intégrale</h4>
 <p>
-  Version intégrale via un contour autour de \(z = 0\), analogue à la formule de Laplace :
+  Version intégrale via un contour autour de \(z = 0\) :
 </p>
 <p class="formula">
   \[
-    \mathcal{M}^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, x^{-1/z} \, dz, 
-    \quad \varphi(z) = F\Big(\frac{1}{z}\Big)
+    \mathcal{M}^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, x^{-1/z} \, dz
+  \]
+</p>
+<p class="formula">
+  \[
+    \varphi(z) = F\Big(\frac{1}{z}\Big)
   \]
 </p>
 <ul>
