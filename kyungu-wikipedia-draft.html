@@ -69,19 +69,19 @@
 
 <h2>Forme intégrale</h2>
 
-<p>La formule de Kyungu admet une forme intégrale, définie sur un petit contour fermé entourant l'origine dans le plan complexe :</p>
+<p>La formule de Kyungu pour la transformée de Laplace inverse admet une forme intégrale, définie sur un petit contour fermé entourant l'origine dans le plan complexe :</p>
 
-<p>
+<p class="formula">
 \[
-\mathcal{L}^{-1}[F](t) = \varphi(0) \cdot \delta(t) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \cdot e^{t/z} \, dz
+\mathcal{L}^{-1}[F](t) = \varphi(0)\, \delta(t) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \, e^{t/z} \, dz
 \]
 </p>
 
 <p>où :</p>
 <ul>
-  <li>\(\Gamma\) est un petit contour fermé autour de l'origine du plan complexe,</li>
-  <li>\(\varphi(z) = F(1/z)\) est la fonction auxiliaire dérivée de \(F(p)\),</li>
-  <li>\(\delta(t)\) désigne la distribution de Dirac.</li>
+  <li>\(\Gamma\) : petit contour fermé autour de \(z = 0\) dans le plan complexe, parcouru positivement,</li>
+  <li>\(\varphi(z) = F(1/z)\) : fonction auxiliaire dérivée de \(F(p)\),</li>
+  <li>\(\delta(t)\) : distribution de Dirac concentrée en \(t = 0\).</li>
 </ul>
 
 <p>Cette forme exprime la transformée de Laplace inverse comme une intégrale complexe autour de l'origine, utilisant la fonction auxiliaire et l'exponentielle complexe.</p>
@@ -113,15 +113,22 @@
   <li>\(\varphi^{(n)}(0)\) : dérivée \(n\)-ième de la fonction auxiliaire</li>
 </ul>
 
-<h3>Forme intégrale :</h3>
+<h3>Forme intégrale</h3>
 
-<p>
+<p>La formule de Kyungu pour la transformée de Mellin inverse admet une forme intégrale, définie sur un petit contour fermé entourant l'origine dans le plan complexe :</p>
+
+<p class="formula">
 \[
-\mathcal{M}^{-1}[F](x) = \varphi(0) \cdot \delta(1 - x) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \cdot x^{-1/z} \, dz
+\mathcal{M}^{-1}[F](x) = \varphi(0)\, \delta(1 - x) + \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \, x^{-1/z} \, dz
 \]
 </p>
 
-<p>où le contour \(\Gamma\) est un petit contour autour de l'origine dans le plan complexe.</p>
+<p>où :</p>
+<ul>
+  <li>\(\Gamma\) : petit contour fermé autour de \(z = 0\), parcouru positivement,</li>
+  <li>\(\varphi(z) = F(1/z)\) : fonction auxiliaire dérivée de \(F(p)\),</li>
+  <li>\(\delta(1 - x)\) : impulsion de Dirac centrée en \(x = 1\).</li>
+</ul>
 
 <p>Cette extension permet de traiter les deux grandes inverses (Laplace et Mellin) dans une approche unifiée, série ou intégrale.</p>
 
