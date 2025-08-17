@@ -2,81 +2,110 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Formule de Kyungu</title>
+  <title>Formule de Kyungu – Brouillon Wikipédia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Chargement de MathJax pour LaTeX -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[', '\\]']]
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+
   <style>
-    body { font-family: sans-serif; line-height: 1.6; max-width: 900px; margin: auto; }
-    h1, h2 { color: #003366; }
-    .formula { background: #f4f4f4; padding: 10px; border-left: 3px solid #003366; margin: 15px 0; }
+    body {
+      font-family: Georgia, serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      line-height: 1.6;
+      color: #222;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    .formula {
+      background: #f4f4f4;
+      padding: 0.5rem;
+      display: block;
+      margin: 1rem 0;
+      border-left: 4px solid #2c3e50;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
 
 <h1>Formule de Kyungu</h1>
 
-<p>
-La <strong>formule de Kyungu</strong> est une méthode mathématique introduite en 2024 par Pathy Kyungu pour exprimer la transformée de Laplace inverse et la transformée de Mellin inverse sous une forme basée sur les dérivées successives d’une fonction auxiliaire. 
-Elle se distingue des tables classiques en donnant directement une expansion en série.
-</p>
+<p>La <strong>formule de Kyungu</strong> est une méthode analytique pour calculer la transformée de Laplace inverse et la transformée de Mellin inverse.  
+Elle a été introduite en 2024 par Pathy Kyungu et repose sur le développement en série entière d’une fonction auxiliaire <math>\varphi(x) = F(1/x)</math>.  
+Cette approche permet d’obtenir des représentations à la fois en série et en intégrale, utiles pour les calculs analytiques et numériques.</p>
 
-<h2>Énoncé de la formule (série)</h2>
-
+<h2>Forme série (Laplace inverse)</h2>
 <p class="formula">
 \[
-\mathcal{L}^{-1}[F](t) \;=\; \varphi(0)\,\delta(t) \;+\; \sum_{n=1}^{\infty} 
-\frac{\varphi^{(n)}(0)}{(n!)^2}\, n \, t^{\,n-1},
+\mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, t^{\,n-1}
 \]
 </p>
+<p>
+avec <math>\varphi(x) = F(1/x)</math>, <math>\delta(t)</math> la distribution de Dirac, et <math>\varphi^{(n)}(0)</math> la n-ième dérivée de <math>\varphi</math> en zéro.
+</p>
 
-<p>où la fonction auxiliaire est définie par \(\varphi(x) = F(1/x)\).</p>
-
-<h2>Version intégrale (Laplace)</h2>
-
+<h2>Forme intégrale (Laplace inverse)</h2>
 <p class="formula">
 \[
 \mathcal{L}^{-1}[F](t) = \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \, e^{t/z} \, dz
 \]
 </p>
+<p>
+Le terme impulsionnel <math>\varphi(0)\,\delta(t)</math> est généré naturellement par le résidu en <math>z=0</math>.<br>
+<em>\(\Gamma\) : petit contour fermé autour de l'origine, parcouru positivement.</em>
+</p>
 
-<p>où :</p>
-<ul>
-  <li>\(\Gamma\) : petit contour fermé autour de \(z = 0\), parcouru positivement,</li>
-  <li>\(\varphi(z) = F(1/z)\) : fonction auxiliaire dérivée de \(F(p)\).</li>
-</ul>
+<h2>Forme série (Mellin inverse)</h2>
+<p class="formula">
+\[
+\mathcal{M}^{-1}[F](x) = \varphi(0)\,\delta(1-x) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (\ln \tfrac{1}{x})^{\,n-1}
+\]
+</p>
+<p>avec <math>\varphi(x) = F(1/x)</math> et <math>\delta(1-x)</math> centrée en <math>x=1</math>.</p>
 
-<p><em>Remarque :</em> le terme impulsionnel \(\varphi(0)\delta(t)\) est <strong>contenu implicitement</strong> dans cette écriture, puisqu’il provient du résidu en \(z=0\).</p>
-
-<h2>Version intégrale (Mellin)</h2>
-
+<h2>Forme intégrale (Mellin inverse)</h2>
 <p class="formula">
 \[
 \mathcal{M}^{-1}[F](x) = \frac{1}{2\pi i} \oint_\Gamma \frac{\varphi(z)}{z^2} \, x^{-1/z} \, dz
 \]
 </p>
-
-<p>où :</p>
-<ul>
-  <li>\(\Gamma\) : petit contour fermé autour de \(z = 0\), parcouru positivement,</li>
-  <li>\(\varphi(z) = F(1/z)\) : fonction auxiliaire dérivée de \(F(p)\).</li>
-</ul>
-
-<p><em>Remarque :</em> le terme impulsionnel \(\varphi(0)\delta(1-x)\) est également <strong>contenu implicitement</strong> dans cette écriture, puisqu’il est généré par le résidu en \(z=0\).</p>
+<p>
+Le terme impulsionnel <math>\varphi(0)\,\delta(1-x)</math> est généré naturellement par le résidu en <math>z=0</math>.<br>
+<em>\(\Gamma\) : petit contour fermé autour de <math>z = 0</math>, parcouru positivement.</em>
+</p>
 
 <h2>Exemples</h2>
-
-<p>Quelques exemples d’application de la formule de Kyungu :</p>
-
 <ul>
-  <li>\(F(p) = \tfrac{1}{p^2} \;\;\Rightarrow\;\; \mathcal{L}^{-1}[F](t) = t\)</li>
-  <li>\(F(p) = \tfrac{1}{1+p^2} \;\;\Rightarrow\;\; \mathcal{L}^{-1}[F](t) = \sin(t)\)</li>
-  <li>\(F(p) = \tfrac{1}{1+p} \;\;\Rightarrow\;\; \mathcal{L}^{-1}[F](t) = e^{-t}\)</li>
-  <li>\(F(p) = \tfrac{1}{1+p^3} \;\;\Rightarrow\;\; \mathcal{L}^{-1}[F](t)\) donné par une série nouvelle, non répertoriée dans les tables classiques.</li>
+  <li><math>F(p) = 1/p^2</math> ⇒ <math>\mathcal{L}^{-1}[F](t) = t</math></li>
+  <li><math>F(p) = 1/(1+p^2)</math> ⇒ <math>\mathcal{L}^{-1}[F](t) = \sin(t)</math></li>
+  <li><math>F(p) = 1/(1+p)</math> ⇒ <math>\mathcal{L}^{-1}[F](t) = e^{-t}</math></li>
+  <li><math>F(p) = 1/(1+p^3)</math> ⇒ <math>\mathcal{L}^{-1}[F](t)</math> donné par une série nouvelle</li>
 </ul>
 
 <h2>Références</h2>
-
 <ul>
-  <li>Pathy Kyungu, « Présentation de la formule de Kyungu pour la transformée de Laplace inverse », Zenodo (2024). DOI : <a href="https://doi.org/10.5281/zenodo.15966318">10.5281/zenodo.15966318</a>.</li>
-  <li>Pathy Kyungu, « Application de la formule de Kyungu : cas de \(\arctan(1/p^2)\) », Zenodo (2024). DOI : <a href="https://doi.org/10.5281/zenodo.16190286">10.5281/zenodo.16190286</a>.</li>
+  <li>Pathy Kyungu, <em>Présentation de la formule de Kyungu pour la transformée de Laplace inverse</em>, Zenodo (2025), <a href="https://doi.org/10.5281/zenodo.15966318" target="_blank">DOI: 10.5281/zenodo.15966318</a></li>
+  <li>Pathy Kyungu, <em>Applications de la formule de Kyungu : cas de arctan(1/p²)</em>, Zenodo (2025), <a href="https://doi.org/10.5281/zenodo.16190286" target="_blank">DOI: 10.5281/zenodo.16190286</a></li>
+  <li>Pathy Kyungu, <em>Extensions Mellin et Gamma de la formule de Kyungu</em>, Zenodo (2025), <a href="https://doi.org/10.5281/zenodo.16886355" target="_blank">DOI: 10.5281/zenodo.16886355</a></li>
 </ul>
 
 </body>
