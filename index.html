@@ -207,18 +207,18 @@
     La <strong>forme série</strong> est pratique pour le calcul explicite, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
   </p>
 
-  <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
+<h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
 
 <p>
-  Le <strong>calcul sommatiel</strong> prolonge analytiquement la somme discrète 
-  \(\sum_{k=1}^{n} f(k)\) pour des valeurs réelles ou complexes de \(n\). 
-  Le sommatiel, noté <strong>S(n)</strong>, permet ainsi de traiter 
-  la somme comme une fonction continue de \(n\).
+  Le <strong>calcul sommatiel</strong> étend analytiquement la somme discrète classique 
+  \(\sum_{k=1}^{n} f(k)\) aux valeurs réelles ou complexes de \(n = x\). 
+  Le sommatiel, noté <strong>S(x) = [f]_x</strong>, fournit ainsi une version continue 
+  de la somme discrète.
 </p>
 
 <p class="formula">
   \[
-    S(x) = x \, \varphi(0) - 
+    S(x) = [f]_x = x \, \varphi(0) - 
     \int_{0}^{\infty} \frac{e^{-xt} - 1}{e^{-t} - 1} \, 
     \mathcal{L}^{-1}[f](t) \, dt
   \]
@@ -260,7 +260,6 @@
   <strong>transformation intégrale généralisée</strong>, reliant 
   le calcul sommatoire aux transformées de Laplace et de Mellin.
 </p>
-
 <h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu–Sommatiel)</h3>
 
 <p>
