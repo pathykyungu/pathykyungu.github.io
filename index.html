@@ -207,63 +207,52 @@
     La <strong>forme série</strong> est pratique pour le calcul explicite, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
   </p>
 
-<h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
+<section>
+  <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
 
-<p>
-  Le <strong>calcul sommatiel</strong> étend analytiquement la somme discrète classique 
-  <span class="formula">\(\sum_{k=1}^{n} f(k)\)</span> aux valeurs réelles ou complexes de <span class="formula">\(n = x\)</span>.
-</p>
+  <h4>Le sommatiel : extension analytique de la somme discrète</h4>
+  <p>
+    Le <strong>calcul sommatiel</strong> étend analytiquement la somme discrète classique :
+  </p>
+  <p class="formula">
+    S(n) = Σ<sub>k=1</sub><sup>n</sup> f(k)
+  </p>
+  <p>
+    aux valeurs réelles ou complexes n = x.
+  </p>
+  <p>
+    Le sommatiel, noté <strong>S(x) = [f]_x</strong>, fournit ainsi une version continue de la somme discrète.
+  </p>
 
-<p>
-  Le sommatiel, noté <span class="formula">\(S(x) = [f]_x\)</span>, fournit ainsi une version continue 
-  de la somme discrète.
-</p>
+  <h4>Limite du sommatiel pour x → ∞</h4>
+  <p class="formula">
+    [f]_x → Σ<sub>k=1</sub><sup>∞</sup> f(k)
+  </p>
+  <p class="formula">
+    Σ<sub>k=1</sub><sup>∞</sup> f(k) = ∫<sub>0</sub><sup>∞</sup> (𝓛⁻¹[f](t))/(eᵗ - 1) dt
+  </p>
 
-<p class="formula">
-  \[
-    S(x) = [f]_x = x \, \varphi(0) - 
-    \int_{0}^{\infty} \frac{e^{-xt} - 1}{e^{-t} - 1} \, 
-    \mathcal{L}^{-1}[f](t) \, dt
-  \]
-</p>
+  <h4>L’hypersommatiel : limite paramétrique du sommatiel</h4>
+  <p>
+    L’hypersommatiel se définit comme la limite paramétrique du sommatiel :
+  </p>
+  <p class="formula">
+    f,(t) = lim<sub>x→0</sub> [f(xt)]_x / x
+  </p>
 
-<p>
-  avec <strong>\(\varphi(x) = f(1/x)\)</strong> et 
-  <strong>\(\varphi(0) = \lim_{x \to 0} \varphi(x)\)</strong>.
-</p>
+  <p>
+    Sa <strong>forme intégrale</strong> s’écrit :
+  </p>
+  <p class="formula">
+    f,(x) = x ∫<sub>0</sub><sup>∞</sup> (t · 𝓛⁻¹[f](t)) / (e^(xt) - 1) dt
+  </p>
 
-<p>
-  Pour une fonction \(f\) à décroissance rapide, lorsque \(x \to \infty\) : 
-</p>
+  <p>
+    Cette formulation montre que le sommatiel et l’hypersommatiel unifient le calcul sommatoire et les transformations intégrales, 
+    en reliant la somme discrète, sa limite et la représentation intégrale continue.
+  </p>
 
-<p class="formula">
-  \[
-    S(x) \xrightarrow[x \to \infty]{} \sum_{k=1}^{\infty} f(k)
-  \]
-</p>
-
-<p class="formula">
-  \[
-    \sum_{k=1}^{\infty} f(k) = \int_{0}^{\infty} \frac{\mathcal{L}^{-1}[f](t)}{e^t - 1} \, dt
-  \]
-</p>
-
-<p>
-  L’<strong>hypersommatiel</strong>, noté <strong>f,(x)</strong>, est une extension intégrale du sommatiel :
-</p>
-
-<p class="formula">
-  \[
-    f,(x) = x \int_{0}^{\infty} \frac{t \, \mathcal{L}^{-1}[f](t)}{e^{xt} - 1} \, dt
-  \]
-</p>
-
-<p>
-  Cette formule interprète l’hypersommatiel comme une 
-  <strong>transformation intégrale généralisée</strong>, reliant 
-  le calcul sommatoire aux transformées de Laplace et de Mellin.
-</p>
-<h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu–Sommatiel)</h3>
+  <h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu–Sommatiel)</h3>
 
 <p>
   Issue du <strong>calcul sommatiel</strong> développé par Pathy Kyungu, 
