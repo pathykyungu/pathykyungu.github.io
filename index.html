@@ -207,32 +207,102 @@
     La <strong>forme série</strong> est pratique pour le calcul explicite, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
   </p>
 
-  <h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu-Sommatiel)</h3>
+  <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
 
-  <p>
-    Issue du <strong>calcul sommatiel</strong> développé par Pathy Kyungu, cette expression étend la formule classique d’Euler–Maclaurin 
-    à un paramètre décalé \(c\), reliant la somme discrète à son équivalent intégral et aux dérivées successives de la fonction \(f\) :
-  </p>
+<p>
+  Le <strong>calcul sommatiel</strong> étend la notion de somme discrète à une 
+  expression analytique continue. Le sommatiel, noté \([f]_x\), est la 
+  <strong>généralisation directe</strong> de la somme infinie 
+  \(\sum_{k=1}^{\infty} f(k)\).
+</p>
 
-  <p class="formula">
-    \[
-      \sum_{k=a+c}^{b+c-1} f(k)
-      = \int_{a}^{b} f(t)\,dt
-      + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \, \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)
-    \]
-  </p>
+<p class="formula">
+  \[
+    [f]_x = x \, \varphi(0) - 
+    \int_{0}^{\infty} 
+    \frac{e^{-xt} - 1}{e^{-t} - 1} 
+    \, \mathcal{L}^{-1}[f](t) \, dt,
+    \quad \text{où } \varphi(x) = f\left(\frac{1}{x}\right)
+    \text{ et } \varphi(0) = \lim_{x \to 0} \varphi(x).
+  \]
+</p>
 
-  <ul>
-    <li>\(B_n(c)\) : polynômes de Bernoulli généralisés dépendant du paramètre \(c\).</li>
-    <li>Le paramètre \(c\) permet de translater la somme discrète à volonté, généralisant ainsi la forme classique d’Euler–Maclaurin.</li>
-    <li>Lorsque \(c = 0\), on retrouve la formule d’Euler–Maclaurin standard.</li>
-    <li>Cette formule relie de manière précise les opérateurs de somme et d’intégration.</li>
-  </ul>
+<p>
+  Dans le cas limite \(x \to \infty\) pour une fonction \(f\) à décroissance rapide, 
+  le sommatiel se réduit à la somme classique :
+</p>
 
-  <p>
-    Cette <strong>formule de Kyungu-Sommatiel</strong> constitue une extension fondamentale de l’analyse sommatoire,
-    ouvrant la voie à une approche unifiée des séries, intégrales et dérivées d’ordre fractionnaire.
-  </p>
+<p class="formula">
+  \[
+    [f]_x \xrightarrow[x \to \infty]{} 
+    \sum_{k=1}^{\infty} f(k)
+    = \int_{0}^{\infty} \mathcal{L}^{-1}[f](t)\,dt.
+  \]
+</p>
+
+<p>
+  L’<strong>hypersommatiel</strong> est une extension intégrale du sommatiel, 
+  basée sur la transformée de Laplace inverse. Il s’écrit :
+</p>
+
+<p class="formula">
+  \[
+    f^{,}(x) = x \int_{0}^{\infty} t^{x-1} 
+    \mathcal{L}^{-1}[f](t) \, dt.
+  \]
+</p>
+
+<p>
+  Cette expression montre que l’hypersommatiel peut être interprété 
+  comme une <strong>transformation intégrale généralisée</strong> reliant 
+  le calcul sommatoire aux structures de Laplace et de Mellin.
+</p>
+
+<ul>
+  <li>
+    <strong>DOI du Sommatiel :</strong> 
+    <a href="https://doi.org/10.5281/zenodo.17188459" target="_blank">
+      https://doi.org/10.5281/zenodo.17188459
+    </a>
+  </li>
+  <li>
+    <strong>DOI de l’Hypersommatiel :</strong> 
+    <a href="https://doi.org/10.5281/zenodo.17237255" target="_blank">
+      https://doi.org/10.5281/zenodo.17237255
+    </a>
+  </li>
+</ul>
+
+<h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu–Sommatiel)</h3>
+
+<p>
+  Issue du <strong>calcul sommatiel</strong> développé par Pathy Kyungu, 
+  cette expression étend la formule classique d’Euler–Maclaurin 
+  à un paramètre décalé \(c\), reliant la somme discrète à son équivalent 
+  intégral et aux dérivées successives de la fonction \(f\) :
+</p>
+
+<p class="formula">
+  \[
+    \sum_{k=a+c}^{b+c-1} f(k)
+    = \int_{a}^{b} f(t)\,dt
+    + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} 
+    \, \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)
+  \]
+</p>
+
+<ul>
+  <li>\(B_n(c)\) : polynômes de Bernoulli généralisés dépendant du paramètre \(c\).</li>
+  <li>Le paramètre \(c\) permet de translater la somme discrète, généralisant la forme classique d’Euler–Maclaurin.</li>
+  <li>Lorsque \(c = 0\), on retrouve la formule d’Euler–Maclaurin standard.</li>
+  <li>Cette formule relie de manière précise les opérateurs de somme et d’intégration.</li>
+</ul>
+
+<p>
+  Cette <strong>formule de Kyungu–Sommatiel</strong> constitue une extension 
+  fondamentale du calcul sommatoire, unifiant les notions de série, d’intégrale 
+  et de dérivée fractionnaire dans une même structure analytique.
+</p>
 
 </section>
 <section class="links">
