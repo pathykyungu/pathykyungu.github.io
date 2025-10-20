@@ -210,9 +210,10 @@
   <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
 
 <p>
-  Le <strong>calcul sommatiel</strong> étend la notion de somme discrète à une 
-  expression analytique continue. Le sommatiel, noté <strong>[f]_x</strong>, est la 
-  <strong>généralisation directe</strong> de la somme infinie 
+  Le <strong>calcul sommatiel</strong> prolonge la somme discrète 
+  \(\sum_{k=1}^{x} f(k)\) à des valeurs réelles ou complexes de \(x\). 
+  Le sommatiel, noté <strong>[f]_x</strong>, est ainsi la 
+  <strong>généralisation analytique</strong> de la somme infinie 
   \(\sum_{k=1}^{\infty} f(k)\).
 </p>
 
@@ -220,22 +221,28 @@
   \[
     [f]_x = x \, \varphi(0) - 
     \int_{0}^{\infty} \frac{e^{-xt} - 1}{e^{-t} - 1} \, 
-    \mathcal{L}^{-1}[f](t) \, dt,
-    \quad \text{où } \varphi(x) = f\Big(\frac{1}{x}\Big), \; 
-    \varphi(0) = \lim_{x \to 0} \varphi(x)
+    \mathcal{L}^{-1}[f](t) \, dt
   \]
 </p>
 
 <p>
-  Dans le cas limite \(x \to \infty\) pour une fonction \(f\) à décroissance rapide, 
-  le sommatiel se réduit à la somme classique :
+  avec <strong>\(\varphi(x) = f(1/x)\)</strong> et 
+  <strong>\(\varphi(0) = \lim_{x \to 0} \varphi(x)\)</strong>.
+</p>
+
+<p>
+  Pour une fonction \(f\) à décroissance rapide, lorsque \(x \to \infty\) : 
 </p>
 
 <p class="formula">
   \[
-    [f]_x \xrightarrow[x \to \infty]{} 
-    \sum_{k=1}^{\infty} f(k) 
-    = \int_{0}^{\infty} \frac{\mathcal{L}^{-1}[f](t)}{e^t - 1} \, dt
+    [f]_x \xrightarrow[x \to \infty]{} \sum_{k=1}^{\infty} f(k)
+  \]
+</p>
+
+<p class="formula">
+  \[
+    \sum_{k=1}^{\infty} f(k) = \int_{0}^{\infty} \frac{\mathcal{L}^{-1}[f](t)}{e^t - 1} \, dt
   \]
 </p>
 
@@ -250,9 +257,9 @@
 </p>
 
 <p>
-  Cette expression montre que l’hypersommatiel peut être interprété 
-  comme une <strong>transformation intégrale généralisée</strong>, 
-  reliant le calcul sommatoire aux structures de Laplace et de Mellin.
+  Cette formule interprète l’hypersommatiel comme une 
+  <strong>transformation intégrale généralisée</strong>, reliant 
+  le calcul sommatoire aux transformées de Laplace et de Mellin.
 </p>
 
 <h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu–Sommatiel)</h3>
