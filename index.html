@@ -110,101 +110,130 @@
   <section>
   <h2>🧠 Formules signatures</h2>
 
-<h3>Formule de Kyungu pour la Transformée de Laplace Inverse</h3>
+  <h3>Formule de Kyungu pour la Transformée de Laplace Inverse</h3>
 
-<h4>1. Forme série</h4>
-<p>
-  La formule de Kyungu permet d'exprimer la transformée de Laplace inverse via une série utilisant les dérivées successives d'une fonction auxiliaire \(\varphi(x) = F(1/x)\) :
-</p>
-<p class="formula">
-  \[
-    \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}
-  \]
-</p>
-<ul>
-  <li><strong>\(\mathcal{L}^{-1}[F](t)\)</strong> : transformée de Laplace inverse de \(F(p)\).</li>
-  <li><strong>\(\varphi(x)\)</strong> : fonction auxiliaire définie par \(\varphi(x) = F(1/x)\).</li>
-  <li><strong>\(\varphi^{(n)}(0)\)</strong> : dérivée n-ième de \(\varphi\) évaluée en 0.</li>
-  <li><strong>\(\delta(t)\)</strong> : distribution de Dirac, représentant l'impulsion concentrée en \(t=0\).</li>
-  <li>La série exprime \(\mathcal{L}^{-1}[F](t)\) pour \(t>0\) via les dérivées successives pondérées par \(\frac{n}{(n!)^2}\) et multipliées par \(t^{n-1}\).</li>
-</ul>
+  <h4>1. Forme série</h4>
+  <p>
+    La formule de Kyungu permet d'exprimer la transformée de Laplace inverse via une série utilisant les dérivées successives d'une fonction auxiliaire \(\varphi(x) = F(1/x)\) :
+  </p>
+  <p class="formula">
+    \[
+      \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}
+    \]
+  </p>
+  <ul>
+    <li><strong>\(\mathcal{L}^{-1}[F](t)\)</strong> : transformée de Laplace inverse de \(F(p)\).</li>
+    <li><strong>\(\varphi(x)\)</strong> : fonction auxiliaire définie par \(\varphi(x) = F(1/x)\).</li>
+    <li><strong>\(\varphi^{(n)}(0)\)</strong> : dérivée n-ième de \(\varphi\) évaluée en 0.</li>
+    <li><strong>\(\delta(t)\)</strong> : distribution de Dirac, représentant l'impulsion concentrée en \(t=0\).</li>
+    <li>La série exprime \(\mathcal{L}^{-1}[F](t)\) pour \(t>0\) via les dérivées successives pondérées par \(\frac{n}{(n!)^2}\) et multipliées par \(t^{n-1}\).</li>
+  </ul>
 
-<h4>2. Forme intégrale</h4>
-<p>
-  La même formule peut être exprimée sous forme intégrale via le théorème des résidus de Cauchy. La série est alors récupérée en développant l'exponentielle \(e^{t/z}\) :
-</p>
-<p class="formula">
-  \[
-    \mathcal{L}^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, e^{t/z} \, dz, 
-    \quad \varphi(z) = F\Big(\frac{1}{z}\Big)
-  \]
-</p>
-<ul>
-  <li>\(\Gamma\) : contour fermé entourant \(z=0\) dans le plan complexe.</li>
-  <li>L’intégrale reproduit la série de Kyungu lorsque \(e^{t/z}\) est développée en série de Taylor.</li>
-  <li>Le terme impulsionnel \(\varphi(0)\delta(t)\) est automatiquement inclus via le résidu en \(z=0\) pour \(t=0\).</li>
-</ul>
-<p>
-  Ainsi, la <strong>forme série</strong> est pratique pour des calculs explicites ou numériques, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
-</p>
-<h3>Formule de Kyungu pour la Transformée de Mellin Inverse</h3>
+  <h4>2. Forme intégrale</h4>
+  <p>
+    La même formule peut être exprimée sous forme intégrale via le théorème des résidus de Cauchy. La série est alors récupérée en développant l'exponentielle \(e^{t/z}\) :
+  </p>
+  <p class="formula">
+    \[
+      \mathcal{L}^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, e^{t/z} \, dz, 
+      \quad \varphi(z) = F\Big(\frac{1}{z}\Big)
+    \]
+  </p>
+  <ul>
+    <li>\(\Gamma\) : contour fermé entourant \(z=0\) dans le plan complexe.</li>
+    <li>L’intégrale reproduit la série de Kyungu lorsque \(e^{t/z}\) est développée en série de Taylor.</li>
+    <li>Le terme impulsionnel \(\varphi(0)\delta(t)\) est automatiquement inclus via le résidu en \(z=0\) pour \(t=0\).</li>
+  </ul>
+  <p>
+    Ainsi, la <strong>forme série</strong> est pratique pour des calculs explicites ou numériques, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
+  </p>
 
-<h4>1. Forme symbolique</h4>
-<p>
-  La transformée de Mellin inverse se relie à la transformée de Laplace inverse par le changement de variable \(t = -\ln x\) :
-</p>
-<p class="formula">
-  \[
-    \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x)
-  \]
-</p>
-<ul>
-  <li>La variable \(x > 0\).</li>
-  <li>Cette relation permet de réutiliser directement la formule de Kyungu pour Laplace.</li>
-</ul>
+  <h3>Formule de Kyungu pour la Transformée de Mellin Inverse</h3>
 
-<h4>2. Forme série</h4>
-<p>
-  Développement en série logarithmique autour de \(x = 1\) :
-</p>
-<p class="formula">
-  \[
-    \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1 - x) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
-  \]
-</p>
-<p class="formula">
-  \[
-    \varphi(x) = F\Big(\frac{1}{x}\Big)
-  \]
-</p>
-<ul>
-  <li>\(\delta(1 - x)\) : impulsion de Dirac centrée en \(x = 1\).</li>
-  <li>Chaque terme de la série correspond à \((- \ln x)^{n-1}\) pondéré par \(n/(n!)^2\) et les dérivées de \(\varphi\) en 0.</li>
-  <li>Pratique pour les expansions explicites ou les calculs numériques.</li>
-</ul>
+  <h4>1. Forme symbolique</h4>
+  <p>
+    La transformée de Mellin inverse se relie à la transformée de Laplace inverse par le changement de variable \(t = -\ln x\) :
+  </p>
+  <p class="formula">
+    \[
+      \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x)
+    \]
+  </p>
+  <ul>
+    <li>La variable \(x > 0\).</li>
+    <li>Cette relation permet de réutiliser directement la formule de Kyungu pour Laplace.</li>
+  </ul>
 
-<h4>3. Forme intégrale</h4>
-<p>
-  Version intégrale via un contour autour de \(z = 0\) :
-</p>
-<p class="formula">
-  \[
-    \mathcal{M}^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, x^{-1/z} \, dz
-  \]
-</p>
-<p class="formula">
-  \[
-    \varphi(z) = F\Big(\frac{1}{z}\Big)
-  \]
-</p>
-<ul>
-  <li>\(\Gamma\) : petit contour fermé autour de \(z = 0\), parcouru positivement dans une région analytique de \(\varphi(z)\).</li>
-  <li>Développement de \(x^{-1/z} = e^{-(\ln x)/z}\) en série permet de retrouver la formule en puissances de \(-\ln x\).</li>
-  <li>Le terme impulsionnel \(\varphi(0)\delta(x - 1)\) est automatiquement inclus via le résidu en \(z = 0\).</li>
-</ul>
-<p>
-  La <strong>forme série</strong> est pratique pour le calcul explicite, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
-</p>
+  <h4>2. Forme série</h4>
+  <p>
+    Développement en série logarithmique autour de \(x = 1\) :
+  </p>
+  <p class="formula">
+    \[
+      \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1 - x) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
+    \]
+  </p>
+  <p class="formula">
+    \[
+      \varphi(x) = F\Big(\frac{1}{x}\Big)
+    \]
+  </p>
+  <ul>
+    <li>\(\delta(1 - x)\) : impulsion de Dirac centrée en \(x = 1\).</li>
+    <li>Chaque terme de la série correspond à \((- \ln x)^{n-1}\) pondéré par \(n/(n!)^2\) et les dérivées de \(\varphi\) en 0.</li>
+    <li>Pratique pour les expansions explicites ou les calculs numériques.</li>
+  </ul>
+
+  <h4>3. Forme intégrale</h4>
+  <p>
+    Version intégrale via un contour autour de \(z = 0\) :
+  </p>
+  <p class="formula">
+    \[
+      \mathcal{M}^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, x^{-1/z} \, dz
+    \]
+  </p>
+  <p class="formula">
+    \[
+      \varphi(z) = F\Big(\frac{1}{z}\Big)
+    \]
+  </p>
+  <ul>
+    <li>\(\Gamma\) : petit contour fermé autour de \(z = 0\), parcouru positivement dans une région analytique de \(\varphi(z)\).</li>
+    <li>Développement de \(x^{-1/z} = e^{-(\ln x)/z}\) en série permet de retrouver la formule en puissances de \(-\ln x\).</li>
+    <li>Le terme impulsionnel \(\varphi(0)\delta(x - 1)\) est automatiquement inclus via le résidu en \(z = 0\).</li>
+  </ul>
+  <p>
+    La <strong>forme série</strong> est pratique pour le calcul explicite, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
+  </p>
+
+  <h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu-Sommatiel)</h3>
+
+  <p>
+    Issue du <strong>calcul sommatiel</strong> développé par Pathy Kyungu, cette expression étend la formule classique d’Euler–Maclaurin 
+    à un paramètre décalé \(c\), reliant la somme discrète à son équivalent intégral et aux dérivées successives de la fonction \(f\) :
+  </p>
+
+  <p class="formula">
+    \[
+      \sum_{k=a+c}^{b+c-1} f(k)
+      = \int_{a}^{b} f(t)\,dt
+      + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \, \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)
+    \]
+  </p>
+
+  <ul>
+    <li>\(B_n(c)\) : polynômes de Bernoulli généralisés dépendant du paramètre \(c\).</li>
+    <li>Le paramètre \(c\) permet de translater la somme discrète à volonté, généralisant ainsi la forme classique d’Euler–Maclaurin.</li>
+    <li>Lorsque \(c = 0\), on retrouve la formule d’Euler–Maclaurin standard.</li>
+    <li>Cette formule relie de manière précise les opérateurs de somme et d’intégration.</li>
+  </ul>
+
+  <p>
+    Cette <strong>formule de Kyungu-Sommatiel</strong> constitue une extension fondamentale de l’analyse sommatoire,
+    ouvrant la voie à une approche unifiée des séries, intégrales et dérivées d’ordre fractionnaire.
+  </p>
+
 </section>
  <section class="links">
   <h2>📄 Publications Zenodo</h2>
