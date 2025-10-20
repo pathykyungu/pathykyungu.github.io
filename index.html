@@ -210,16 +210,15 @@
   <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
 
 <p>
-  Le <strong>calcul sommatiel</strong> prolonge la somme discrète 
-  \(\sum_{k=1}^{x} f(k)\) à des valeurs réelles ou complexes de \(x\). 
-  Le sommatiel, noté <strong>[f]_x</strong>, est ainsi la 
-  <strong>généralisation analytique</strong> de la somme infinie 
-  \(\sum_{k=1}^{\infty} f(k)\).
+  Le <strong>calcul sommatiel</strong> prolonge analytiquement la somme discrète 
+  \(\sum_{k=1}^{n} f(k)\) pour des valeurs réelles ou complexes de \(n\). 
+  Le sommatiel, noté <strong>S(n)</strong>, permet ainsi de traiter 
+  la somme comme une fonction continue de \(n\).
 </p>
 
 <p class="formula">
   \[
-    [f]_x = x \, \varphi(0) - 
+    S(x) = x \, \varphi(0) - 
     \int_{0}^{\infty} \frac{e^{-xt} - 1}{e^{-t} - 1} \, 
     \mathcal{L}^{-1}[f](t) \, dt
   \]
@@ -236,7 +235,7 @@
 
 <p class="formula">
   \[
-    [f]_x \xrightarrow[x \to \infty]{} \sum_{k=1}^{\infty} f(k)
+    S(x) \xrightarrow[x \to \infty]{} \sum_{k=1}^{\infty} f(k)
   \]
 </p>
 
