@@ -210,47 +210,50 @@
 <section>
   <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
 
-  <h4>Le sommatiel : extension analytique de la somme discrète</h4>
   <p>
     Le <strong>calcul sommatiel</strong> étend analytiquement la somme discrète classique :
   </p>
   <p class="formula">
-    S(n) = Σ<sub>k=1</sub><sup>n</sup> f(k)
-  </p>
-  <p>
-    aux valeurs réelles ou complexes n = x.
-  </p>
-  <p>
-    Le sommatiel, noté <strong>S(x) = [f]_x</strong>, fournit ainsi une version continue de la somme discrète.
-  </p>
-
-  <h4>Limite du sommatiel pour x → ∞</h4>
-  <p class="formula">
-    [f]_x → Σ<sub>k=1</sub><sup>∞</sup> f(k)
-  </p>
-  <p class="formula">
-    Σ<sub>k=1</sub><sup>∞</sup> f(k) = ∫<sub>0</sub><sup>∞</sup> (𝓛⁻¹[f](t))/(eᵗ - 1) dt
-  </p>
-
-  <h4>L’hypersommatiel : limite paramétrique du sommatiel</h4>
-  <p>
-    L’hypersommatiel se définit comme la limite paramétrique du sommatiel :
-  </p>
-  <p class="formula">
-    f,(t) = lim<sub>x→0</sub> [f(xt)]_x / x
+    \[ S(n) = \sum_{k=1}^{n} f(k) \]
   </p>
 
   <p>
-    Sa <strong>forme intégrale</strong> s’écrit :
+    Le sommatiel prolonge cette somme aux valeurs réelles ou complexes de \(n = x\). 
+    Il est noté :
   </p>
   <p class="formula">
-    f,(x) = x ∫<sub>0</sub><sup>∞</sup> (t · 𝓛⁻¹[f](t)) / (e^(xt) - 1) dt
+    \[ S(x) = [f]_x \]
+  </p>
+  <p>
+    Cette extension fournit une version continue et analytique de la somme discrète.
   </p>
 
   <p>
-    Cette formulation montre que le sommatiel et l’hypersommatiel unifient le calcul sommatoire et les transformations intégrales, 
-    en reliant la somme discrète, sa limite et la représentation intégrale continue.
+    La limite du sommatiel pour une fonction à décroissance rapide donne la somme infinie classique :
   </p>
+  <p class="formula">
+    \[ [f]_x \xrightarrow[x \to \infty]{} \sum_{k=1}^{\infty} f(k) = \int_0^{\infty} \frac{\mathcal{L}^{-1}[f](t)}{e^t - 1} \, dt \]
+  </p>
+
+  <p>
+    L’<strong>hypersommatiel</strong> est la limite paramétrique du sommatiel :
+  </p>
+  <p class="formula">
+    \[ f,(t) = \lim_{x \to 0} \frac{[f(xt)]_x}{x} \]
+  </p>
+
+  <p>
+    Sa forme intégrale s’écrit :
+  </p>
+  <p class="formula">
+    \[ f,(x) = x \int_0^{\infty} \frac{t \, \mathcal{L}^{-1}[f](t)}{e^{xt}-1} \, dt \]
+  </p>
+
+  <p>
+    Cette expression montre que l’hypersommatiel peut être interprété comme une 
+    <strong>transformation intégrale généralisée</strong>, reliant le calcul sommatoire aux structures de Laplace et de Mellin.
+  </p>
+</section>
 
   <h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu–Sommatiel)</h3>
 
