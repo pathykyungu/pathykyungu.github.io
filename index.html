@@ -208,50 +208,32 @@
   </p>
 
 <section>
-  <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
+  <h3>Formules fondamentales — Sommatiel et Hypersommatiel</h3>
 
-  <p>
-    Le <strong>calcul sommatiel</strong> étend analytiquement la somme discrète classique :
-  </p>
+  <h4>Sommatiel : prolongement analytique de la somme discrète</h4>
   <p class="formula">
-    \[ S(n) = \sum_{k=1}^{n} f(k) \]
+    \[ S(x) = f(1) + f(2) + \cdots + f(x), \qquad (x \in \mathbb{N}) \]
   </p>
 
-  <p>
-    Le sommatiel prolonge cette somme aux valeurs réelles ou complexes de \(n = x\). 
-    Il est noté :
-  </p>
   <p class="formula">
+    C’est-à-dire :
     \[ S(x) = [f]_x \]
   </p>
-  <p>
-    Cette extension fournit une version continue et analytique de la somme discrète.
-  </p>
 
-  <p>
-    La limite du sommatiel pour une fonction à décroissance rapide donne la somme infinie :
-  </p>
   <p class="formula">
-    \[ [f]_x \xrightarrow[x \to \infty]{} \sum_{k=1}^{\infty} f(k) = \int_0^{\infty} \frac{\mathcal{L}^{-1}[f](t)}{e^t - 1} \, dt \]
+    \[ S(x) = x\,\varphi(0)\;-\;\int_{0}^{\infty}
+       \frac{e^{-x t}-1}{e^{t}-1}\;
+       \mathcal{L}^{-1}[f](t)\;dt \]
   </p>
 
-  <p>
-    L’<strong>hypersommatiel</strong> est la limite paramétrique du sommatiel :
-  </p>
+  <h4>Hypersommatiel :</h4>
   <p class="formula">
-    \[ f,(t) = \lim_{x \to 0} \frac{[f(xt)]_x}{x} \]
+    \[ f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x} \]
   </p>
 
-  <p>
-    Sa forme intégrale s’écrit :
-  </p>
   <p class="formula">
-    \[ f,(x) = x \int_0^{\infty} \frac{t \, \mathcal{L}^{-1}[f](t)}{e^{xt}-1} \, dt \]
-  </p>
-
-  <p>
-    Cette expression montre que l’hypersommatiel peut être interprété comme une 
-    <strong>transformation intégrale généralisée</strong>, reliant le calcul sommatoire aux structures de Laplace et de Mellin.
+    \[ f,(s) = s \int_{0}^{\infty}
+       \frac{t\,\mathcal{L}^{-1}[f](t)}{e^{s t}-1}\;dt \]
   </p>
 </section>
 
