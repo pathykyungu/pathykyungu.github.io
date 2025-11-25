@@ -441,57 +441,36 @@
   </div>
 </footer>
 
-<!-- Début Annexe Formules (texte brut pour IA / Google) -->
-<div id="annexe-formules" style="display:none;">
-<pre>
-%% Formule KL – Transformée de Laplace Inverse %%
-% Forme série
-L^{-1}[F](t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \varphi^{(n)}(0) t^{n-1}
-\varphi(x) = F(1/x)
+<!-- Début de l'annexe invisible pour les humains, lisible par Google -->
+<pre style="color: transparent; font-size:0.8em; line-height:1.2em;">
+Annexe – Formules de Kyungu (texte brut LaTeX lisible par IA)
 
-% Forme intégrale
-L^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{C_0} \frac{\varphi(x)}{x^2} e^{t/x} dx
-\varphi(x) = F(1/x)
+1. Formule KL – Transformée de Laplace inverse
+L^{-1}[F](t) = v(0) \, \delta(t) + \sum_{n=1}^{\infty} \frac{n \, v^{(n)}(0)}{(n!)^2} \, t^{n-1}
+où v(x) = F(1/x), \delta(t) est la distribution de Dirac, et v^{(n)}(0) est la n-ième dérivée de v en 0.
 
-%% Forme série générale (distributions)
-L^{-1}[F](t) = \sum_{n=0}^{\infty} \frac{c_n}{\Gamma(\alpha_n)} t_+^{\alpha_n - 1} 
-+ \sum_{\alpha_j=-m} c_j \delta^{(m)}(t)
-+ \sum_{\alpha_k=0} c_k \delta(t)
-t_+^{\lambda} = 
-    \begin{cases}
-        t^{\lambda}, & t>0 \\
-        0, & t<0
-    \end{cases}
+Forme intégrale équivalente :
+L^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{C_0} \frac{v(x)}{x^2} e^{t/x} \, dx
+où C_0 est un contour fermé autour de x=0 dans le plan complexe.
 
-%% Formule KM – Transformée de Mellin Inverse %%
-% Relation avec Laplace
+2. Transformée de Mellin inverse
 M^{-1}[F](x) = L^{-1}[F](-\ln x)
 
-% Forme série
-M^{-1}[F](x) = \varphi(0)\delta(1-x) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \varphi^{(n)}(0) (-\ln x)^{n-1}
-\varphi(x) = F(1/x)
+Forme série :
+M^{-1}[F](x) = v(0) \, \delta(1-x) + \sum_{n=1}^{\infty} \frac{n \, v^{(n)}(0)}{(n!)^2} \, (-\ln x)^{n-1}
+avec v(x) = F(1/x)
 
-% Forme intégrale
-M^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} x^{-1/z} dz
-\varphi(z) = F(1/z)
+Forme intégrale :
+M^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{C_0} \frac{v(z)}{z^2} x^{-1/z} \, dz
 
-%% Formules Sommatiel et Hypersommatiel %%
-% Sommatiel
-S(n) = \sum_{k=1}^{n} f(k)
-S(x) = [f]_x
-S(x) = x \varphi(0) - \int_0^{\infty} \frac{e^{-xt}-1}{e^t-1} L^{-1}[f](t) dt
-\varphi(x) = f(1/x)
+3. Sommatiel et Hypersommatiel (en texte LaTeX)
+Sommatiel : S(x) = [f]_x = x \, v(0) - \int_0^{\infty} \frac{e^{-x t} - 1}{e^t - 1} \, L^{-1}[f](t) \, dt, avec v(x) = f(1/x)
 
-% Hypersommatiel
-f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x}
-f,(s) = s \int_0^{\infty} \frac{t L^{-1}[f](t)}{e^{st}-1} dt
+Hypersommatiel : f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x} = s \int_0^{\infty} \frac{t \, L^{-1}[f](t)}{e^{s t} - 1} \, dt
 
-%% Formule d’Euler–Maclaurin généralisée (Kyungu-Sommatiel) %%
-\sum_{k=a+c}^{b+c-1} f(k) 
-= \int_a^b f(t) dt + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \left(f^{(n-1)}(b) - f^{(n-1)}(a)\right)
+4. Formule de Kyungu–Sommatiel (Euler–Maclaurin généralisée)
+\sum_{k=a+c}^{b+c-1} f(k) = \int_a^b f(t) dt + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} (f^{(n-1)}(b) - f^{(n-1)}(a))
+où B_n(c) sont les polynômes de Bernoulli généralisés.
 </pre>
-</div>
-<!-- Fin Annexe Formules -->
-  
-</body>
+<!-- Fin de l'annexe invisible -->
 </html>
