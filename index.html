@@ -441,5 +441,95 @@
   </div>
 </footer>
 
+<section id="annexe-formules">
+  <h2>📌 Annexe : Formules de Kyungu et Sommatiel/Hypersommatiel</h2>
+  <p>Les formules suivantes sont présentées au format LaTeX, prêtes à être copiées ou utilisées pour des calculs.</p>
+
+  <pre><code class="language-latex">
+% ===========================
+% 1. Formule KL – Transformée de Laplace inverse
+% ===========================
+
+% Forme série (Kyungu)
+\[
+\mathcal{L}^{-1}[F](t)
+=
+\varphi(0)\,\delta(t)
++
+\sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1},
+\qquad \varphi(x) = F\!\left(\frac{1}{x}\right)
+\]
+
+% Forme intégrale (Kyungu)
+\[
+\mathcal{L}^{-1}[F](t)
+=
+\frac{1}{2\pi i}\int_{C_0} \frac{\varphi(x)}{x^{2}} \; e^{t/x}\; dx,
+\qquad \varphi(x)=F\!\left(\frac{1}{x}\right)
+\]
+
+% ===========================
+% 2. Formule KM – Transformée de Mellin inverse
+% ===========================
+
+% Forme série (Mellin)
+\[
+\mathcal{M}^{-1}[F](x)
+=
+\varphi(0)\,\delta(1-x)
++
+\sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1},
+\qquad \varphi(x) = F\!\left(\frac{1}{x}\right)
+\]
+
+% Forme intégrale (Mellin)
+\[
+\mathcal{M}^{-1}[F](x)
+=
+\mathcal{L}^{-1}[F](-\ln x)
+=
+\frac{1}{2\pi i}\int_{C_0} \frac{\varphi(z)}{z^{2}} \, x^{-1/z}\, dz,
+\qquad \varphi(z) = F\!\left(\frac{1}{z}\right)
+\]
+
+% ===========================
+% 3. Sommatiel
+% ===========================
+
+% Somme discrète prolongée
+\[
+S(n) = \sum_{k=1}^{n} f(k), 
+\qquad
+S(x) = [f]_x
+\]
+
+% Représentation intégrale
+\[
+S(x) = x \, \varphi(0)
+-
+\int_{0}^{\infty} 
+\frac{e^{-x t} - 1}{e^{t} - 1} \, \mathcal{L}^{-1}[f](t) \, dt,
+\qquad \varphi(x) = f(1/x)
+\]
+
+% ===========================
+% 4. Hypersommatiel
+% ===========================
+
+% Limite paramétrique
+\[
+f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x}
+\]
+
+% Forme intégrale
+\[
+f,(s) = s \int_{0}^{\infty} 
+\frac{t \, \mathcal{L}^{-1}[f](t)}{e^{s t} - 1} \, dt
+\]
+  </code></pre>
+
+  <p><em>Remarque :</em> Ici \(C_0\) désigne le petit contour entourant \(0\) dans le plan complexe, parcouru positivement, et \(x^{-1/z} = \exp(-(\ln x)/z)\).</p>
+</section>
+  
 </body>
 </html>
