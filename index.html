@@ -1,198 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Professeur Pathy Kyungu – Mathématicien | Formule de Kyungu</title>
-  <link rel="stylesheet" href="style.css">
   
-  <meta name="author" content="Professeur Pathy Kyungu" />
+  <!-- Meta SEO -->
+  <meta name="author" content="Professeur Pathy Kyungu">
   <meta name="description" content="Professeur Pathy Kyungu, mathématicien congolais, auteur de la formule de Kyungu pour la transformée de Laplace inverse. Découvrez ses recherches, articles et vidéos éducatives.">
-  <meta name="keywords" content="Pathy Kyungu, Professeur Pathy Kyungu, formule de Kyungu, transformée de Laplace inverse, mathématiques, physique, vulgarisation scientifique, RDC, enseignement, Zenodo, TikTok, Facebook" />
-  <meta name="google-site-verification" content="kakT10w8CuFR8JiWMW4Ls1L5yg6bhH3nzfzKLMq8C0Y" />
+  <meta name="keywords" content="Pathy Kyungu, formule de Kyungu, transformée de Laplace inverse, mathématiques, physique, vulgarisation scientifique, Zenodo, TikTok, Facebook">
+  <meta name="google-site-verification" content="kakT10w8CuFR8JiWMW4Ls1L5yg6bhH3nzfzKLMq8C0Y">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Professeur Pathy Kyungu – Mathématiques & Recherches" />
-  <meta property="og:description" content="Découvrez la formule originale de Kyungu pour la transformée de Laplace inverse, ainsi que des contenus pédagogiques en mathématiques et physique." />
-  <meta property="og:image" content="https://pathykyungu.github.io/images/kyungu-photo.jpg" />
-  <meta property="og:url" content="https://pathykyungu.github.io" />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Professeur Pathy Kyungu – Mathématiques & Recherches">
+  <meta property="og:description" content="Découvrez la formule originale de Kyungu pour la transformée de Laplace inverse et ses contenus pédagogiques.">
+  <meta property="og:image" content="https://pathykyungu.github.io/images/kyungu-photo.jpg">
+  <meta property="og:url" content="https://pathykyungu.github.io">
+  <meta property="og:type" content="website">
 
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <link rel="canonical" href="https://pathykyungu.github.io/" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Favicon & CSS -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://pathykyungu.github.io/">
+
   <!-- MathJax -->
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-</head>
-<body>
 
-  <!-- HEADER -->
-  <header style="display: flex; align-items: center; margin-bottom: 1em;">
-    <div style="text-align: center; margin-right: 1em;">
-      <img src="images/kyungu-photo.jpg" alt="Professeur Pathy Kyungu" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 8px rgba(0,0,0,0.2);" />
-      <div style="font-size: 0.85em; color: #555; margin-top: 0.5em;">Pathy Kyungu</div>
+  <style>
+    /* Styles rapides pour rendre les badges réseaux cliquables */
+    .badge-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 1em 0; }
+    .badge-container .zone { width: 50px; height: 50px; display: inline-block; background-size: cover; border-radius: 8px; }
+    .badge-container .tiktok { background-image: url('images/tiktok.png'); }
+    .badge-container .facebook { background-image: url('images/facebook.png'); }
+    .badge-container .zenodo { background-image: url('images/zenodo.png'); }
+    .badge-container .linktree { background-image: url('images/linktree.png'); }
+    .badge-container .zone a { display:block; width:100%; height:100%; text-indent:-9999px; }
+  </style>
+</head>
+
+<body>
+  <header style="display:flex; align-items:center; margin-bottom:1em; flex-wrap:wrap;">
+    <div style="text-align:center; margin-right:1em;">
+      <img src="images/kyungu-photo.jpg" alt="Professeur Pathy Kyungu" style="width:150px;height:150px;border-radius:50%;object-fit:cover;box-shadow:0 0 8px rgba(0,0,0,0.2);">
+      <div style="font-size:0.85em;color:#555;margin-top:0.5em;">Pathy Kyungu</div>
     </div>
-    <div>
-      <h1 style="margin: 0; font-size: 1.5em; color: #0055aa;">Site officiel du Professeur Pathy Kyungu</h1>
-      <p style="margin: 0.5em 0 0 0; font-weight: bold; color: #333;">Mathématiques · Vulgarisation · Recherches</p>
+    <div style="flex:1;">
+      <h1 style="margin:0;font-size:1.5em;color:#0055aa;">Site officiel du Professeur Pathy Kyungu</h1>
+      <p style="margin:0.5em 0 0 0;font-weight:bold;color:#333;">Mathématiques · Vulgarisation · Recherches</p>
     </div>
   </header>
 
-  <!-- BIOGRAPHIE -->
-  <section>
-    <h2>👨🏽‍🏫 Biographie scientifique</h2>
-    <p><strong>Pathy Kyungu</strong> est un <strong>mathématicien et chercheur indépendant</strong> originaire de la <strong>RDC</strong>. Il est principalement connu pour ses travaux sur la <strong>transformée de Laplace inverse</strong> et la <strong>transformée de Mellin inverse</strong>, à partir desquelles il a formulé la célèbre <strong>formule de Kyungu</strong>, publiée sur <a href="https://zenodo.org/communities/kyungu-formula" target="_blank" rel="noopener noreferrer">Zenodo</a>.</p>
-    <p>Passionné de sciences dès son enfance, il amorce ses premières recherches à 16 ans. En 1999, à 19 ans, le Vice-Gouverneur du Katanga, <strong>Jacques Muyumba Ndubula</strong>, mentionne officiellement le dépôt d’un résumé de ses découvertes.</p>
-    <p>En 2002, il met en évidence un nouvel opérateur mathématique : le <strong>sommatiel</strong>, donnant naissance à l’<strong>hypersommatiel</strong>. En 2010, il propose une approche originale de l’<strong>hypothèse de Riemann</strong>, publiée publiquement le 2 octobre 2025.</p>
-    <p>Il poursuit ses recherches de manière indépendante, concentré sur la <strong>formule de Kyungu</strong> et ses applications analytiques.</p>
-    <p>Ses publications sont disponibles sur <strong>Zenodo</strong>, et il possède des comptes sur <strong>arXiv</strong> et <strong>HAL</strong>.</p>
-    <p>En parallèle, il vulgarise les mathématiques et la physique à travers des <strong>vidéos pédagogiques</strong> sur <a href="https://www.tiktok.com/@mathkyungu" target="_blank" rel="noopener noreferrer">TikTok</a> et <a href="https://www.facebook.com/mathkyungu" target="_blank" rel="noopener noreferrer">Facebook</a>, sous le nom <em>Le Professeur des Maths</em>.</p>
-  </section>
+  <main>
+    <!-- Biographie -->
+    <section>
+      <h2>👨🏽‍🏫 Biographie scientifique</h2>
+      <p><strong>Pathy Kyungu</strong> est un <strong>mathématicien et chercheur indépendant</strong> originaire de la <strong>RDC</strong>, connu pour ses travaux sur la <strong>transformée de Laplace inverse</strong> et <strong>formule de Kyungu</strong>.</p>
+      <p>Il a développé le <strong>sommatiel</strong> et l’<strong>hypersommatiel</strong>, et propose des avancées originales sur l’<strong>hypothèse de Riemann</strong>.</p>
+      <p>Ses publications officielles sont disponibles sur <a href="https://zenodo.org/communities/kyungu-formula" target="_blank" rel="noopener noreferrer">Zenodo</a> et d’autres plateformes scientifiques.</p>
+    </section>
 
-  <!-- CITATION -->
-  <div style="max-width: 700px; margin: 2em auto; padding: 1.5em; background-color: #f0f0f0; border-left: 5px solid #0055aa; font-style: italic; font-size: 1.2em; color: #333;">
-    <blockquote>
-      “Rien n’est fondamental en soi. Une connaissance ne devient fondamentale que pour celui qui choisit de la considérer comme telle.”
-      <br>
-      <span class="signature">— Professeur Pathy Kyungu</span>
-    </blockquote>
-  </div>
+    <!-- Citation -->
+    <div style="max-width:700px;margin:2em auto;padding:1.5em;background-color:#f0f0f0;border-left:5px solid #0055aa;font-style:italic;font-size:1.2em;color:#333;">
+      <blockquote>
+        “Rien n’est fondamental en soi. Une connaissance ne devient fondamentale que pour celui qui choisit de la considérer comme telle.”
+        <br>
+        <span class="signature">— Professeur Pathy Kyungu</span>
+      </blockquote>
+    </div>
 
-  <!-- FORMULES -->
-  <section>
-    <h2>🧠 Formules signatures</h2>
-
-    <h3>Formule de Kyungu pour la Transformée de Laplace Inverse</h3>
-    <h4>1. Forme série</h4>
-    <p>La formule de Kyungu permet d'exprimer la transformée de Laplace inverse via une série :</p>
-    <p class="formula">
-      \[
+    <!-- Formules signatures -->
+    <section>
+      <h2>🧠 Formules signatures</h2>
+      <h3>Transformée de Laplace Inverse – Formule de Kyungu</h3>
+      <p class="formula"> 
+        \[
         \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}
-      \]
-    </p>
+        \]
+      </p>
 
-    <h4>2. Forme intégrale</h4>
-    <p>
-      La même formule peut être exprimée sous forme intégrale via le théorème des résidus :
-    </p>
-    <p class="formula">
-      \[
-        \mathcal{L}^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, e^{t/z} \, dz, 
-        \quad \varphi(z) = F\Big(\frac{1}{z}\Big)
-      \]
-    </p>
+      <h3>Transformée de Mellin Inverse</h3>
+      <p class="formula">
+        \[
+        \mathcal{M}^{-1}[F](x) = \varphi(0)\,\delta(1-x) + \sum_{n=1}^{\infty} \frac{n \, \varphi^{(n)}(0)}{(n!)^2} (-\ln x)^{n-1}
+        \]
+      </p>
 
-    <h3>Formule de Kyungu pour la Transformée de Mellin Inverse</h3>
-    <p class="formula">
-      \[
-        \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1 - x) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
-      \]
-    </p>
-    <p class="formula">\(\varphi(x) = F(1/x)\)</p>
+      <h3>Calcul Sommatiel et Hypersommatiel</h3>
+      <p class="formula">[f]_x = x \varphi(0) - \int_0^{\infty} \frac{e^{-xt}-1}{e^t-1} \mathcal{L}^{-1}[f](t) dt</p>
+      <p class="formula">f,(s) = s \int_0^{\infty} \frac{t \, \mathcal{L}^{-1}[f](t)}{e^{st}-1} dt</p>
+    </section>
 
-    <h3>Sommatiel et Hypersommatiel</h3>
-<p>
-La définition via transformée de Laplace inverse :
-</p>
-<p class="formula">
-\[
-[f]_x = x \, \varphi(0) - \int_0^\infty \frac{e^{-x t} - 1}{e^t - 1} \, \mathcal{L}^{-1}[f](t) \, dt
-\]
-</p>
-<p class="formula">
-\[
-f,(s) = s \int_0^\infty \frac{t \, \mathcal{L}^{-1}[f](t)}{e^{s t} - 1} \, dt
-\]
-</p>
+    <!-- Publications -->
+    <section class="links">
+      <h2>📄 Publications Zenodo</h2>
+      <ul>
+        <li>📘 <a href="https://doi.org/10.5281/zenodo.15966318" target="_blank" rel="noopener noreferrer">Formule KL – Laplace inverse</a></li>
+        <li>📘 <a href="https://doi.org/10.5281/zenodo.15778234" target="_blank" rel="noopener noreferrer">Formule KML – Mellin inverse</a></li>
+        <li>📗 <a href="https://doi.org/10.5281/zenodo.17188459" target="_blank" rel="noopener noreferrer">Sommatiel – Formule sommatoire</a></li>
+        <li>📙 <a href="https://doi.org/10.5281/zenodo.17237255" target="_blank" rel="noopener noreferrer">Hypersommatiel</a></li>
+      </ul>
+    </section>
 
-    <h3>Formule de Kyungu–Sommatiel (Euler–Maclaurin généralisée)</h3>
-    <p class="formula">
-      \[
-        \sum_{k=a+c}^{b+c-1} f(k)
-        = \int_{a}^{b} f(t)\,dt
-        + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} 
-        \, \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)
-      \]
-    </p>
-  </section>
+    <!-- Réseaux sociaux -->
+    <section>
+      <h2>🌐 Réseaux – Accès rapide</h2>
+      <div class="badge-container">
+        <div class="zone tiktok"><a href="https://www.tiktok.com/@mathkyungu" target="_blank" rel="noopener noreferrer" title="TikTok">TikTok</a></div>
+        <div class="zone facebook"><a href="https://www.facebook.com/mathkyungu" target="_blank" rel="noopener noreferrer" title="Facebook">Facebook</a></div>
+        <div class="zone zenodo"><a href="https://zenodo.org/communities/kyungu-formula" target="_blank" rel="noopener noreferrer" title="Zenodo">Zenodo</a></div>
+        <div class="zone linktree"><a href="https://linktr.ee/leprofesseurkyungu" target="_blank" rel="noopener noreferrer" title="Linktree">Linktree</a></div>
+      </div>
+    </section>
 
-  <!-- PUBLICATIONS -->
-  <section class="links">
-    <h2>📄 Publications Zenodo</h2>
-    <ul>
-      <li>📘 <a href="https://doi.org/10.5281/zenodo.15966318" target="_blank">Formule KL (Laplace inverse)</a></li>
-      <li>📘 <a href="https://doi.org/10.5281/zenodo.15778234" target="_blank">Formule KML (Mellin inverse)</a></li>
-      <li>📗 <a href="https://doi.org/10.5281/zenodo.17188459" target="_blank">Sommatiel</a></li>
-      <li>📙 <a href="https://doi.org/10.5281/zenodo.17237255" target="_blank">Hypersommatiel</a></li>
-      <li>📥 <a href="https://github.com/pathykyungu/pathykyungu.github.io/raw/0b5e9f6f94b77bf6991d7aae4591065f44a11d0c/Kyungu-Laplace.zip" target="_blank">Télécharger ZIP (Formule KL)</a></li>
-      <li>📄 <a href="https://doi.org/10.5281/zenodo.15853609" target="_blank">Démonstration complète</a></li>
-      <li>📄 <a href="https://doi.org/10.5281/zenodo.15754963" target="_blank">Portée et perspectives</a></li>
-    </ul>
-  </section>
+    <!-- Contact -->
+    <section>
+      <h2>📬 Contact</h2>
+      <p>Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></p>
+    </section>
 
-  <!-- RESEAUX SOCIAUX -->
-<section>
-  <h2>🌐 Réseaux – Accès rapide</h2>
-  <div class="social-icons" style="text-align:center; font-size:1.5em; gap: 20px;">
-    <a href="https://www.tiktok.com/@mathkyungu" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
-    <a href="https://www.facebook.com/mathkyungu" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
-    <a href="https://zenodo.org/communities/kyungu-formula" target="_blank"><i class="fas fa-book"></i> Zenodo</a>
-    <a href="https://linktr.ee/leprofesseurkyungu" target="_blank"><i class="fas fa-link"></i> Linktree</a>
-  </div>
-</section>
+  </main>
 
-  <!-- GITHUB -->
-  <section class="links">
-    <h2>📦 Mes dépôts GitHub récents</h2>
-    <ul>
-      <li>🧪 <a href="https://pathykyungu.github.io/formule-kyungu.html" target="_blank">Formule de Kyungu (Laplace inverse)</a></li>
-      <li>🔁 <a href="https://pathykyungu.github.io/inverse-laplace-kyungu.html" target="_blank">What If We Started With the Inverse?</a></li>
-      <li>🌐 <a href="https://pathykyungu.github.io/kyungu-formula-en.html" target="_blank">Kyungu Formula – English version</a></li>
-      <li>📚 <a href="https://pathykyungu.github.io/kyungu-wikipedia-draft.html" target="_blank">Ébauche Wikipedia</a></li>
-      <li>🗂️ <a href="https://github.com/PathyKyungu?tab=repositories" target="_blank">Voir tous mes dépôts</a></li>
-    </ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section>
-    <h2>📬 Contact</h2>
-    <p>Email : <a href="mailto:leprofesseurkyungu@gmail.com">leprofesseurkyungu@gmail.com</a></p>
-    <a href="https://independentscholar.academia.edu/PathyKyungu" target="_blank" style="display:inline-block; background-color:#4CAF50; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; font-weight:bold;">
-      📚 Voir mon profil Academia.edu
-    </a>
-  </section>
-
-  <!-- SOCIAL ICONS -->
-  <div class="social-icons" style="text-align:center; margin-top:20px; font-size: 1.5em;">
-  <a href="https://www.instagram.com/kyungupathy" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.linkedin.com/in/path-kyungu-a9a3a236b" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="https://x.com/eno_tikyung" target="_blank"><i class="fab fa-x-twitter"></i></a>
-  <a href="https://www.youtube.com/@Professeurkyungu" target="_blank"><i class="fab fa-youtube"></i></a>
-</div>
-
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
-    <div class="footer-container">
+    <div class="footer-container" style="text-align:center;padding:2em 1em;">
       <p class="quote">🧠 Enseigner les maths, éclairer les esprits.</p>
-      <div class="footer-links">
-        <a href="https://www.instagram.com/kyungupathy" target="_blank"><img src="images/ico-instagram.svg" alt="Instagram"></a>
-        <a href="https://www.linkedin.com/in/path-kyungu-a9a3a236b" target="_blank"><img src="images/ico-linkedin.svg" alt="LinkedIn"></a>
-        <a href="https://x.com/eno_tikyung" target="_blank"><img src="images/ico-x.svg" alt="X"></a>
-        <a href="https://www.youtube.com/@Professeurkyungu" target="_blank"><img src="images/ico-youtube.svg" alt="YouTube"></a>
+      <div class="footer-links" style="margin:1em 0;">
+        <a href="https://www.instagram.com/kyungupathy" target="_blank" title="Instagram"><img src="images/ico-instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/path-kyungu-a9a3a236b" target="_blank" title="LinkedIn"><img src="images/ico-linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://x.com/eno_tikyung" target="_blank" title="X"><img src="images/ico-x.svg" alt="X"></a>
+        <a href="https://www.youtube.com/@Professeurkyungu" target="_blank" title="YouTube"><img src="images/ico-youtube.svg" alt="YouTube"></a>
       </div>
       <p class="copyright">© 2025 Pathy Kyungu. Tous droits réservés.</p>
     </div>
   </footer>
 
-  <!-- FORMULES INDEXABLES GOOGLE (invisible) -->
+  <!-- Formules indexables pour Google -->
   <div style="position:absolute; left:-9999px; top:-9999px; visibility:hidden;">
-    <p>L^{-1}[F](t) = φ(0) δ(t) + ∑ n φ^{(n)}(0)/(n!)^2 t^{n-1}, φ(x)=F(1/x)</p>
-    <p>M^{-1}[F](x) = φ(0) δ(1-x) + ∑ n φ^{(n)}(0)/(n!)^2 (-ln x)^{n-1}</p>
-    <p>[f]_x = x φ(0) - ∫₀^∞ (e^{-xt}-1)/(e^t-1) L^{-1}[f](t) dt</p>
-    <p>f,(s) = s ∫₀^∞ t L^{-1}[f](t)/(e^{st}-1) dt</p>
+    <p>L^{-1}[F](t) = φ(0) δ(t) + ∑_{n=1}^{∞} n φ^{(n)}(0)/(n!)^2 t^{n-1}</p>
+    <p>M^{-1}[F](x) = φ(0) δ(1-x) + ∑_{n=1}^{∞} n φ^{(n)}(0)/(n!)^2 (-ln x)^{n-1}</p>
+    <p>[f]_x = x φ(0) - ∫_0^∞ (e^{-xt}-1)/(e^t-1) L^{-1}[f](t) dt</p>
+    <p>f,(s) = s ∫_0^∞ t L^{-1}[f](t)/(e^{st}-1) dt</p>
   </div>
-
 </body>
 </html>
