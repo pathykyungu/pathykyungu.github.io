@@ -20,7 +20,7 @@
 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="canonical" href="https://pathykyungu.github.io/" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <!-- MathJax -->
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -93,8 +93,19 @@
     <p class="formula">\(\varphi(x) = F(1/x)\)</p>
 
     <h3>Sommatiel et Hypersommatiel</h3>
-    <p class="formula">[f]_x = x φ(0) - ∫₀^∞ (e^{-x t} - 1)/(e^t - 1) L^{-1}[f](t) dt</p>
-    <p class="formula">f,(s) = s ∫₀^∞ t L^{-1}[f](t)/(e^{s t} - 1) dt</p>
+<p>
+La définition via transformée de Laplace inverse :
+</p>
+<p class="formula">
+\[
+[f]_x = x \, \varphi(0) - \int_0^\infty \frac{e^{-x t} - 1}{e^t - 1} \, \mathcal{L}^{-1}[f](t) \, dt
+\]
+</p>
+<p class="formula">
+\[
+f,(s) = s \int_0^\infty \frac{t \, \mathcal{L}^{-1}[f](t)}{e^{s t} - 1} \, dt
+\]
+</p>
 
     <h3>Formule de Kyungu–Sommatiel (Euler–Maclaurin généralisée)</h3>
     <p class="formula">
@@ -154,12 +165,12 @@
   </section>
 
   <!-- SOCIAL ICONS -->
-  <div class="social-icons" style="text-align:center; margin-top:20px;">
-    <a href="https://www.instagram.com/kyungupathy" target="_blank">Instagram</a> |
-    <a href="https://www.linkedin.com/in/path-kyungu-a9a3a236b" target="_blank">LinkedIn</a> |
-    <a href="https://x.com/eno_tikyung" target="_blank">X (Twitter)</a> |
-    <a href="https://www.youtube.com/@Professeurkyungu" target="_blank">YouTube</a>
-  </div>
+  <div class="social-icons" style="text-align:center; margin-top:20px; font-size: 1.5em;">
+  <a href="https://www.instagram.com/kyungupathy" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.linkedin.com/in/path-kyungu-a9a3a236b" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <a href="https://x.com/eno_tikyung" target="_blank"><i class="fab fa-x-twitter"></i></a>
+  <a href="https://www.youtube.com/@Professeurkyungu" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
 
   <!-- FOOTER -->
   <footer>
