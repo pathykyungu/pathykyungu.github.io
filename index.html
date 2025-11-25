@@ -442,93 +442,83 @@
 </footer>
 
 <section id="annexe-formules">
-  <h2>📌 Annexe : Formules de Kyungu et Sommatiel/Hypersommatiel</h2>
-  <p>Les formules suivantes sont présentées au format LaTeX, prêtes à être copiées ou utilisées pour des calculs.</p>
+  <h2>Annexe : Formules de Kyungu</h2>
 
-  <pre><code class="language-latex">
-% ===========================
-% 1. Formule KL – Transformée de Laplace inverse
-% ===========================
+  <h3>1. Formule KL – Transformée de Laplace inverse</h3>
 
-% Forme série (Kyungu)
-\[
-\mathcal{L}^{-1}[F](t)
-=
-\varphi(0)\,\delta(t)
-+
-\sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1},
-\qquad \varphi(x) = F\!\left(\frac{1}{x}\right)
-\]
+  <p><strong>Forme série :</strong></p>
+  <p>
+    \[
+      \mathcal{L}^{-1}[F](t) = \varphi(0) \, \delta(t) 
+      + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}, \quad t \ge 0
+    \]
+  </p>
+  <p>où \(\varphi(x) = F(1/x)\).</p>
 
-% Forme intégrale (Kyungu)
-\[
-\mathcal{L}^{-1}[F](t)
-=
-\frac{1}{2\pi i}\int_{C_0} \frac{\varphi(x)}{x^{2}} \; e^{t/x}\; dx,
-\qquad \varphi(x)=F\!\left(\frac{1}{x}\right)
-\]
+  <p><strong>Forme intégrale :</strong></p>
+  <p>
+    \[
+      \mathcal{L}^{-1}[F](t) = \frac{1}{2 \pi i} \int_{C_0} \frac{\varphi(x)}{x^2} \, e^{t/x} \, dx
+    \]
+  </p>
+  <p>Le contour \(C_0\) entoure \(x=0\) dans le sens positif.</p>
 
-% ===========================
-% 2. Formule KM – Transformée de Mellin inverse
-% ===========================
+  <h3>2. Formule KM – Transformée de Mellin inverse</h3>
 
-% Forme série (Mellin)
-\[
-\mathcal{M}^{-1}[F](x)
-=
-\varphi(0)\,\delta(1-x)
-+
-\sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1},
-\qquad \varphi(x) = F\!\left(\frac{1}{x}\right)
-\]
+  <p><strong>Relation avec Laplace :</strong></p>
+  <p>
+    \[
+      \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x), \quad x > 0
+    \]
+  </p>
 
-% Forme intégrale (Mellin)
-\[
-\mathcal{M}^{-1}[F](x)
-=
-\mathcal{L}^{-1}[F](-\ln x)
-=
-\frac{1}{2\pi i}\int_{C_0} \frac{\varphi(z)}{z^{2}} \, x^{-1/z}\, dz,
-\qquad \varphi(z) = F\!\left(\frac{1}{z}\right)
-\]
+  <p><strong>Forme série :</strong></p>
+  <p>
+    \[
+      \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1-x) 
+      + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
+    \]
+  </p>
+  <p>avec \(\varphi(x) = F(1/x)\).</p>
 
-% ===========================
-% 3. Sommatiel
-% ===========================
+  <p><strong>Forme intégrale :</strong></p>
+  <p>
+    \[
+      \mathcal{M}^{-1}[F](x) = \frac{1}{2 \pi i} \int_{C_0} \frac{\varphi(z)}{z^2} \, x^{-1/z} \, dz
+    \]
+  </p>
+  <p>Le contour \(C_0\) est autour de \(z=0\), dans une région analytique de \(\varphi(z)\).</p>
 
-% Somme discrète prolongée
-\[
-S(n) = \sum_{k=1}^{n} f(k), 
-\qquad
-S(x) = [f]_x
-\]
+  <h3>3. Formules Sommatiel et Hypersommatiel</h3>
 
-% Représentation intégrale
-\[
-S(x) = x \, \varphi(0)
--
-\int_{0}^{\infty} 
-\frac{e^{-x t} - 1}{e^{t} - 1} \, \mathcal{L}^{-1}[f](t) \, dt,
-\qquad \varphi(x) = f(1/x)
-\]
+  <p><strong>Sommatiel :</strong></p>
+  <p>
+    \[
+      S(x) = [f]_x = x \, \varphi(0) - \int_0^\infty \frac{e^{-x t} - 1}{e^t - 1} \, \mathcal{L}^{-1}[f](t) \, dt
+    \]
+  </p>
+  <p>avec \(\varphi(x) = f(1/x)\).</p>
 
-% ===========================
-% 4. Hypersommatiel
-% ===========================
+  <p><strong>Hypersommatiel :</strong></p>
+  <p>
+    \[
+      f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x} 
+      = s \int_0^\infty \frac{t \, \mathcal{L}^{-1}[f](t)}{e^{s t} - 1} \, dt
+    \]
+  </p>
 
-% Limite paramétrique
-\[
-f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x}
-\]
+  <h3>4. Formule générale de Kyungu–Sommatiel (Euler–Maclaurin généralisé)</h3>
 
-% Forme intégrale
-\[
-f,(s) = s \int_{0}^{\infty} 
-\frac{t \, \mathcal{L}^{-1}[f](t)}{e^{s t} - 1} \, dt
-\]
-  </code></pre>
+  <p>
+    Pour un paramètre \(c\) : 
+    \[
+      \sum_{k=a+c}^{b+c-1} f(k)
+      = \int_a^b f(t)\,dt
+      + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \, \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)
+    \]
+  </p>
+  <p>\(B_n(c)\) : polynômes de Bernoulli généralisés.</p>
 
-  <p><em>Remarque :</em> Ici \(C_0\) désigne le petit contour entourant \(0\) dans le plan complexe, parcouru positivement, et \(x^{-1/z} = \exp(-(\ln x)/z)\).</p>
 </section>
   
 </body>
