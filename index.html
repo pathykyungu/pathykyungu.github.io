@@ -441,77 +441,57 @@
   </div>
 </footer>
 
-<section id="annexe-formules" style="margin-top: 3em; padding: 1em; border-top: 3px solid #0055aa; background-color: #f9f9f9;">
-  <h2>📎 Annexe : Formules de Kyungu</h2>
-
-  <h3>1. Formule KL – Transformée de Laplace Inverse</h3>
-
-  <p>Forme série (humaine) :</p>
-  <p class="formula">
-    \[
-      \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}, 
-      \quad \varphi(x) = F\Big(\frac{1}{x}\Big)
-    \]
-  </p>
-
-  <p>LaTeX brut (lisible par Google et les IA) :</p>
-  <pre>
+<!-- Début Annexe Formules (texte brut pour IA / Google) -->
+<div id="annexe-formules" style="display:none;">
+<pre>
+%% Formule KL – Transformée de Laplace Inverse %%
+% Forme série
 L^{-1}[F](t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \varphi^{(n)}(0) t^{n-1}
 \varphi(x) = F(1/x)
-  </pre>
 
-  <p>Forme intégrale :</p>
-  <p class="formula">
-    \[
-      \mathcal{L}^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} e^{t/z} dz, 
-      \quad \varphi(z) = F\Big(\frac{1}{z}\Big)
-    \]
-  </p>
+% Forme intégrale
+L^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{C_0} \frac{\varphi(x)}{x^2} e^{t/x} dx
+\varphi(x) = F(1/x)
 
-  <pre>
-L^{-1}[F](t) = (1 / 2πi) ∮_Γ φ(z)/z^2 * exp(t/z) dz
-φ(z) = F(1/z)
-  </pre>
+%% Forme série générale (distributions)
+L^{-1}[F](t) = \sum_{n=0}^{\infty} \frac{c_n}{\Gamma(\alpha_n)} t_+^{\alpha_n - 1} 
++ \sum_{\alpha_j=-m} c_j \delta^{(m)}(t)
++ \sum_{\alpha_k=0} c_k \delta(t)
+t_+^{\lambda} = 
+    \begin{cases}
+        t^{\lambda}, & t>0 \\
+        0, & t<0
+    \end{cases}
 
-  <h3>2. Formule KM – Transformée de Mellin Inverse</h3>
+%% Formule KM – Transformée de Mellin Inverse %%
+% Relation avec Laplace
+M^{-1}[F](x) = L^{-1}[F](-\ln x)
 
-  <p>Relation avec Laplace :</p>
-  <p class="formula">
-    \[
-      \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x)
-    \]
-  </p>
+% Forme série
+M^{-1}[F](x) = \varphi(0)\delta(1-x) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \varphi^{(n)}(0) (-\ln x)^{n-1}
+\varphi(x) = F(1/x)
 
-  <pre>
-M^{-1}[F](x) = L^{-1}[F](-ln(x))
-  </pre>
+% Forme intégrale
+M^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} x^{-1/z} dz
+\varphi(z) = F(1/z)
 
-  <p>Forme série :</p>
-  <p class="formula">
-    \[
-      \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1-x) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \varphi^{(n)}(0) (-\ln x)^{n-1}, 
-      \quad \varphi(x) = F\Big(\frac{1}{x}\Big)
-    \]
-  </p>
+%% Formules Sommatiel et Hypersommatiel %%
+% Sommatiel
+S(n) = \sum_{k=1}^{n} f(k)
+S(x) = [f]_x
+S(x) = x \varphi(0) - \int_0^{\infty} \frac{e^{-xt}-1}{e^t-1} L^{-1}[f](t) dt
+\varphi(x) = f(1/x)
 
-  <pre>
-M^{-1}[F](x) = φ(0) δ(1-x) + Σ_{n=1}^∞ n/(n!)^2 φ^{(n)}(0) * (-ln(x))^(n-1)
-φ(x) = F(1/x)
-  </pre>
+% Hypersommatiel
+f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x}
+f,(s) = s \int_0^{\infty} \frac{t L^{-1}[f](t)}{e^{st}-1} dt
 
-  <p>Forme intégrale :</p>
-  <p class="formula">
-    \[
-      \mathcal{M}^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} x^{-1/z} dz,
-      \quad \varphi(z) = F\Big(\frac{1}{z}\Big)
-    \]
-  </p>
-
-  <pre>
-M^{-1}[F](x) = (1 / 2πi) ∮_Γ φ(z)/z^2 * x^(-1/z) dz
-φ(z) = F(1/z)
-  </pre>
-</section>
+%% Formule d’Euler–Maclaurin généralisée (Kyungu-Sommatiel) %%
+\sum_{k=a+c}^{b+c-1} f(k) 
+= \int_a^b f(t) dt + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \left(f^{(n-1)}(b) - f^{(n-1)}(a)\right)
+</pre>
+</div>
+<!-- Fin Annexe Formules -->
   
 </body>
 </html>
