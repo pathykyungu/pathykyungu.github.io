@@ -1,244 +1,211 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Encodage -->
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professeur Pathy Kyungu – Mathématicien | Formule de Kyungu</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <meta name="author" content="Professeur Pathy Kyungu" />
+  <meta name="description" content="Professeur Pathy Kyungu, mathématicien congolais, auteur de la formule de Kyungu pour la transformée de Laplace inverse. Découvrez ses recherches, articles et vidéos éducatives.">
+  <meta name="keywords" content="Pathy Kyungu, Professeur Pathy Kyungu, formule de Kyungu, transformée de Laplace inverse, mathématiques, physique, vulgarisation scientifique, RDC, enseignement, Zenodo, TikTok, Facebook" />
+  <meta name="google-site-verification" content="kakT10w8CuFR8JiWMW4Ls1L5yg6bhH3nzfzKLMq8C0Y" />
 
-  <!-- Responsive -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Open Graph (pour un meilleur partage sur réseaux sociaux) -->
+  <meta property="og:title" content="Professeur Pathy Kyungu – Mathématiques & Recherches" />
+  <meta property="og:description" content="Découvrez la formule originale de Kyungu pour la transformée de Laplace inverse, ainsi que des contenus pédagogiques en mathématiques et physique." />
+  <meta property="og:image" content="https://pathykyungu.github.io/images/kyungu-photo.jpg" />
+  <meta property="og:url" content="https://pathykyungu.github.io" />
+  <meta property="og:type" content="website" />
 
-  <!-- Titre SEO -->
-  <title>Formules de Kyungu – Transformée de Laplace & Mellin (Officiel)</title>
-
-  <!-- Description SEO -->
-  <meta name="description"
-        content="Page officielle de la Formule de Kyungu pour la transformée de Laplace inverse et la transformée de Mellin inverse. Démonstrations, séries, exemples et LaTeX complet.">
-
-  <!-- Auteur -->
-  <meta name="author" content="Pathy Kyungu">
-
-  <!-- Robots (laisser indexer) -->
-  <meta name="robots" content="index, follow">
-
-  <!-- Canonical pour éviter le contenu dupliqué -->
-  <link rel="canonical" href="https://pathykyungu.github.io">
-
-  <!-- Favicon (facultatif si tu en as un) -->
-  <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
-
-  <!-- Style interne optionnel -->
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-    }
-
-    .zone-technique {
-      background: #fafafa;
-      border-left: 4px solid #ccc;
-      padding: 1em;
-      margin: 2em 0;
-      color: #444;
-    }
-    .zone-technique h3 {
-      margin-top: 0;
-      color: #333;
-    }
-  </style>
-
-  <!-- Polyfill ES6 (nécessaire pour MathJax sur vieux navigateurs) -->
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-
-  <!-- MathJax 3 propre et unique -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      }
-    };
-  </script>
-  <script async id="MathJax-script"
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://pathykyungu.github.io/" />
+  
+  <!-- MathJax -->
+  <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
+
 </head>
 <body>
 
-  <header style="display: flex; align-items: center; margin-bottom: 1.5em;">
-    <div style="text-align: center; margin-right: 1em;">
-      <img src="images/kyungu-photo.jpg" 
-           alt="Photographie du Professeur Pathy Kyungu" 
-           style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 8px rgba(0,0,0,0.2);" />
-      <div style="font-size: 0.85em; color: #555; margin-top: 0.5em;">
-        Pathy Kyungu
-      </div>
-    </div>
-
-    <div>
-      <h1 style="margin: 0; font-size: 1.7em; color: #0055aa;">
-        Site officiel du Professeur Pathy Kyungu
-      </h1>
-      <p style="margin: 0.5em 0 0 0; font-weight: bold; color: #333;">
-        Mathématiques · Vulgarisation · Recherches
-      </p>
-    </div>
-  </header>
-
-
-
-  <!-- SECTION BIO -->
-  <section>
-    <h2>👨🏽‍🏫 Biographie scientifique</h2>
-
-    <p>
-      <strong>Pathy Kyungu</strong> est un <strong>mathématicien et chercheur indépendant</strong> originaire de la 
-      <strong>République Démocratique du Congo (RDC)</strong>. Il est principalement connu pour ses travaux sur 
-      la <strong>transformée de Laplace inverse</strong> et la <strong>transformée de Mellin inverse</strong>, 
-      à partir desquelles il a formulé la désormais célèbre 
-      <strong>formule de Kyungu</strong>, publiée officiellement sur 
-      <a href="https://zenodo.org/communities/kyungu-formula" target="_blank" rel="noopener noreferrer">Zenodo</a>.
-    </p>
-
-    <p>
-      Passionné de sciences depuis son enfance, il amorce ses premières recherches dès l’âge de 
-      <strong>16 ans</strong>. En <strong>1999</strong>, à seulement <strong>19 ans</strong>, 
-      le Vice-Gouverneur du Katanga, <strong>Jacques Muyumba Ndubula</strong>, 
-      mentionne officiellement le dépôt d’un résumé de ses découvertes.
-    </p>
-
-    <p>
-      En <strong>2002</strong>, il met en évidence un nouvel opérateur mathématique fondamental, 
-      le <strong>sommatiel</strong>, donnant naissance à une transformée associée : 
-      l’<strong>hypersommatiel</strong>.  
-      En <strong>2010</strong>, il élabore une approche originale de l’<strong>hypothèse de Riemann</strong>. 
-      La première version publique de cette proposition a été diffusée le <strong>2 octobre 2025</strong>, 
-      issue d’un document de recherche rédigé à l’origine sous <em>Word 2003</em> et conservé dans ses archives personnelles.
-    </p>
-
-    <p>
-      Après une tentative de création d’une fondation collaborative, il poursuit désormais ses travaux 
-      en toute indépendance, concentrant ses efforts sur le développement et les applications 
-      analytiques de la <strong>formule de Kyungu</strong>, qu’il considère comme l’un des outils 
-      les plus puissants pour la théorie des transformées inverses.
-    </p>
-
-    <p>
-      Ses publications officielles sont disponibles sur <strong>Zenodo</strong>, 
-      et il dispose également de comptes personnels sur <strong>arXiv</strong> et <strong>HAL</strong> 
-      pour de futures soumissions.
-    </p>
-
-    <p>
-      En parallèle, <strong>Pathy Kyungu</strong> vulgarise les mathématiques et la physique 
-      à travers des <strong>vidéos pédagogiques</strong> qu’il partage sur 
-      <a href="https://www.tiktok.com/@mathkyungu" target="_blank" rel="noopener noreferrer">TikTok</a> 
-      et 
-      <a href="https://www.facebook.com/mathkyungu" target="_blank" rel="noopener noreferrer">Facebook</a>, 
-      sous le nom <em>Le Professeur des Maths</em>.
-    </p>
-  </section>
-
-
-
-  <!-- CITATION -->
-  <div style="
-      max-width: 700px;
-      margin: 2em auto;
-      padding: 1.5em;
-      background-color: #f0f0f0;
-      border-left: 5px solid #0055aa;
-      font-style: italic;
-      font-size: 1.2em;
-      color: #333;
-    ">
-    <blockquote style="margin: 0;">
-      « Rien n’est fondamental en soi. Une connaissance ne devient fondamentale que 
-      pour celui qui choisit de la considérer comme telle. »
-      <br><br>
-      <span class="signature" style="font-weight: bold;">— Professeur Pathy Kyungu</span>
-    </blockquote>
+  <header style="display: flex; align-items: center; margin-bottom: 1em;">
+  <div style="text-align: center; margin-right: 1em;">
+    <img src="images/kyungu-photo.jpg" alt="Professeur Pathy Kyungu" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 8px rgba(0,0,0,0.2);" />
+    <div style="font-size: 0.85em; color: #555; margin-top: 0.5em;">Pathy Kyungu</div>
   </div>
+  <div>
+    <h1 style="margin: 0; font-size: 1.5em; color: #0055aa;">Site officiel du Professeur Pathy Kyungu</h1>
+    <p style="margin: 0.5em 0 0 0; font-weight: bold; color: #333;">Mathématiques · Vulgarisation · Recherches</p>
+  </div>
+</header>
+
+<section>
+  <h2>👨🏽‍🏫 Biographie scientifique</h2>
+
+  <p>
+    <strong>Pathy Kyungu</strong> est un <strong>mathématicien et chercheur indépendant</strong> originaire de la 
+    <strong>République Démocratique du Congo (RDC)</strong>. Il est principalement connu pour ses travaux sur 
+    la <strong>transformée de Laplace inverse</strong> et la <strong>transformée de Mellin inverse</strong>, 
+    à partir desquelles il a formulé la désormais célèbre 
+    <strong>formule de Kyungu</strong>, publiée officiellement sur 
+    <a href="https://zenodo.org/communities/kyungu-formula" target="_blank" rel="noopener noreferrer">Zenodo</a>.
+  </p>
+
+  <p>
+    Passionné de sciences depuis son enfance, il amorce ses premières recherches dès l’âge de 
+    <strong>16 ans</strong>. En <strong>1999</strong>, à seulement <strong>19 ans</strong>, 
+    le Vice-Gouverneur du Katanga, <strong>Jacques Muyumba Ndubula</strong>, 
+    mentionne officiellement le dépôt d’un résumé de ses découvertes.
+  </p>
+
+  <p>
+    En <strong>2002</strong>, il met en évidence un nouvel opérateur mathématique fondamental, 
+    le <strong>sommatiel</strong>, donnant naissance à une transformée associée : 
+    l’<strong>hypersommatiel</strong>.  
+    En <strong>2010</strong>, il élabore une approche originale de l’<strong>hypothèse de Riemann</strong>. 
+    La première version publique de cette proposition a été diffusée le <strong>2 octobre 2025</strong>, 
+    issue d’un document de recherche rédigé à l’origine sous <em>Word 2003</em> et conservé dans ses archives personnelles.
+  </p>
+
+  <p>
+    Après une tentative de création d’une fondation collaborative, il poursuit désormais ses travaux 
+    en toute indépendance, concentrant ses efforts sur le développement et les applications 
+    analytiques de la <strong>formule de Kyungu</strong>, qu’il considère comme l’un des outils 
+    les plus puissants pour la théorie des transformées inverses.
+  </p>
+
+  <p>
+    Ses publications officielles sont disponibles sur <strong>Zenodo</strong>, 
+    et il dispose également de comptes personnels sur <strong>arXiv</strong> et <strong>HAL</strong> 
+    pour de futures soumissions.
+  </p>
+
+  <p>
+    En parallèle, <strong>Pathy Kyungu</strong> vulgarise les mathématiques et la physique 
+    à travers des <strong>vidéos pédagogiques</strong> qu’il partage sur 
+    <a href="https://www.tiktok.com/@mathkyungu" target="_blank" rel="noopener noreferrer">TikTok</a> 
+    et 
+    <a href="https://www.facebook.com/mathkyungu" target="_blank" rel="noopener noreferrer">Facebook</a>, 
+    sous le nom <em>Le Professeur des Maths</em>.
+  </p>
+</section>
+  <div style="
+  max-width: 700px;
+  margin: 2em auto;
+  padding: 1.5em;
+  background-color: #f0f0f0;
+  border-left: 5px solid #0055aa;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #333;
+">
+<blockquote>
+  “Rien n’est fondamental en soi. Une connaissance ne devient fondamentale que pour celui qui choisit de la considérer comme telle.”
+  <br>
+  <span class="signature">— Professeur Pathy Kyungu</span>
+</blockquote>
+  </div>
+</div>
   <section>
   <h2>🧠 Formules signatures</h2>
 
-  <!-- ============================= -->
-  <!-- Formule de Kyungu – Laplace  -->
-  <!-- ============================= -->
   <h3>Formule de Kyungu pour la Transformée de Laplace Inverse</h3>
 
-  <h4>Forme série</h4>
+  <h4>1. Forme série</h4>
   <p>
-    La transformée de Laplace inverse d'une fonction \( F(p) \) via la formule de Kyungu s'écrit :
+    La formule de Kyungu permet d'exprimer la transformée de Laplace inverse via une série utilisant les dérivées successives d'une fonction auxiliaire \(\varphi(x) = F(1/x)\) :
   </p>
   <p class="formula">
     \[
-      \mathcal{L}^{-1}[F](t)
-      = \varphi(0)\,\delta(t)
-      + \sum_{n=1}^{\infty}
-        \frac{n}{(n!)^2}\,\varphi^{(n)}(0)\,t^{\,n-1},
-      \qquad
-      \varphi(x) = F(1/x)
+      \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}
     \]
   </p>
+  <ul>
+    <li><strong>\(\mathcal{L}^{-1}[F](t)\)</strong> : transformée de Laplace inverse de \(F(p)\).</li>
+    <li><strong>\(\varphi(x)\)</strong> : fonction auxiliaire définie par \(\varphi(x) = F(1/x)\).</li>
+    <li><strong>\(\varphi^{(n)}(0)\)</strong> : dérivée n-ième de \(\varphi\) évaluée en 0.</li>
+    <li><strong>\(\delta(t)\)</strong> : distribution de Dirac, représentant l'impulsion concentrée en \(t=0\).</li>
+    <li>La série exprime \(\mathcal{L}^{-1}[F](t)\) pour \(t>0\) via les dérivées successives pondérées par \(\frac{n}{(n!)^2}\) et multipliées par \(t^{n-1}\).</li>
+  </ul>
 
-  <h4>Forme intégrale</h4>
-  <p>La même formule sous forme intégrale :</p>
+  <h4>2. Forme intégrale</h4>
+  <p>
+    La même formule peut être exprimée sous forme intégrale via le théorème des résidus de Cauchy. La série est alors récupérée en développant l'exponentielle \(e^{t/z}\) :
+  </p>
   <p class="formula">
     \[
-      \mathcal{L}^{-1}[F](t)
-      = \frac{1}{2\pi i}
-        \oint_{\Gamma}
-        \frac{\varphi(z)}{z^2}\,
-        e^{t/z}\,dz,
-      \qquad
-      \varphi(z) = F(1/z)
+      \mathcal{L}^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, e^{t/z} \, dz, 
+      \quad \varphi(z) = F\Big(\frac{1}{z}\Big)
     \]
   </p>
+  <ul>
+    <li>\(\Gamma\) : contour fermé entourant \(z=0\) dans le plan complexe.</li>
+    <li>L’intégrale reproduit la série de Kyungu lorsque \(e^{t/z}\) est développée en série de Taylor.</li>
+    <li>Le terme impulsionnel \(\varphi(0)\delta(t)\) est automatiquement inclus via le résidu en \(z=0\) pour \(t=0\).</li>
+  </ul>
+  <p>
+    Ainsi, la <strong>forme série</strong> est pratique pour des calculs explicites ou numériques, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
+  </p>
 
-  <!-- ============================= -->
-  <!-- Formule de Kyungu – Mellin   -->
-  <!-- ============================= -->
   <h3>Formule de Kyungu pour la Transformée de Mellin Inverse</h3>
 
-  <h4>Forme symbolique</h4>
-  <p>Relation fondamentale avec la transformée de Laplace :</p>
+  <h4>1. Forme symbolique</h4>
+  <p>
+    La transformée de Mellin inverse se relie à la transformée de Laplace inverse par le changement de variable \(t = -\ln x\) :
+  </p>
   <p class="formula">
     \[
-      \mathcal{M}^{-1}[F](x)
-      = \mathcal{L}^{-1}[F](-\ln x),
-      \qquad x>0
+      \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x)
     \]
   </p>
+  <ul>
+    <li>La variable \(x > 0\).</li>
+    <li>Cette relation permet de réutiliser directement la formule de Kyungu pour Laplace.</li>
+  </ul>
 
-  <h4>Forme série</h4>
-  <p>Développement logarithmique autour de \(x = 1\) :</p>
+  <h4>2. Forme série</h4>
+  <p>
+    Développement en série logarithmique autour de \(x = 1\) :
+  </p>
   <p class="formula">
     \[
-      \mathcal{M}^{-1}[F](x)
-      = \varphi(0)\,\delta(1-x)
-      + \sum_{n=1}^{\infty}
-        \frac{\varphi^{(n)}(0)}{(n!)^2}\,n\,(-\ln x)^{n-1},
-      \qquad
-      \varphi(x)=F(1/x)
+      \mathcal{M}^{-1}[F](x) = \varphi(0) \, \delta(1 - x) + \sum_{n=1}^{\infty} \frac{\varphi^{(n)}(0)}{(n!)^2} \, n \, (-\ln x)^{n-1}
     \]
   </p>
-
-  <h4>Forme intégrale</h4>
-  <p>Version intégrale via un contour autour de \(z = 0\) :</p>
   <p class="formula">
     \[
-      \mathcal{M}^{-1}[F](x)
-      = \frac{1}{2\pi i}
-        \oint_{\Gamma}
-        \frac{\varphi(z)}{z^2}\,
-        x^{-1/z}\,dz,
-      \qquad
-      \varphi(z)=F(1/z)
+      \varphi(x) = F\Big(\frac{1}{x}\Big)
     \]
   </p>
+  <ul>
+    <li>\(\delta(1 - x)\) : impulsion de Dirac centrée en \(x = 1\).</li>
+    <li>Chaque terme de la série correspond à \((- \ln x)^{n-1}\) pondéré par \(n/(n!)^2\) et les dérivées de \(\varphi\) en 0.</li>
+    <li>Pratique pour les expansions explicites ou les calculs numériques.</li>
+  </ul>
 
-</section>
+  <h4>3. Forme intégrale</h4>
+  <p>
+    Version intégrale via un contour autour de \(z = 0\) :
+  </p>
+  <p class="formula">
+    \[
+      \mathcal{M}^{-1}[F](x) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, x^{-1/z} \, dz
+    \]
+  </p>
+  <p class="formula">
+    \[
+      \varphi(z) = F\Big(\frac{1}{z}\Big)
+    \]
+  </p>
+  <ul>
+    <li>\(\Gamma\) : petit contour fermé autour de \(z = 0\), parcouru positivement dans une région analytique de \(\varphi(z)\).</li>
+    <li>Développement de \(x^{-1/z} = e^{-(\ln x)/z}\) en série permet de retrouver la formule en puissances de \(-\ln x\).</li>
+    <li>Le terme impulsionnel \(\varphi(0)\delta(x - 1)\) est automatiquement inclus via le résidu en \(z = 0\).</li>
+  </ul>
+  <p>
+    La <strong>forme série</strong> est pratique pour le calcul explicite, tandis que la <strong>forme intégrale</strong> est élégante et adaptée aux méthodes analytiques complexes.
+  </p>
 
 <section>
   <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
@@ -313,49 +280,35 @@
   </p>
 </section>
 
- <!-- Formule de Kyungu–Sommatiel (indexable pour Google) -->
-<div style="position:absolute; left:-9999px; top:-9999px; visibility:hidden;">
-
-<h3>Généralisation de la Formule d’Euler–Maclaurin (Kyungu–Sommatiel)</h3>
+  <h3>Généralisation de la Formule d’Euler–Maclaurin (Formule de Kyungu–Sommatiel)</h3>
 
 <p>
-  La formule suivante est une extension de la formule classique d’Euler–Maclaurin,
-  obtenue en introduisant un paramètre de translation \(c\).  
-  Elle relie la somme discrète décalée aux dérivées successives de la fonction \(f\) 
-  et à son intégrale continue.
+  Issue du <strong>calcul sommatiel</strong> développé par Pathy Kyungu, 
+  cette expression étend la formule classique d’Euler–Maclaurin 
+  à un paramètre décalé \(c\), reliant la somme discrète à son équivalent 
+  intégral et aux dérivées successives de la fonction \(f\) :
 </p>
 
 <p class="formula">
   \[
-    \sum_{k=a+c}^{\,b+c-1} f(k)
-    \;=\;
-    \int_{a}^{b} f(t)\,dt
-    \;+\;
-    \sum_{n=1}^{\infty}
-      \frac{B_n(c)}{n!}
-      \,\bigl( f^{(n-1)}(b) - f^{(n-1)}(a) \bigr),
+    \sum_{k=a+c}^{b+c-1} f(k)
+    = \int_{a}^{b} f(t)\,dt
+    + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} 
+    \, \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)
   \]
 </p>
 
 <ul>
-  <li>
-    \(B_n(c)\) : polynômes de Bernoulli généralisés dépendant du paramètre \(c\).
-  </li>
-  <li>
-    \(c\) permet de translater la somme discrète, étendant la formule classique.
-  </li>
-  <li>
-    Lorsque \(c = 0\), on retrouve exactement la formule standard d’Euler–Maclaurin.
-  </li>
-  <li>
-    Cette identité établit un lien profond entre série, intégrale et dérivées successives.
-  </li>
+  <li>\(B_n(c)\) : polynômes de Bernoulli généralisés dépendant du paramètre \(c\).</li>
+  <li>Le paramètre \(c\) permet de translater la somme discrète, généralisant la forme classique d’Euler–Maclaurin.</li>
+  <li>Lorsque \(c = 0\), on retrouve la formule d’Euler–Maclaurin standard.</li>
+  <li>Cette formule relie de manière précise les opérateurs de somme et d’intégration.</li>
 </ul>
 
 <p>
-  Cette <strong>formule de Kyungu–Sommatiel</strong> constitue une généralisation analytique 
-  majeure du calcul sommatoire, unifiant de manière naturelle la somme discrète, 
-  l’intégration et les opérateurs différentiels.
+  Cette <strong>formule de Kyungu–Sommatiel</strong> constitue une extension 
+  fondamentale du calcul sommatoire, unifiant les notions de série, d’intégrale 
+  et de dérivée fractionnaire dans une même structure analytique.
 </p>
 
 </section>
@@ -493,92 +446,68 @@
 
   <!-- Formule KL série -->
   <p>
-    La formule de Kyungu pour l'inversion de Laplace d'une fonction \( F(p) \) s'écrit :
-    \[
-      \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n \varphi^{(n)}(0)}{(n!)^2} t^{\,n-1}, 
-      \quad \varphi(x) = F(1/x)
-    \]
+    La formule de Kyungu pour l'inversion de Laplace d'une fonction F(p) s'écrit :
+    L^{-1}[F](t) = φ(0) δ(t) + ∑_{n=1}^{∞} n φ^{(n)}(0) / (n!)^2 t^{n-1}, 
+    où φ(x) = F(1/x).
   </p>
 
   <!-- Formule KL intégrale -->
   <p>
-    La formule intégrale correspondante :
-    \[
-      \mathcal{L}^{-1}[F](t) = \frac{1}{2\pi i} \oint_{C_0} \frac{\varphi(x)}{x^2} e^{t/x} dx
-    \]
+    La formule intégrale correspondante est :
+    L^{-1}[F](t) = 1/(2πi) ∮_{C0} φ(x)/x^2 e^{t/x} dx.
   </p>
 
   <!-- Formule KL cas particulier -->
   <p>
-    Cas particulier : pour \( F(p) = 1/p^2 \), \( \varphi(x) = x^2 \) et la série donne :
-    \[
-      \mathcal{L}^{-1}[1/p^2](t) = t
-    \]
+    Cas particulier : pour F(p) = 1/p^2, φ(x) = x^2 et la série donne L^{-1}[1/p^2](t) = t.
   </p>
 
   <!-- Formule KL extension aux séries non entières -->
   <p>
-    Pour des séries non entières :
-    \[
-      \mathcal{L}^{-1}[F](t) = \sum_{\alpha_n \notin \mathbb{Z}^{-}} \frac{c_n}{\Gamma(\alpha_n)} t^{\alpha_n-1} 
-      + \sum_{\alpha_j=-m} c_j \delta^{(m)}(t) 
-      + \sum_{\alpha_k=0} c_k \delta(t)
-    \]
-    avec \( \varphi(x) = F(1/x) \) et \( t_+^{\lambda} \) défini par prolongement analytique.
+    Pour des séries non entières : 
+    L^{-1}[F](t) = ∑_{αn∉Z^-} cn / Γ(αn) t^{αn-1} 
+    + ∑_{αj=-m} cj δ^{(m)}(t) 
+    + ∑_{αk=0} ck δ(t), 
+    où φ(x) = F(1/x) et t^{λ}_+ est défini par prolongement analytique.
   </p>
 
   <!-- Formule KM série -->
   <p>
-    Transformée de Mellin inverse via Laplace :
-    \[
-      \mathcal{M}^{-1}[F](x) = \mathcal{L}^{-1}[F](-\ln x) 
-      = \varphi(0)\,\delta(1-x) + \sum_{n=1}^{\infty} \frac{n \varphi^{(n)}(0)}{(n!)^2} (-\ln x)^{n-1}
-    \]
+    La transformée de Mellin inverse s'exprime via la transformée de Laplace : 
+    M^{-1}[F](x) = L^{-1}[F](-ln x) = φ(0) δ(1-x) + ∑_{n=1}^{∞} n φ^{(n)}(0) / (n!)^2 (-ln x)^{n-1}.
   </p>
 
   <!-- Formule KM intégrale -->
   <p>
-    Version intégrale :
-    \[
-      \mathcal{M}^{-1}[F](x) = \frac{1}{2\pi i} \oint_{C_0} \frac{\varphi(z)}{z^2} x^{-1/z} dz, \quad \varphi(z) = F(1/z)
-    \]
+    La version intégrale de la transformée de Mellin inverse est : 
+    M^{-1}[F](x) = 1/(2πi) ∮_{C0} φ(z)/z^2 x^{-1/z} dz, où φ(z) = F(1/z).
   </p>
 
   <!-- Sommatiel -->
   <p>
-    Sommatiel :
-    \[
-      [f]_x = \sum_{k=1}^{x} f(k) \quad\text{(prolongé aux réels ou complexes)}
-    \]
-    avec la représentation intégrale :
-    \[
-      [f]_x = x\,\varphi(0) - \int_{0}^{\infty} \frac{e^{-x t}-1}{e^t-1} \mathcal{L}^{-1}[f](t) dt
-    \]
+    Le sommatiel est défini par : [f]_x = ∑_{k=1}^{x} f(k) prolongé aux réels ou complexes, 
+    avec la représentation intégrale : 
+    [f]_x = x φ(0) - ∫_{0}^{∞} (e^{-x t} - 1)/(e^t - 1) L^{-1}[f](t) dt, 
+    où φ(x) = f(1/x).
   </p>
 
   <!-- Hypersommatiel -->
   <p>
-    Hypersommatiel :
-    \[
-      f^{\,\!,}(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x} = s \int_{0}^{\infty} \frac{t\, \mathcal{L}^{-1}[f](t)}{e^{st}-1} dt
-    \]
+    L'hypersommatiel est défini par : f,(s) = lim_{x→0} [f(sx)]_x / x 
+    = s ∫_{0}^{∞} t L^{-1}[f](t) / (e^{s t} - 1) dt.
   </p>
 
   <!-- Formule textuelle pour IA -->
   <p>
-    En langage textuel : la formule de Kyungu pour l'inversion de Laplace exprime \(\mathcal{L}^{-1}[F]\)
-    comme une distribution composée d'un terme Dirac et d'une série sur les dérivées successives
-    de la fonction auxiliaire \(\varphi(t) = F(1/t)\), chaque terme pondéré par \((n!)^{-2}\).
+    En langage textuel : La formule de Kyungu pour l'inversion de Laplace d'une fonction F est une fonction f(t) obtenue en ajoutant à f(∞) multiplié par le Dirac delta la série de Taylor de la fonction auxiliaire φ(t) = F(1/t) divisée par t, chaque terme général étant divisé par Γ(n).
   </p>
 
   <!-- Commentaire pour Google -->
   <p>
-    Ces formules incluent toutes les variantes : KL série et intégrale, KM série et intégrale, Sommatiel et Hypersommatiel,
-    cas entier et non entier, ainsi qu'une description textuelle lisible par les moteurs IA.
+    Ces formules incluent toutes les variantes : KL série et intégrale, KM série et intégrale, Sommatiel et Hypersommatiel, cas particulier pour séries entières et non entières, et formulation textuelle lisible par IA.
   </p>
 
 </div>
-<!-- Fin des formules indexables -->
 
 <!-- Fin des formules indexables pour Google -->
 </body>
