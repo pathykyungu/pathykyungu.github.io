@@ -142,7 +142,42 @@
   <li><strong>\(\frac{n}{(n!)^2}\)</strong> : coefficient de pondération spécifique assurant la convergence de la série.</li>
   <li>Cette forme est particulièrement efficace pour les calculs numériques et les expansions explicites.</li>
 </ul>
+<hr>
 
+<h3>Exemple d'application : \( F(p) = e^{a/p} \)</h3>
+<p>
+  Cet exemple illustre la capacité de la formule à traiter les singularités essentielles à l'infini.
+</p>
+
+<p>
+  1. <strong>Fonction auxiliaire :</strong> 
+  \[ \varphi(x) = F(1/x) = e^{ax} \]
+</p>
+
+<p>
+  2. <strong>Développement en série :</strong> 
+  En \( x = 0 \), nous avons \( \varphi(0) = 1 \) et \( \varphi^{(n)}(0) = a^n \).
+</p>
+
+<p>
+  3. <strong>Application de la Formule de Kyungu :</strong>
+  \[
+    \mathcal{L}^{-1}[e^{a/p}](t) = \delta(t) + \sum_{n=1}^{\infty} \frac{n \cdot a^n}{(n!)^2} \, t^{n-1}
+  \]
+</p>
+
+<p>
+  4. <strong>Forme fermée :</strong> 
+  En simplifiant les factorielles (\( n/n! = 1/(n-1)! \)), on identifie la fonction de Bessel modifiée de première espèce \( I_1 \) :
+  \[
+    f(t) = \delta(t) + \sqrt{\frac{a}{t}} \, I_1(2\sqrt{at})
+  \]
+</p>
+
+<ul>
+  <li>Le terme \( \delta(t) \) provient de la valeur constante \( \varphi(0) \).</li>
+  <li>La partie régulière décrit la croissance transitoire du système.</li>
+</ul>
 
   <h4>2. Forme intégrale</h4>
   <p>
