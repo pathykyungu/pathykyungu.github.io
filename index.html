@@ -110,24 +110,39 @@
   <section>
   <h2>🧠 Formules signatures</h2>
 
-  <h3>Formule de Kyungu pour la Transformée de Laplace Inverse</h3>
+<h3>Transformée de Laplace Inverse : Méthode de Kyungu</h3>
 
-  <h4>1. Forme série</h4>
-  <p>
-    La formule de Kyungu permet d'exprimer la transformée de Laplace inverse via une série utilisant les dérivées successives d'une fonction auxiliaire \(\varphi(x) = F(1/x)\) :
-  </p>
-  <p class="formula">
-    \[
-      \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}
-    \]
-  </p>
-  <ul>
-    <li><strong>\(\mathcal{L}^{-1}[F](t)\)</strong> : transformée de Laplace inverse de \(F(p)\).</li>
-    <li><strong>\(\varphi(x)\)</strong> : fonction auxiliaire définie par \(\varphi(x) = F(1/x)\).</li>
-    <li><strong>\(\varphi^{(n)}(0)\)</strong> : dérivée n-ième de \(\varphi\) évaluée en 0.</li>
-    <li><strong>\(\delta(t)\)</strong> : distribution de Dirac, représentant l'impulsion concentrée en \(t=0\).</li>
-    <li>La série exprime \(\mathcal{L}^{-1}[F](t)\) pour \(t>0\) via les dérivées successives pondérées par \(\frac{n}{(n!)^2}\) et multipliées par \(t^{n-1}\).</li>
-  </ul>
+<h4>1. Formule Générale Unifiée</h4>
+<p>
+  Pour une fonction auxiliaire \(\varphi(x) = F(1/x)\) admettant un développement de la forme \(\sum c_n x^{\alpha_n}\), la transformée inverse s'écrit au sens des distributions :
+</p>
+<p class="formula">
+  \[
+    \mathcal{L}^{-1}[F](t) = \underbrace{\sum_{\alpha_n > 0} \frac{c_n}{\Gamma(\alpha_n)} t^{\alpha_n - 1}}_{\text{Partie régulière}} + \underbrace{\sum_{\alpha_j = -m \le 0} c_j \delta^{(m)}(t)}_{\text{Termes singuliers}}
+  \]
+</p>
+
+<h4>2. Forme série (Cas des fonctions analytiques en \(x=0\))</h4>
+<p>
+  Lorsque \(\varphi(x)\) est analytique en 0, la formule se spécialise sous la forme série suivante :
+</p>
+<p class="formula">
+  \[
+    \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}
+  \]
+</p>
+<p class="formula">
+  \[
+    \text{avec } \varphi(x) = F\Big(\frac{1}{x}\Big)
+  \]
+</p>
+<ul>
+  <li><strong>\(\mathcal{L}^{-1}[F](t)\)</strong> : transformée de Laplace inverse de \(F(p)\).</li>
+  <li><strong>\(\varphi(0)\,\delta(t)\)</strong> : terme impulsionnel issu de la constante du développement (\(\alpha=0\)).</li>
+  <li><strong>\(\frac{n}{(n!)^2}\)</strong> : coefficient de pondération spécifique assurant la convergence de la série.</li>
+  <li>Cette forme est particulièrement efficace pour les calculs numériques et les expansions explicites.</li>
+</ul>
+
 
   <h4>2. Forme intégrale</h4>
   <p>
