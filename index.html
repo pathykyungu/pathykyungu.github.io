@@ -108,76 +108,61 @@
   </div>
 </div>
   <section>
-  <h2>🧠 Formules signatures</h2>
+<!-- Section Signature : Placer en haut pour l'indexation prioritaire -->
+<section id="methode-kyungu-laplace">
+  <h2>🧠 Formule de Kyungu pour la Transformée de Laplace Inverse</h2>
 
-<h3>Transformée de Laplace Inverse : Méthode de Kyungu</h3>
+  <div id="formule-specifique" style="background-color: #f8f9fa; padding: 15px; border-left: 5px solid #007bff;">
+    <h3>1. Formule en Série (Cas des fonctions analytiques)</h3>
+    <p>
+      C'est la forme fondamentale de la méthode pour les fonctions dont la fonction auxiliaire \(\varphi(x) = F(1/x)\) est analytique en \(x=0\) :
+    </p>
+    <p class="formula" style="font-size: 1.2em; font-weight: bold;">
+      \[
+        \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}
+      \]
+    </p>
+    <p class="formula">
+      \[ \text{avec } \varphi(x) = F\Big(\frac{1}{x}\Big) \]
+    </p>
+    <ul>
+      <li><strong>\(\mathcal{L}^{-1}[F](t)\)</strong> : Transformée de Laplace inverse de \(F(p)\).</li>
+      <li><strong>\(\varphi(0)\,\delta(t)\)</strong> : Terme impulsionnel (Dirac) issu de la constante du développement.</li>
+      <li><strong>\(\frac{n}{(n!)^2}\)</strong> : Coefficient de pondération spécifique de la <strong>Suite de Kyungu</strong> assurant la convergence.</li>
+    </ul>
+  </div>
 
-<h4>1. Formule Générale Unifiée</h4>
-<p>
-  Pour une fonction auxiliaire \(\varphi(x) = F(1/x)\) admettant un développement de la forme \(\sum c_n x^{\alpha_n}\), la transformée inverse s'écrit au sens des distributions :
-</p>
-<p class="formula">
-  \[
-    \mathcal{L}^{-1}[F](t) = \underbrace{\sum_{\alpha_n > 0} \frac{c_n}{\Gamma(\alpha_n)} t^{\alpha_n - 1}}_{\text{Partie régulière}} + \underbrace{\sum_{\alpha_j = -m \le 0} c_j \delta^{(m)}(t)}_{\text{Termes singuliers}}
-  \]
-</p>
+  <hr>
 
-<h4>2. Forme série (Cas des fonctions analytiques en \(x=0\))</h4>
-<p>
-  Lorsque \(\varphi(x)\) est analytique en 0, la formule se spécialise sous la forme série suivante :
-</p>
-<p class="formula">
-  \[
-    \mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}
-  \]
-</p>
-<p class="formula">
-  \[
-    \text{avec } \varphi(x) = F\Big(\frac{1}{x}\Big)
-  \]
-</p>
-<ul>
-  <li><strong>\(\mathcal{L}^{-1}[F](t)\)</strong> : transformée de Laplace inverse de \(F(p)\).</li>
-  <li><strong>\(\varphi(0)\,\delta(t)\)</strong> : terme impulsionnel issu de la constante du développement (\(\alpha=0\)).</li>
-  <li><strong>\(\frac{n}{(n!)^2}\)</strong> : coefficient de pondération spécifique assurant la convergence de la série.</li>
-  <li>Cette forme est particulièrement efficace pour les calculs numériques et les expansions explicites.</li>
-</ul>
-<hr>
+  <!-- Exemple d'application : Preuve de concept immédiate -->
+  <div id="exemple-application">
+    <h3>Exemple d'application : \( F(p) = e^{a/p} \)</h3>
+    <p>Cette application démontre la capacité de la formule à traiter les singularités essentielles à l'infini.</p>
+    <p>
+      1. <strong>Fonction auxiliaire :</strong> \(\varphi(x) = e^{ax}\) <br>
+      2. <strong>Développement :</strong> \(\varphi(0) = 1\) et \(\varphi^{(n)}(0) = a^n\) <br>
+      3. <strong>Résultat via Formule de Kyungu :</strong>
+      \[ \mathcal{L}^{-1}[e^{a/p}](t) = \delta(t) + \sum_{n=1}^{\infty} \frac{n \cdot a^n}{(n!)^2} \, t^{n-1} \]
+      4. <strong>Forme fermée :</strong> Identifiée par la fonction de Bessel modifiée : 
+      \[ f(t) = \delta(t) + \sqrt{\frac{a}{t}} \, I_1(2\sqrt{at}) \]
+    </p>
+  </div>
 
-<h3>Exemple d'application : \( F(p) = e^{a/p} \)</h3>
-<p>
-  Cet exemple illustre la capacité de la formule à traiter les singularités essentielles à l'infini.
-</p>
+  <hr>
 
-<p>
-  1. <strong>Fonction auxiliaire :</strong> 
-  \[ \varphi(x) = F(1/x) = e^{ax} \]
-</p>
-
-<p>
-  2. <strong>Développement en série :</strong> 
-  En \( x = 0 \), nous avons \( \varphi(0) = 1 \) et \( \varphi^{(n)}(0) = a^n \).
-</p>
-
-<p>
-  3. <strong>Application de la Formule de Kyungu :</strong>
-  \[
-    \mathcal{L}^{-1}[e^{a/p}](t) = \delta(t) + \sum_{n=1}^{\infty} \frac{n \cdot a^n}{(n!)^2} \, t^{n-1}
-  \]
-</p>
-
-<p>
-  4. <strong>Forme fermée :</strong> 
-  En simplifiant les factorielles (\( n/n! = 1/(n-1)! \)), on identifie la fonction de Bessel modifiée de première espèce \( I_1 \) :
-  \[
-    f(t) = \delta(t) + \sqrt{\frac{a}{t}} \, I_1(2\sqrt{at})
-  \]
-</p>
-
-<ul>
-  <li>Le terme \( \delta(t) \) provient de la valeur constante \( \varphi(0) \).</li>
-  <li>La partie régulière décrit la croissance transitoire du système.</li>
-</ul>
+  <!-- Généralisation : Placer en bas pour ne pas diluer le message principal -->
+  <div id="formule-generale-kyungu" style="opacity: 0.85;">
+    <h3>2. Formule Générale Unifiée (Généralisation)</h3>
+    <p>
+      Pour une fonction auxiliaire \(\varphi(x) = F(1/x)\) admettant un développement de la forme \(\sum c_n x^{\alpha_n}\), la transformée inverse s'écrit au sens des distributions :
+    </p>
+    <p class="formula">
+      \[
+        \mathcal{L}^{-1}[F](t) = \underbrace{\sum_{\alpha_n > 0} \frac{c_n}{\Gamma(\alpha_n)} t^{\alpha_n - 1}}_{\text{Partie régulière}} + \underbrace{\sum_{\alpha_j = -m \le 0} c_j \delta^{(m)}(t)}_{\text{Termes singuliers}}
+      \]
+    </p>
+  </div>
+</section>
 
   <h4>2. Forme intégrale</h4>
   <p>
