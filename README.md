@@ -9,31 +9,29 @@ Ce dépôt présente les fondements théoriques du **Calcul Sommatiel** et du **
 
 Pour une fonction auxiliaire $\varphi(x) = F(1/x)$ analytique en $x=0$, la transformée de Laplace inverse s'exprime sous forme de série :
 
-$$\mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}$$
+$$\mathcal{L}^{-1}\[F\](t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty}\frac{n}{(n!)^2} \varphi^{(n)}(0)t^{n-1}$$
 
 ### Forme Intégrale Unifiée
-$$\mathcal{L}^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, e^{t/z} \, dz$$
+$$\mathcal{L}^{-1}\[F\](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} e^{t/z} dz$$
 
 ---
 
 ## 2. Le Calcul Sommatiel
 
-Le sommatiel $S(x)$, noté $[f]_x$, est le prolongement analytique de la somme discrète $\sum_{k=1}^{n} f(k)$ aux valeurs réelles ou complexes de $x$.
+Le sommatiel $S(x)$, noté $\[F\]x$ est le prolongement analytique de la somme discrète $\sum_{k=1}^{n} F(k)$ aux valeurs réelles ou complexes de $x$.
 
 ### Représentation intégrale
-$$S(x) = [f]_x = \int_{0}^{\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{L}^{-1}[f](t) \, dt$$
+$$ S(x) = \[F(x)\]_x = \int_{0}^{\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{L}^{-1}\[F\](t) dt$$
 
----
+## 3. L'Hypersommatiel $F,(s)$
 
-## 3. L'Hypersommatiel $f,(s)$
-
-L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule : $f,(s)$.
+L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule : $F,(s)$.
 
 ### Définition limite
-$$f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x}$$
+$$F,(s) = \lim_{x \to 0} \frac{\[F(sx)\]_x}{x}$$
 
 ### Représentation intégrale exacte
-$$f,(s) = s \int_{0}^{\infty} \frac{t \cdot \mathcal{L}^{-1}[f](t)}{e^{st} - 1} \, dt$$
+$$F,(s) = s \int_{0}^{\infty} \frac{t\cdot\mathcal{L}^{-1}\[f\](t)}{e^{st} - 1} dt$$
 
 ---
 
@@ -41,7 +39,7 @@ $$f,(s) = s \int_{0}^{\infty} \frac{t \cdot \mathcal{L}^{-1}[f](t)}{e^{st} - 1} 
 
 Cette formule étend la relation classique d'Euler-Maclaurin en introduisant un paramètre de décalage $c$ et les polynômes de Bernoulli $B_n(c)$ :
 
-$$\sum_{k=a+c}^{b+c-1} f(k) = \int_{a}^{b} f(t)\,dt + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \, \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)$$
+$$\sum_{k=a+c}^{b+c-1} f(k) = \int_{a}^{b} f(t)dt + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)$$
 
 ---
 
