@@ -1,106 +1,67 @@
-# 📘 Formules de Kyungu – Approches analytiques inverses
-![License: CC BY 4.0](https://img.shields.io/badge/Licence-CC%20BY%204.0-blue.svg)
+# Calcul Sommatiel et Formules de Kyungu
+### Par Pathy Kyungu Ngoïe
 
-Ce dépôt présente les travaux originaux du Professeur **Pathy Kyungu** sur les méthodes inverses en analyse opérationnelle, notamment :
-
-- ✅ La **formule de Kyungu pour la transformée de Laplace inverse (KL)**
-- ✅ La **formule Kyungu-Mellin-Laplace (KML)**, qui établit un pont entre les transformées de Laplace et de Mellin
-- ✅ Des séries généralisées, des applications pédagogiques, et des résultats inédits non présents dans les tables classiques
+Ce dépôt présente les fondements théoriques du **Calcul Sommatiel** et du **Calcul Hypersommatiel**, ainsi que les méthodes d'inversion des transformées de Laplace et de Mellin développées par **Pathy Kyungu Ngoïe**. Ces travaux offrent un pont analytique entre les sommes discrètes, les intégrales continues et les distributions.
 
 ---
 
-## 🌐 Accès rapide
+## 1. La Formule de Kyungu (Laplace Inverse)
 
-- 🔗 **Site officiel** : [https://pathykyungu.github.io](https://pathykyungu.github.io)
-- 📥 **Téléchargement de l’archive** :  
-  [📦 Kyungu-Laplace.zip](./Kyungu-Laplace.zip)
+Pour une fonction auxiliaire $\varphi(x) = F(1/x)$ analytique en $x=0$, la transformée de Laplace inverse s'exprime sous forme de série :
 
----
+$$\mathcal{L}^{-1}[F](t) = \varphi(0)\,\delta(t) + \sum_{n=1}^{\infty} \frac{n}{(n!)^2} \, \varphi^{(n)}(0) \, t^{n-1}$$
 
-## 🧠 Objectifs du projet
-
-Ce travail vise à :
-
-- Proposer une nouvelle façon d’aborder les **transformées inverses**
-- Réconcilier les outils analytiques avec les méthodes pédagogiques modernes
-- Offrir aux chercheurs et aux étudiants des **outils accessibles, puissants et cohérents**
+### Forme Intégrale Unifiée
+$$\mathcal{L}^{-1}[F](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} \, e^{t/z} \, dz$$
 
 ---
 
-## 📄 Contenu de l’archive ZIP
+## 2. Le Calcul Sommatiel
 
-- `kyungu-inverse-laplace-article.tex` – Code LaTeX complet
-- `kyungu-inverse-laplace-article.pdf` – Article académique
-- `README.txt` – Résumé et instructions
+Le sommatiel $S(x)$, noté $[f]_x$, est le prolongement analytique de la somme discrète $\sum_{k=1}^{n} f(k)$ aux valeurs réelles ou complexes de $x$.
 
----
-
-## 🧪 Exemples traités
-
-Les méthodes sont appliquées à plusieurs fonctions transformées, dont :
-
-1. F(p) = 1/p²
-2. F(p) = 1/(1 + p²)
-3. F(p) = p²/(1 + p³)
-4. F(p) = exp(2/p)
-5. F(p) = p⁵ / (1 - p⁵)
-
-*→ Les détails et les calculs se trouvent dans la version HTML du site ci-dessous.*
+### Représentation intégrale
+$$S(x) = [f]_x = \int_{0}^{\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{L}^{-1}[f](t) \, dt$$
 
 ---
 
-## 📘 Lire l’article complet en ligne
+## 3. L'Hypersommatiel $f,(s)$
 
-🔍 **Page dédiée avec formules et exemples** (MathJax activé) :  
-👉 [pathykyungu.github.io/formule-kyungu.html](https://pathykyungu.github.io/formule-kyungu.html)
+L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule : $f,(s)$.
 
----
+### Définition limite
+$$f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x}$$
 
-## 🔗 Publications officielles
-
-**📌 Présentation détaillée de la formule de Kyungu**  
-[![DOI – Présentation détaillée de la formule de Kyungu](https://zenodo.org/badge/DOI/10.5281/zenodo.16783934.svg)](https://doi.org/10.5281/zenodo.16783934)
-
-**📌 DOI 1 – Démonstration de la formule**  
-[![DOI 1](https://zenodo.org/badge/DOI/10.5281/zenodo.15719813.svg)](https://doi.org/10.5281/zenodo.15719813)
-
-**📌 DOI 2 – Extensions via la formule KML**  
-[![DOI 2](https://zenodo.org/badge/DOI/10.5281/zenodo.15778235.svg)](https://doi.org/10.5281/zenodo.15778235)
-
-**📌 DOI 3 – Exemples et séries non classiques**  
-[![DOI 3](https://zenodo.org/badge/DOI/10.5281/zenodo.15754963.svg)](https://doi.org/10.5281/zenodo.15754963)
+### Représentation intégrale exacte
+$$f,(s) = s \int_{0}^{\infty} \frac{t \cdot \mathcal{L}^{-1}[f](t)}{e^{st} - 1} \, dt$$
 
 ---
 
-## 👤 Auteur
+## 4. Formule d’Euler–Maclaurin Généralisée (Kyungu)
 
-**Prof. Pathy Kyungu**  
-Institut Technique Industriel Lumière du Christ (Likasi, RDC)  
-📧 [leprofesseurkyungu@gmail.com](mailto:leprofesseurkyungu@gmail.com)  
-🌐 [pathykyungu.github.io](https://pathykyungu.github.io)  
-🔗 [linktr.ee/leprofesseurkyungu](https://linktr.ee/leprofesseurkyungu)
+Cette formule étend la relation classique d'Euler-Maclaurin en introduisant un paramètre de décalage $c$ et les polynômes de Bernoulli $B_n(c)$ :
+
+$$\sum_{k=a+c}^{b+c-1} f(k) = \int_{a}^{b} f(t)\,dt + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \, \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)$$
 
 ---
 
-Merci pour votre intérêt et votre curiosité scientifique 🙏🏽
+## 5. Publications Officielles et Références (DOI)
 
-# 📘 Transformée Gamma et son Inversion
+Pour citer ces travaux, veuillez vous référer aux publications suivantes :
 
-Ce dépôt contient l'article complet sur la transformée gamma, sa définition, sa forme intégrale, et sa formule d’inversion, basé sur la méthode de Kyungu.
+*   **Théorie Unifiée** : Kyungu, P. (2026). *Analyse Sommatielle : Théorie unifiée de la sommation et de l'intégration*. [DOI: 10.5281/zenodo.18517761](https://doi.org/10.5281/zenodo.18517761)
+*   **Hypersommatiel** : Kyungu, P. (2025). *L'Hypersommatiel : un nouvel outil mathématique — Une transformée de Kyungu à support zêta*. [DOI: 10.5281/zenodo.17692063](https://doi.org/10.5281/zenodo.17692063)
+*   **Calcul Sommatiel** : Kyungu, P. (2025). *Le Calcul Sommatiel : de l'intuition adolescente aux développements modernes*. [DOI: 10.5281/zenodo.17566411](https://doi.org/10.5281/zenodo.17566411)
+*   **Euler-Maclaurin** : Kyungu, P. (2025). *Généralisation de la Formule d'Euler-Maclaurin*. [DOI: 10.5281/zenodo.17505791](https://doi.org/10.5281/zenodo.17505791)
+*   **Laplace Inverse** : Kyungu, P. (2025). *Detailed Presentation of Kyungu's Formula for the Inverse Laplace Transform*. [DOI: 10.5281/zenodo.17341923](https://doi.org/10.5281/zenodo.17341923)
+*   **Hypothèse de Riemann** : Kyungu, P. (2025). *Une étude de la fonction zêta et proposition d'une preuve de l'hypothèse de Riemann*. [DOI: 10.5281/zenodo.17389226](https://doi.org/10.5281/zenodo.17389226)
 
-## 📄 Lire l’article en PDF
+---
 
-👉 [Cliquez ici pour lire l’article](transformee_gamma.pdf)
+## Domaines d'application
+- **Physique Théorique** : Analyse des singularités essentielles.
+- **Théorie des Nombres** : Étude de la fonction Zêta de Riemann.
+- **Calcul Numérique** : Convergence accélérée des transformées inverses.
 
-## 🌐 Auteur
-
-- Pathy Kyungu  
-- Site web : [pathykyungu.github.io](https://pathykyungu.github.io)  
-- © 2025 Pathy Kyungu. Tous droits réservés.
-
-## 📄 Licence
-
-[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-
-Ce dépôt est mis à disposition selon les termes de la licence Creative Commons Attribution 4.0 International (CC BY 4.0).  
-Vous pouvez partager, modifier, adapter et utiliser ce travail, même à des fins commerciales, **à condition de citer l’auteur** : *Pathy Kyungu*.
+---
+© 2025-2026 Pathy Kyungu Ngoïe. Tous droits réservés.
