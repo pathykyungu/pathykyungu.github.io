@@ -123,12 +123,11 @@ où il intervient sous le nom <em>Le Professeur des Maths</em>.
   </div>
 </div>
   <section>
-<!-- Section Signature : Placer en haut pour l'indexation prioritaire -->
 <section id="methode-kyungu-laplace">
-  <h2>🧠 Formule de Kyungu pour la Transformée de Laplace Inverse</h2>
+  <h2> Fondements de l'Analyse Sommatielle</h2>
 
   <div id="formule-specifique" style="background-color: #f8f9fa; padding: 15px; border-left: 5px solid #007bff;">
-    <h3>1. Formule en Série (Cas des fonctions analytiques)</h3>
+    <h3>1. Formule de Kyungu pour la Transformée de Laplace Inverse (Forme serie)</h3>
     <p>
       C'est la forme fondamentale de la méthode pour les fonctions dont la fonction auxiliaire \(\varphi(x) = F(1/x)\) est analytique en \(x=0\) :
     </p>
@@ -148,8 +147,6 @@ où il intervient sous le nom <em>Le Professeur des Maths</em>.
   </div>
 
   <hr>
-
-  <!-- Exemple d'application : Preuve de concept immédiate -->
   <div id="exemple-application">
     <h3>Exemple d'application : \( F(p) = e^{a/p} \)</h3>
     <p>Cette application démontre la capacité de la formule à traiter les singularités essentielles à l'infini.</p>
@@ -162,10 +159,7 @@ où il intervient sous le nom <em>Le Professeur des Maths</em>.
       \[ f(t) = \delta(t) + \sqrt{\frac{a}{t}} \, I_1(2\sqrt{at}) \]
     </p>
   </div>
-
   <hr>
-
-  <!-- Généralisation : Placer en bas pour ne pas diluer le message principal -->
   <div id="formule-generale-kyungu" style="opacity: 0.85;">
     <h3>2. Formule Générale Unifiée (Généralisation)</h3>
     <p>
@@ -264,7 +258,7 @@ où il intervient sous le nom <em>Le Professeur des Maths</em>.
     Le <strong>calcul sommatiel</strong> étend analytiquement la somme discrète classique :
   </p>
   <p class="formula">
-    \[ S(n) = \sum_{k=1}^{n} f(k) \]
+    \[ S(n) = \sum_{k=1}^{n} F(k) \]
   </p>
 
   <p>
@@ -273,33 +267,33 @@ où il intervient sous le nom <em>Le Professeur des Maths</em>.
     On note alors :
   </p>
   <p class="formula">
-    \[ S(x) = [f]_x \]
+    \[ S(x) = [F]_x \]
   </p>
 
   <p>
-    Le sommatiel admet une représentation intégrale élégante reliant la somme et la transformée de Laplace :
+    Le sommatiel admet une représentation intégrale élégante reliant la somme et la transformée de Laplace Inverse :
   </p>
   <p class="formula">
     \[
       S(x) = -\;
       \int_{0}^{\infty} 
       \frac{e^{-x t} - 1}{e^{t} - 1} \,
-      \mathcal{L}^{-1}[f](t) \, dt
+      \mathcal{L}^{-1}[F](t) \, dt
     \]
   </p>
   <p class="sous-formule">
-    où \( \varphi(x) = f(1/x) \)
+    où \( \varphi(x) = F(1/x) \)
   </p>
 
   <p>
-    Dans le cas limite \( x \to \infty \), pour une fonction \( f \) à décroissance rapide, 
+    Dans le cas limite \( x \to \infty \), pour une fonction \( F \) à décroissance rapide, 
     le sommatiel se réduit naturellement à la somme infinie :
   </p>
   <p class="formula">
     \[
-      [f]_x \xrightarrow[x \to \infty]{} 
+      [F]_x \xrightarrow[x \to \infty]{} 
       \sum_{k=1}^{\infty} f(k) 
-      = \int_{0}^{\infty} \frac{\mathcal{L}^{-1}[f](t)}{e^t - 1} \, dt
+      = \int_{0}^{\infty} \frac{\mathcal{L}^{-1}[F](t)}{e^t - 1} \, dt
     \]
   </p>
 
@@ -308,7 +302,7 @@ où il intervient sous le nom <em>Le Professeur des Maths</em>.
   </p>
   <p class="formula">
     \[
-      f,(s) = \lim_{x \to 0} \frac{[f(sx)]_x}{x}
+      F,(s) = \lim_{x \to 0} \frac{[F(sx)]_x}{x}
     \]
   </p>
 
@@ -317,20 +311,28 @@ où il intervient sous le nom <em>Le Professeur des Maths</em>.
   </p>
   <p class="formula">
     \[
-      f,(s) = s \int_{0}^{\infty} 
-      \frac{t \, \mathcal{L}^{-1}[f](t)}{e^{s t} - 1} \, dt
+      F,(s) = s \int_{0}^{\infty} 
+      \frac{t \, \mathcal{L}^{-1}[F](t)}{e^{s t} - 1} \, dt
     \]
   </p>
+  <p>
+    La Formule Sommatoire de Kyungu est alors :
+  <p>
+    \[
+s\sum_{k=1}^{\infty} F(sk)
+=
+\left[\int_{s}^{\infty} F(t)\, dt\right],(s)
+\]
 
   <p>
-    Ces deux formules établissent un pont entre les <strong>séries discrètes</strong>, 
+    Ces formules établissent un pont entre les <strong>séries discrètes</strong>, 
     les <strong>intégrales continues</strong> et les <strong>transformations de Laplace</strong>, 
     offrant une base analytique pour la généralisation de la formule d’Euler–Maclaurin 
     et l’introduction du calcul hypersommatiel.
   </p>
 </section>
 
-  <h3>Formule d’Euler–Maclaurin generalisée de Kyungu (Kyungu Euler-Maclaurin Generalized Formula</h3>
+  <h3>Formule d’Euler–Maclaurin generalisée de Kyungu </h3>
 
 <p>
   Issue du <strong>calcul sommatiel</strong> développé par Pathy Kyungu, 
