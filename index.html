@@ -272,30 +272,30 @@
   </p>
 
   <p>
-    Le sommatiel admet une représentation intégrale élégante reliant la somme et la transformée de Laplace Inverse. 
-    Au sens des distributions, la borne inférieure \( 0^{-} \) garantit que les points de masse de Dirac situés sur la partie négative de l'axe réel font pleinement partie du domaine d'intégration :
+    Le sommatiel admet une représentation intégrale globale reliant la somme et la transformée de Laplace Inverse. 
+    Au sens des distributions, l'intégration sur l'axe réel complet de \( -\infty \) à \( +\infty \) permet de capturer automatiquement les points de masse de Dirac réels, qu'ils soient positifs ou négatifs :
   </p>
   <p class="formula">
     \[
       S(x) = -\;
-      \int_{0^{-}}^{\infty} 
+      \int_{-\infty}^{+\infty} 
       \frac{e^{-x t} - 1}{e^{t} - 1} \,
       \mathcal{L}^{-1}[F](t) \, dt
     \]
   </p>
   <p style="font-size: 0.9em; color: #555; font-style: italic; margin-top: -0.5em; margin-bottom: 1.5em; text-align: center;">
-    Note : Cette intégrale peut être prolongée analytiquement au plan complexe en modifiant le chemin d'intégration de manière à englober et inclure les points de masse imaginaires.
+    Note fondamentale : Le prolongement au plan complexe reste rigoureusement nécessaire pour les fonctions dont la transformée de Laplace inverse engendre des points de masse de Dirac imaginaires ou complexes, obligeant le chemin d'intégration à quitter l'axe réel pour englober ces singularités.
   </p>
 
   <p>
     Dans le cas limite \( x \to \infty \), pour une fonction \( F \) à décroissance rapide, 
-    le sommatiel se réduit naturellement à la somme infinie en préservant l'action distributionnelle à l'origine :
+    le sommatiel se réduit naturellement à la somme infinie sous sa forme distributionnelle globale :
   </p>
   <p class="formula">
     \[
       [F]_x \xrightarrow[x \to \infty]{} 
       \sum_{k=1}^{\infty} F(k) 
-      = \int_{0^{-}}^{\infty} \frac{\mathcal{L}^{-1}[F](t)}{e^t - 1} \, dt
+      = \int_{-\infty}^{+\infty} \frac{\mathcal{L}^{-1}[F](t)}{e^t - 1} \, dt
     \]
   </p>
 
@@ -303,32 +303,35 @@
     L’<strong>hypersommatiel</strong> est défini comme la <strong>limite paramétrique du sommatiel</strong> :
   </p>
   <p class="formula">
-  \[
-    F,(s) = \lim_{x \to 0} \frac{[F(sx)]_x}{x}
-  \]
-</p>
-<p style="font-size: 0.95em; line-height: 1.6; font-style: italic; color: #444;">
-    Note sur la notation : La notation « virgule » de \( F,(s) \) joue pour l’hypersommatiel le même rôle structurel et conceptuel que l’apostrophe \( F'(x) \) pour la dérivée classique dans la notation lagrangienne. Elle affirme le statut de l'hypersommatiel comme l'opérateur différentiel propre à l'Analyse Sommatielle.
+    \[
+      F,(s) = \lim_{x \to 0} \frac{[F(sx)]_x}{x}
+    \]
   </p>
+  <p style="font-size: 0.95em; line-height: 1.6; font-style: italic; color: #444; text-align: center; margin-bottom: 1.5em;">
+    Note sur la notation : La notation « virgule » de \( F,(s) \) joue pour l’hypersommatiel le même rôle structurel et conceptuel que l’apostrophe \( F'(x) \) pour la dérivée classique dans la notation lagrangienne.
+  </p>
+
   <p>
-    Sa forme intégrale s’écrit en étendant le domaine à la borne \( 0^{-} \) :
+    La relation différentielle fondamentale de l'Analyse Sommatielle s'exprime par la règle de dérivation suivante, mettant en évidence le rôle de l'hypersommatiel comme opérateur de correction structurelle :
   </p>
   <p class="formula">
     \[
-      F,(s) = s \int_{0^{-}}^{\infty} 
+      \frac{d}{dx} [F(sx)]_x = \left[ \frac{d}{dx} F(sx) \right]_x + F,(s)
+    \]
+  </p>
+
+  <p>
+    Sa forme intégrale universelle s'écrit sur l'axe réel complet, sous réserve du prolongement au plan complexe pour les composantes impulsionnelles imaginaires :
+  </p>
+  <p class="formula">
+    \[
+      F,(s) = s \int_{-\infty}^{+\infty} 
       \frac{t \, \mathcal{L}^{-1}[F](t)}{e^{s t} - 1} \, dt
     \]
   </p>
+  
   <p>
-  La <strong>relation différentielle fondamentale de l'Analyse Sommatielle</strong> s'exprime alors par la règle de dérivation suivante, mettant en évidence le rôle de l'hypersommatiel comme opérateur de correction structurelle :
-</p>
-<p class="formula">
-  \[
-    \frac{d}{dx} [F(sx)]_x = \left[ \frac{d}{dx} F(sx) \right]_x + F,(s)
-  \]
-</p>
-  <p>
-    La Formule Sommatoire de Kyungu est alors :
+    La Formule Sommatoire de Kyungu relie ces concepts :
   </p>
   <p class="formula">
     \[
