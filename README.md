@@ -23,7 +23,7 @@ Le sommatiel $S(x)$, noté $[F]_x$, est le prolongement analytique de la somme d
 ### Représentation intégrale
 Le sommatiel admet une représentation intégrale s'établissant de l'origine gauche à l'infini positif :
 
-$$ S(x) = [F(x)]_x = \int_{0^-}^{+\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{L}^{-1}[F](t) \, dt $$
+$$ S(x) =\[F(x)]\_x = \int_{0^-}^{+\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{L}^{-1}\[F\](t)\, dt $$
 
 *Note topologique : L'intégration réelle est étendue discrètement sur $\mathbb{R}^-$ par de petits contours isolés pour envelopper les singularités réelles négatives s'il en existe, neutralisant ainsi toute divergence vers l'infini négatif.*
 
