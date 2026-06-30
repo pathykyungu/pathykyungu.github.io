@@ -29,7 +29,7 @@ $$ S(x) =\[F(x)]\_x = \int_{0^-}^{+\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{
 
 ## 3. L'Hypersommatiel $F,(s)$
 
-L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule $F,(s)$, jouant le même rôle conceptuel que l'apostrophe $F'(x)$ pour la dérivée classique.
+L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule $F,(s)$ jouant le même rôle conceptuel que l'apostrophe $F'(x)$ pour la dérivée classique.
 
 ### Définition limite
 
