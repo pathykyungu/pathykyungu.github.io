@@ -563,24 +563,29 @@
     M^{-1}[F](x) = 1/(2πi) ∮_{C0} φ(z)/z^2 x^{-1/z} dz, où φ(z) = F(1/z).
   </p>
 
-  <!-- Sommatiel (Mise à jour : Axe réel complet) -->
+   <!-- Sommatiel (Mise à jour : Axe réel positif étendu de 0^- à +∞ et petits contours sur R^-) -->
   <p>
     Le sommatiel au sens de l'Analyse Sommatielle est défini par : [F]_x = S(x) étendant la somme discrète classique ∑_{k=1}^{n} F(k) aux réels ou complexes. 
-    Sa représentation intégrale globale sur l'axe réel complet est : 
-    S(x) = - ∫_{-∞}^{+∞} (e^{-x t} - 1)/(e^t - 1) L^{-1}[F](t) dt. 
-    L'intégration de -∞ à +∞ capture automatiquement les points de masse de Dirac réels, positifs ou négatifs. Un prolongement au plan complexe reste requis pour les fonctions dont la transformée de Laplace inverse engendre des points de masse de Dirac imaginaires ou complexes, forçant le chemin d'intégration à quitter l'axe réel.
+    Sa représentation intégrale s'établit de l'origine gauche à l'infini positif par : S(x) = ∫_{0^-}^{+∞} (1 - e^{-x t})/(e^t - 1) L^{-1}[F](t) dt. 
+    L'intégration de 0^- à +∞ capture automatiquement les distributions à l'origine. Ce domaine réel s'étend discrètement sur R^- par de petits contours fermés isolés pour englober chirurgicalement les singularités réelles négatives s'il en existe, évitant toute divergence vers l'infini négatif.
   </p>
 
   <!-- Sommatiel au cas limite infini -->
   <p>
-    Dans le cas limite où x tend vers l'infini, pour une fonction F à décroissance rapide, le sommatiel se réduit à la somme infinie sous sa forme distributionnelle globale : 
-    [F]_∞ = ∑_{k=1}^{∞} F(k) = ∫_{-∞}^{+∞} L^{-1}[F](t) / (e^t - 1) dt.
+    Dans le cas limite où x tend vers l'infini, pour une fonction F à décroissance rapide, le sommatiel se réduit à la somme infinie sous sa forme distributionnelle : 
+    [F]_∞ = ∑_{k=1}^{∞} F(k) = ∫_{0^-}^{+∞} L^{-1}[F](t) / (e^t - 1) dt.
   </p>
 
-  <!-- Hypersommatiel (Mise à jour : Règle de dérivation et Axe réel complet) -->
+  <!-- Hypersommatiel (Mise à jour : Règle de dérivation, Critère de licité et Contour unifié Gamma) -->
   <p>
     L'hypersommatiel est défini comme la limite paramétrique du sommatiel par : F,(s) = lim_{x→0} [F(sx)]_x / x. 
-    Sa forme intégrale universelle s'écrit sur l'axe réel complet par : F,(s) = s ∫_{-∞}^{+∞} t L^{-1}[F](t) / (e^{s t} - 1) dt, sous réserve du prolongement au plan complexe pour les composantes impulsionnelles imaginaires.
+    L'hypersommation terme à terme d'une série de Taylor est régie par un critère de licité exigeant un rayon de convergence non nul de la série hypersommée résultante. En cas d'indétermination par effacement de monômes, ce critère d'hyperconvergence s'étudie sur la dérivée F'(s). En cas de non-hyperconvergence, le recours à la formule intégrale complexe est obligatoire.
+  </p>
+
+  <!-- Forme intégrale unifiée de l'Hypersommatiel sur le plan complexe -->
+  <p>
+    La forme intégrale universelle et globale de l'hypersommatiel s'écrit sous la forme d'une unique intégrale curviligne complexe par : F,(s) = ∮_Γ (s t) L^{-1}[F](t) / (e^{s t} - 1) dt.
+    Le domaine géométrique d'intégration unifié est défini par Γ = H_{0^-} U {γ_k}, où H_{0^-} désigne le lacet de Hankel enveloppant l'origine gauche, et {γ_k} est l'ensemble disjoint de petits contours isolés de Cauchy entourant individuellement chaque singularité (qu'elle soit réelle négative ou complexe imaginaire).
   </p>
 
   <!-- Note notationnelle et Relation différentielle de l'Hypersommatiel -->
@@ -588,7 +593,7 @@
     La notation « virgule » F,(s) joue pour l’hypersommatiel le même rôle conceptuel que l’apostrophe F'(x) pour la dérivée classique dans la notation lagrangienne. La relation différentielle fondamentale de l'Analyse Sommatielle s'exprime par la règle de dérivation : d/dx [F(sx)]_x = [ d/dx F(sx) ]_x + F,(s), montrant l'hypersommatiel comme un opérateur de correction structurelle.
   </p>
 
-  <!-- Formule Sommatoire de Kyungu (Nouveauté) -->
+  <!-- Formule Sommatoire de Kyungu -->
   <p>
     La Formule Sommatoire de Kyungu relie directement le sommatiel et l'hypersommatiel selon l'égalité : 
     s ∑_{k=1}^{∞} F(sk) = [ ∫_{s}^{∞} F(t) dt ],(s).
