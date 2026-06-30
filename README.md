@@ -25,7 +25,7 @@ Le sommatiel admet une représentation intégrale s'établissant de l'origine ga
 
 $$ S(x) =\[F(x)]\_x = \int_{0^-}^{+\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{L}^{-1}\[F\](t)dt $$
 
-*Note topologique : L'intégration réelle est étendue discrètement sur $\mathbb{R}^-$ par de petits contours isolés pour envelopper les singularités réelles négatives s'il en existe, neutralisant ainsi toute divergence vers l'infini négatif.*
+*Note topologique : L'intégration réelle est étendue discrètement sur* $\mathbb{R}^-$ *par de petits contours isolés pour envelopper les singularités réelles négatives s'il en existe, neutralisant ainsi toute divergence vers l'infini négatif.*
 
 ## 3. L'Hypersommatiel $F,(s)$
 
