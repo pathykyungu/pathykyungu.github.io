@@ -252,7 +252,7 @@
   </div>
 </section>
 
-<section>
+  <section>
   <h3>Formules du Calcul Sommatiel et Hypersommatiel</h3>
 
   <p>
@@ -272,30 +272,26 @@
   </p>
 
   <p>
-    Le sommatiel admet une représentation intégrale globale reliant la somme et la transformée de Laplace Inverse. 
-    Au sens des distributions, l'intégration sur l'axe réel complet de \( -\infty \) à \( +\infty \) permet de capturer automatiquement les points de masse de Dirac réels, qu'ils soient positifs ou négatifs :
+    Le sommatiel admet une représentation intégrale sur l'axe réel positif, étendu à l'origine gauche pour capturer proprement les distributions à l'origine :
   </p>
   <p class="formula">
     \[
-      S(x) = -\;
-      \int_{-\infty}^{+\infty} 
-      \frac{e^{-x t} - 1}{e^{t} - 1} \,
-      \mathcal{L}^{-1}[F](t) \, dt
+      S(x) = \int_{0^-}^{+\infty} \frac{1 - e^{-x t}}{e^{t} - 1} \, \mathcal{L}^{-1}[F](t) \, dt
     \]
   </p>
   <p style="font-size: 0.9em; color: #555; font-style: italic; margin-top: -0.5em; margin-bottom: 1.5em; text-align: center;">
-    Note fondamentale : Le prolongement au plan complexe reste rigoureusement nécessaire pour les fonctions dont la transformée de Laplace inverse engendre des points de masse de Dirac imaginaires ou complexes, obligeant le chemin d'intégration à quitter l'axe réel pour englober ces singularités.
+    Note sur le prolongement : Cette intégration réelle s'étend discrètement sur \(\mathbb{R}^-\) par de petits contours isolés pour englober les singularités réelles négatives s'il en existe, évitant ainsi toute divergence de l'intégrande vers l'infini négatif.
   </p>
 
   <p>
     Dans le cas limite \( x \to \infty \), pour une fonction \( F \) à décroissance rapide, 
-    le sommatiel se réduit naturellement à la somme infinie sous sa forme distributionnelle globale :
+    le sommatiel se réduit naturellement à la somme infinie sous sa forme distributionnelle :
   </p>
   <p class="formula">
     \[
       [F]_x \xrightarrow[x \to \infty]{} 
       \sum_{k=1}^{\infty} F(k) 
-      = \int_{-\infty}^{+\infty} \frac{\mathcal{L}^{-1}[F](t)}{e^t - 1} \, dt
+      = \int_{0^-}^{+\infty} \frac{\mathcal{L}^{-1}[F](t)}{e^t - 1} \, dt
     \]
   </p>
 
@@ -312,6 +308,10 @@
   </p>
 
   <p>
+    L'hypersommatiel régit également le critère d'<strong>hyperconvergence</strong> : l'hypersommation terme à terme d'une série de Taylor n'est licite que si le rayon de convergence de la série hypersommée résultante est non nul. Si l'effacement des monômes (notamment impairs) masque l'information analytique, le critère s'étudie rigoureusement sur la dérivée de la fonction. En cas de non-hyperconvergence, le recours à la formule intégrale complexe est obligatoire.
+  </p>
+
+  <p>
     La relation différentielle fondamentale de l'Analyse Sommatielle s'exprime par la règle de dérivation suivante, mettant en évidence le rôle de l'hypersommatiel comme opérateur de correction structurelle :
   </p>
   <p class="formula">
@@ -321,13 +321,23 @@
   </p>
 
   <p>
-    Sa forme intégrale universelle s'écrit sur l'axe réel complet, sous réserve du prolongement au plan complexe pour les composantes impulsionnelles imaginaires :
+    Le prolongement de l'hypersommatiel à tout le plan complexe s'écrit de manière universelle sous la forme d'une unique intégrale de contour topologique :
   </p>
   <p class="formula">
     \[
-      F,(s) = s \int_{-\infty}^{+\infty} 
-      \frac{t \, \mathcal{L}^{-1}[F](t)}{e^{s t} - 1} \, dt
+      F,(s) = \oint_{\Gamma} \frac{st}{e^{st} - 1} \, \mathcal{L}^{-1}[F](t) \, dt
     \]
+  </p>
+  <p>
+    où le domaine géométrique global d'intégration \(\Gamma\) fusionne la régularisation continue et la capture discrète :
+  </p>
+  <p class="formula">
+    \[
+      \Gamma = \mathcal{H}_{0^-} \cup \left( \bigcup_{k} \gamma_k \right)
+    \]
+  </p>
+  <p style="font-size: 0.9em; color: #555; font-style: italic; margin-top: -0.5em; margin-bottom: 1.5em; text-align: center;">
+    Ici, \(\mathcal{H}_{0^-}\) représente le lacet de Hankel enveloppant l'origine gauche, et \(\bigcup_{k} \gamma_k\) désigne l'ensemble disjoint de petits contours isolés entourant individuellement chaque singularité (réelle négative ou complexe imaginaire isolée).
   </p>
   
   <p>
