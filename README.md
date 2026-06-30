@@ -18,7 +18,7 @@ $$\mathcal{L}^{-1}\[F\](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{
 
 ## 2. Le Calcul Sommatiel
 
-Le sommatiel $S(x)$, noté $[F]_x$, est le prolongement analytique de la somme discrète $\sum_{k=1}^{n} F(k)$ aux valeurs réelles ou complexes de $x$.
+Le sommatiel $S(x)$, noté $\[F]\_x$, est le prolongement analytique de la somme discrète $\sum\_{k=1}^{n} F(k)$ aux valeurs réelles ou complexes de $x$.
 
 ### Représentation intégrale
 Le sommatiel admet une représentation intégrale s'établissant de l'origine gauche à l'infini positif :
@@ -27,7 +27,7 @@ $$ S(x) =\[F(x)]\_x = \int_{0^-}^{+\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{
 
 *Note topologique : L'intégration réelle est étendue discrètement sur $\mathbb{R}^-$ par de petits contours isolés pour envelopper les singularités réelles négatives s'il en existe, neutralisant ainsi toute divergence vers l'infini négatif.*
 
-## 3. L'Hypersommatiel $F,(s)$
+## 3. L'Hypersommatiel $\F,(s)\$
 
 L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule $F,(s)$, jouant le même rôle conceptuel que l'apostrophe $F'(x)$ pour la dérivée classique.
 
