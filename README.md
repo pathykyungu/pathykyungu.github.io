@@ -41,7 +41,7 @@ L'hypersommation terme à terme d'une série de Taylor est soumise à un critèr
 ### Représentation intégrale unifiée (Plan Complexe)
 La forme globale universelle de l'hypersommatiel s'énonce sous la forme d'une unique intégrale curviligne complexe :
 
-$$ F,(s) = \oint_{\Gamma} \frac{st}{e^{st} - 1} \mathcal{L}^{-1}\[F\](t) \, dt $$
+$$ F,(s) = \oint_{\Gamma} \frac{st}{e^{st} - 1} \mathcal{L}^{-1}\[F\](t) \ dt $$
 
 où le domaine géométrique global d'intégration $\Gamma$ fusionne la régularisation continue et la capture discrète :
 
