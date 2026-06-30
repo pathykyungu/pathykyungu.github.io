@@ -18,22 +18,33 @@ $$\mathcal{L}^{-1}\[F\](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{
 
 ## 2. Le Calcul Sommatiel
 
-Le sommatiel $S(x)$, noté $\[F\]x$ est le prolongement analytique de la somme discrète $\sum_{k=1}^{n} F(k)$ aux valeurs réelles ou complexes de $x$.
+Le sommatiel $S(x)$, noté $[F]_x$, est le prolongement analytique de la somme discrète $\sum_{k=1}^{n} F(k)$ aux valeurs réelles ou complexes de $x$.
 
 ### Représentation intégrale
-$$ S(x) = \[F(x)\]_x = \int_{0}^{\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{L}^{-1}\[F\](t) dt$$
+Le sommatiel admet une représentation intégrale s'établissant de l'origine gauche à l'infini positif :
+$$S(x) = [F]_x = \int_{0^-}^{+\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{L}^{-1}[F](t) \, dt$$
+
+*Note topologique : L'intégration réelle est étendue discrètement sur $\mathbb{R}^-$ par de petits contours isolés pour envelopper les singularités réelles négatives s'il en existe, neutralisant ainsi toute divergence vers l'infini négatif.*
 
 ## 3. L'Hypersommatiel $F,(s)$
 
-L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule : $F,(s)$.
+L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule $F,(s)$, jouant le même rôle conceptuel que l'apostrophe $F'(x)$ pour la dérivée classique.
 
 ### Définition limite
-$$F,(s) = \lim_{x \to 0} \frac{\[F(sx)\]_x}{x}$$
+$$F,(s) = \lim_{x \to 0} \frac{[F(sx)]_x}{x}$$
 
-### Représentation intégrale exacte
-$$F,(s) = s \int_{0}^{\infty} \frac{t\cdot\mathcal{L}^{-1}\[f\](t)}{e^{st} - 1} dt$$
+### Le Critère de Licité (Hyperconvergence)
+L'hypersommation terme à terme d'une série de Taylor est soumise à un critère de licité strict : le rayon de convergence de la série hypersommée obtenue doit être non nul. Si l'effacement structurel des monômes (notamment de degré impair $\ge 3$) masque l'information analytique, le critère d'hyperconvergence s'étudie sur la dérivée $F'(s)$. En cas de non-hyperconvergence, le recours à la formule intégrale complexe est obligatoire.
 
----
+### Représentation intégrale unifiée (Plan Complexe)
+La forme globale universelle de l'hypersommatiel s'énonce sous la forme d'une unique intégrale curviligne complexe :
+$$F,(s) = \oint_{\Gamma} \frac{st}{e^{st} - 1} \mathcal{L}^{-1}[F](t) \, dt$$
+
+où le domaine géométrique global d'intégration $\Gamma$ fusionne la régularisation continue et la capture discrète :
+$$\Gamma = \mathcal{H}_{0^-} \cup \left( \bigcup_{k} \gamma_k \right)$$
+
+*   $\mathcal{H}_{0^-}$ représente le lacet de Hankel enveloppant l'origine gauche ($0^-$).
+*   $\bigcup_{k} \gamma_k$ désigne l'ensemble disjoint de petits contours isolés de Cauchy entourant individuellement chaque singularité (qu'elle soit réelle négative ou complexe imaginaire isolée).
 
 ## 4. Formule d’Euler–Maclaurin Généralisée (Kyungu)
 
