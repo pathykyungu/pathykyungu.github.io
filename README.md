@@ -27,7 +27,7 @@ $$ S(x) =\[F(x)]\_x = \int_{0^-}^{+\infty} \frac{1 - e^{-xt}}{e^t - 1} \mathcal{
 
 *Note topologique : L'intégration réelle est étendue discrètement sur $\mathbb{R}^-$ par de petits contours isolés pour envelopper les singularités réelles négatives s'il en existe, neutralisant ainsi toute divergence vers l'infini négatif.*
 
-## 3. L'Hypersommatiel $\F,(s)\$
+## 3. L'Hypersommatiel $F,(s)$
 
 L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa notation spécifique utilise la virgule $F,(s)$, jouant le même rôle conceptuel que l'apostrophe $F'(x)$ pour la dérivée classique.
 
@@ -41,7 +41,7 @@ L'hypersommation terme à terme d'une série de Taylor est soumise à un critèr
 ### Représentation intégrale unifiée (Plan Complexe)
 La forme globale universelle de l'hypersommatiel s'énonce sous la forme d'une unique intégrale curviligne complexe :
 
-$$ F,(s) = \oint_{\Gamma} \frac{st}{e^{st} - 1} \mathcal{L}^{-1}[F](t) \, dt $$
+$$ F,(s) = \oint_{\Gamma} \frac{st}{e^{st} - 1} \mathcal{L}^{-1}\[F\](t) \, dt $$
 
 où le domaine géométrique global d'intégration $\Gamma$ fusionne la régularisation continue et la capture discrète :
 
