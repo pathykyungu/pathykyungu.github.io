@@ -36,7 +36,8 @@ L'hypersommatiel est défini comme la limite paramétrique du sommatiel. Sa nota
 $$ F,(s) = \lim_{x \to 0} \frac{[F(sx)]_x}{x} $$
 
 ### Le Critère de Licité (Hyperconvergence)
-L'hypersommation terme à terme d'une série de Taylor est soumise à un critère de licité strict : le rayon de convergence de la série hypersommée obtenue doit être non nul. Si l'effacement structurel des monômes (notamment de degré impair $\ge 3$) masque l'information analytique, le critère d'hyperconvergence s'étudie sur la dérivée $F'(s)$. En cas de non-hyperconvergence, le recours à la formule intégrale complexe est obligatoire.
+L'hypersommatiel est un operateur lineaire. l'operation terme à terme de cet outil mathematique devient delicat pour une serie de Taylor : La fonction doit être hyperconvergente: le rayon de convergence de la série hypersommée obtenue doit être non nul. Dans le cas des fonctions impaires, 
+l'effacement structurel des monômes (notamment de degré impair $\ge 3$) dans la serie de Taylor, masque l'information analytique sur l'hyperconvergence, et le critère d'hyperconvergence s'étudie sur la dérivée $F'(s)$. En cas d'hyperdivergence, le recours à la formule intégrale complexe est obligatoire.
 
 ### Représentation intégrale de l'hypersommatiel
 La forme  integrale de l'hypersommatiel s'énonce par :
