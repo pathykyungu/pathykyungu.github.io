@@ -1,7 +1,7 @@
 # Calcul Sommatiel et Formules de Kyungu
 ### Par Pathy Kyungu Ngoïe
 
-Ce dépôt présente les fondements théoriques du **Calcul Sommatiel** et du **Calcul Hypersommatiel**, ainsi que les méthodes d'inversion des transformées de Laplace et de Mellin développées par **Pathy Kyungu Ngoïe**. Ces travaux offrent un pont analytique entre les sommes discrètes, les intégrales continues et les distributions.
+Ce dépôt présente les fondements théoriques de **l'Analyse Sommatielle**, ainsi que les méthodes d'inversion des transformées de Laplace et de Mellin développées par **Pathy Kyungu Ngoïe**. Ces travaux offrent un pont analytique entre les sommes discrètes, les intégrales continues et les distributions.
 
 ---
 
@@ -11,12 +11,12 @@ Pour une fonction auxiliaire $\varphi(x) = F(1/x)$ analytique en $x=0$, la trans
 
 $$\mathcal{L}^{-1}\[F\](t) = \varphi(0)\delta(t) + \sum_{n=1}^{\infty}\frac{n}{(n!)^2} \varphi^{(n)}(0)t^{n-1}$$
 
-### Forme Intégrale Unifiée
+### Forme Intégrale de la formule de Kyungu pour l'inversion de Laplace
 $$\mathcal{L}^{-1}\[F\](t) = \frac{1}{2 \pi i} \oint_{\Gamma} \frac{\varphi(z)}{z^2} e^{t/z} dz$$
 
 ---
 
-## 2. Le Calcul Sommatiel
+## 2. Le Sommatiel
 
 Le sommatiel $S(x)$, noté $\[F]\_x$, est le prolongement analytique de la somme discrète $\sum\_{k=1}^{n} F(k)$ aux valeurs réelles ou complexes de $x$.
 
@@ -38,23 +38,16 @@ $$ F,(s) = \lim_{x \to 0} \frac{[F(sx)]_x}{x} $$
 ### Le Critère de Licité (Hyperconvergence)
 L'hypersommation terme à terme d'une série de Taylor est soumise à un critère de licité strict : le rayon de convergence de la série hypersommée obtenue doit être non nul. Si l'effacement structurel des monômes (notamment de degré impair $\ge 3$) masque l'information analytique, le critère d'hyperconvergence s'étudie sur la dérivée $F'(s)$. En cas de non-hyperconvergence, le recours à la formule intégrale complexe est obligatoire.
 
-### Représentation intégrale unifiée (Plan Complexe)
-La forme globale universelle de l'hypersommatiel s'énonce sous la forme d'une unique intégrale curviligne complexe :
+### Représentation intégrale de l'hypersommatiel
+La forme  integrale de l'hypersommatiel s'énonce par :
 
-$$ F,(s) = \oint_{\Gamma} \frac{st}{e^{st} - 1} \mathcal{L}^{-1}\[F\](t)dt $$
-
-où le domaine géométrique global d'intégration $\Gamma$ fusionne la régularisation continue et la capture discrète :
-
-$$ \Gamma = \mathcal{H}_{0^-} \cup \left( \bigcup_{k} \gamma_k \right) $$
-
-*   $\mathcal{H}_{0^-}$ représente le lacet de Hankel enveloppant l'origine gauche ($0^-$).
-*   $\bigcup_{k} \gamma_k$ désigne l'ensemble disjoint de petits contours isolés de Cauchy entourant individuellement chaque singularité (qu'elle soit réelle négative ou complexe imaginaire isolée).
+$$ F,(s) = \int_{0^-}^{+\infty} \frac{\mathcal{L}^{-1}\[F\](t)}{e^{st} - 1} tdt $$
 
 ## 4. Formule d’Euler–Maclaurin Généralisée (Kyungu)
 
 Cette formule étend la relation classique d'Euler-Maclaurin en introduisant un paramètre de décalage $c$ et les polynômes de Bernoulli $B_n(c)$ :
 
-$$\sum_{k=a+c}^{b+c-1} f(k) = \int_{a}^{b} f(t)dt + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \big( f^{(n-1)}(b) - f^{(n-1)}(a) \big)$$
+$$\sum_{k=a+c}^{b+c-1} F(k) = \int_{a}^{b} F(t)dt + \sum_{n=1}^{\infty} \frac{B_n(c)}{n!} \big(F^{(n-1)}(b) - F^{(n-1)}(a) \big)$$
 
 ---
 
